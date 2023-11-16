@@ -1,50 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Inter:wght@400;600&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;600;700&display=swap');
 
 .site{
+    /* display: flex; */
+    /* justify-content: space-around; */
     width: 1920px;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .header{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 .header__navbar{
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
 }
-/* .header__navbar a{
-    display: flex;
-    justify-content: space-around;
-}
-.header__navbar li{
-    display: inline-block;
-    list-style: none;
-    color: #000;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 600;
-} */
-.header__navbar{
-    display: flex;
-    justify-content: space-around;
-}
-.header__navbar a{
-    text-align: center;
-    font-family: Poppins;
+.header__navbar p{
+    font-family: 'Poppins';
     font-size: 14px;
     font-weight: 600;
 }
 .header__navbar button{
     border-radius: 50px;
-    border: 2px solid var(--Color---3, #0156FF);
+    border: 2px solid #0156FF;
     padding: 8px 26px;
-    align-items: center;
     color: #0156FF;
     font-family: Poppins;
     font-size: 14px;
+    font-weight: 600;
+}
+.header__profile{
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+    align-items: center;
+}
+
+
+.content {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+.content__banner_1{
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+}
+.content__products{
+    display: flex;
+    justify-content: center;    
+}
+.content__product{
+    width: 235px;
+}
+.content__product__title{
+    color: #000;
+    font-family: Poppins;
+    font-size: 13px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+
 }
