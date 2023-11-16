@@ -1,0 +1,10 @@
+.header{
+    
+}
+.header__navbar{
+    
+}
+.header__navbar li{
+    display: inline-block;
+    list-style: none;
+}
