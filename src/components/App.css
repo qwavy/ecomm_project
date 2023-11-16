@@ -1,10 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Inter:wght@400;600&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;600;700&display=swap');
+
+.site{
+    width: 1920px;
+    margin: auto;
+}
+
 .header{
-    
+    display: flex;
+    justify-content: space-evenly;
 }
 .header__navbar{
-    
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .header__navbar a{
+    display: flex;
+    justify-content: space-around;
 }
 .header__navbar li{
     display: inline-block;
     list-style: none;
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+} */
+.header__navbar{
+    display: flex;
+    justify-content: space-around;
+}
+.header__navbar a{
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+}
+.header__navbar button{
+    border-radius: 50px;
+    border: 2px solid var(--Color---3, #0156FF);
+    padding: 8px 26px;
+    align-items: center;
+    color: #0156FF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
