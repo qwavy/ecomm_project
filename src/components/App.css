@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Inter:wght@400;600&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;600;700&display=swap');
 
-.site{
+.site {
     /* display: flex; */
     /* justify-content: space-around; */
     width: 1920px;
-    /* margin: auto; */
+    margin: auto;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
 }
-.header__navbar{
+
+.header__navbar {
     width: 70%;
     display: flex;
     justify-content: space-evenly;
 }
-.header__navbar p{
+
+.header__navbar p {
     font-family: 'Poppins';
     font-size: 14px;
     font-weight: 600;
 }
-.header__navbar button{
+
+.header__navbar button {
     border-radius: 50px;
     border: 2px solid #0156FF;
     padding: 8px 26px;
@@ -32,7 +35,8 @@
     font-size: 14px;
     font-weight: 600;
 }
-.header__profile{
+
+.header__profile {
     display: flex;
     justify-content: space-evenly;
     width: 10%;
@@ -45,24 +49,91 @@
     justify-content: center;
     align-items: center;
 }
-.content__banner_1{
+
+.content__banner_1 {
     /* margin: auto; */
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     width: 100%;
 }
-.content__products{
+
+.content__products {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
-.content__product{
+
+.content__product {
     width: 235px;
 }
-.content__product__title{
+
+.content__product__title {
     color: #000;
     font-family: Poppins;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
 
+}
+
+.msi_banner {
+    background-image: url(../images/msi_laptop.png);
+    width: 232px;
+    height: 346px;
+    
+}
+.msi_banner p{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 22px;
+font-weight: 700
+}
+.msi_content {
+
+    display: flex;
+    justify-content: center;
+}
+
+.msi_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . . . .";
+}
+
+.msi_product {
+    width: 230px;
+}
+
+.msi_product p {
+
+    display: flex;
+    width: 185px;
+    height: 65px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.msi_product span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
 }
