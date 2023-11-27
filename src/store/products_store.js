@@ -15,30 +15,129 @@ class Product{
         {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:399,image:product_image_1}, 
     ] 
     msi_laptops = [ 
-        {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:3,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:5,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:6,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:7,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:8,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:9,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:10,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
-        {id:11,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_laptop_1}, 
+        {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:3,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:5,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:6,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:7,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:8,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:9,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:10,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
+        {id:11,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_laptop_1,characteristic:{
+            processer:'intel',
+            processer_model:'i',
+            ram:'GB',
+            ssd:'',
+            hdd:'',
+            display:'',
+            display_hz:'',
+            video_card:''
+        }}, 
     ] 
     msi_dekstops = [
-        {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:3,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:5,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:6,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:7,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:8,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:9,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:10,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
-        {id:11,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,image:msi_dekstop_1}, 
+        {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:3,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:5,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:6,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:7,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:8,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:9,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:10,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
+        {id:11,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
     ]
 
     constructor(){ 

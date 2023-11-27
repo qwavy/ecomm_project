@@ -79,10 +79,11 @@ const MainPage = observer(() => {
             <p><a>all products</a></p>
           </div>
           <div className='msi_products'>
-            {msiLaptopsFive.map((laptop) => <div className='msi_product'>
+          {msiLaptopsFive.map((laptop) => <div className='msi_product'>
               <img src={laptop.image} />
-              <p>{laptop.name}</p>
-              <span>{laptop.price}</span>
+              <p className='msi_laptop_name'>{laptop.name}</p>
+              <p><s>{laptop.old_price}$</s></p>
+              <span>{laptop.price}$</span>
             </div>)}
           </div>
         </div>
@@ -92,10 +93,11 @@ const MainPage = observer(() => {
             <p><a>all products</a></p>
           </div>
           <div className='msi_products'>
-            {msiDekstopsFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} />
-              <p>{laptop.name}</p>
-              <span>{laptop.price}</span>
+          {msiDekstopsFive.map((desktop) => <div className='msi_product'>
+              <img src={desktop.image} />
+              <p className='msi_laptop_name'>{desktop.name}</p>
+              <p><s>{desktop.old_price}$</s></p>
+              <span>{desktop.price}$</span>
             </div>)}
           </div>
         </div>
@@ -107,8 +109,9 @@ const MainPage = observer(() => {
           <div className='msi_products'>
             {msiLaptopsFive.map((laptop) => <div className='msi_product'>
               <img src={laptop.image} />
-              <p>{laptop.name}</p>
-              <span>{laptop.price}</span>
+              <p className='msi_laptop_name'>{laptop.name}</p>
+              <p><s>{laptop.old_price}$</s></p>
+              <span>{laptop.price}$</span>
             </div>)}
           </div>
         </div>
