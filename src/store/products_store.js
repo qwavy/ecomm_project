@@ -126,6 +126,7 @@ class Product{
             video_card:''
         }}, 
     ] 
+    
     msi_dekstops = [
         {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
         {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
