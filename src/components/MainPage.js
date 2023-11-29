@@ -89,7 +89,7 @@ const MainPage = observer(() => {
         </div>
         <div className='msi_content'>
           <div className='msi_banner dekstop'>
-            <p>msi laptops</p>
+            <p>msi dekstops</p>
             <p><a>all products</a></p>
           </div>
           <div className='msi_products'>

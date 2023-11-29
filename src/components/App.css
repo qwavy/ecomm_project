@@ -76,15 +76,14 @@
 }
 
 .msi_banner {
-    background-image: url(../images/msi_laptop.png);
     width: 232px;
     height: 346px;
     text-align: center;
 }
-.msi_banner .laptop{
-    
+.msi_banner.laptop{
+    background-image: url(../images/msi_laptop.png);
 }
-.msi_banner .dekstop{
+.msi_banner.dekstop{
     background-image: url(../images/msi_dekstop.png);
 
 }
