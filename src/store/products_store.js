@@ -1259,6 +1259,7 @@ class Product{
                     },
     ]
     
+    
     constructor(){ 
         makeAutoObservable(this) 
     } 
