@@ -85,7 +85,9 @@
 }
 .msi_banner.dekstop{
     background-image: url(../images/msi_dekstop.png);
-
+}
+.msi_banner.monitor{
+    background-image: url(../images//msi_monitor.png);
 }
 .msi_banner p{
     color: #FFF;
