@@ -85,7 +85,7 @@ const MainPage = observer(() => {
           </div>
           <div className='msi_products'>
           {msiLaptopsFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} className='test'/>
+              <img src={laptop.image} className='msi_image'/>
               <p className='msi_laptop_name'>{laptop.name}</p>
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
@@ -99,7 +99,7 @@ const MainPage = observer(() => {
           </div>
           <div className='msi_products'>
           {msiDekstopsFive.map((desktop) => <div className='msi_product'>
-              <img src={desktop.image} alt='car' className='test'/>
+              <img src={desktop.image} alt='car' className='msi_image'/>
               <p className='msi_laptop_name'>{desktop.name}</p>
               <p><s>{desktop.old_price}$</s></p>
               <span>{desktop.price}$</span>
@@ -113,7 +113,7 @@ const MainPage = observer(() => {
           </div>
           <div className='msi_products'>
             {msiMonitorsFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} alt='car' className='test'/>
+              <img src={laptop.image} alt='car' className='msi_image'/>
               <p className='msi_laptop_name'>{laptop.name}</p>
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
@@ -128,7 +128,7 @@ const MainPage = observer(() => {
           </div>
           <div className='msi_products'>
             {msiHeadphonesFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} alt='car' className='test'/>
+              <img src={laptop.image} alt='car' className='msi_image'/>
               <p className='msi_laptop_name'>{laptop.name}</p>
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
@@ -142,7 +142,7 @@ const MainPage = observer(() => {
           </div>
           <div className='msi_products'>
             {msiMotherboardFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} alt='car' className='test'/>
+              <img src={laptop.image} alt='car' className='msi_image'/>
               <p className='msi_laptop_name'>{laptop.name}</p>
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
