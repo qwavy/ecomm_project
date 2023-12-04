@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 
 // components 
-import '../components/App.css';
+import '../MainPage/MainPage.css';
 
 
 // mobx 
-import products_store from '../store/products_store';
+import products_store from '../../store/products_store';
 import { observer } from "mobx-react-lite"
 
 // icons for layout 
 // import logo from '../images/logo.png'; 
-import pfp from '../images/pfp.png';
-import cart_icon from '../images/cart_icon.png';
-import search_icon from '../images/search_icon.png';
-import banner_1 from '../images/banner_1.png';
-import logo from '../images/Logo.png'
-
-
-import msi_laptop from '../images/msi_laptop.png'
+import pfp from '../../images/pfp.png';
+import cart_icon from '../../images/cart_icon.png';
+import search_icon from '../../images/search_icon.png';
+import banner_1 from '../../images/banner_1.png';
+import logo from '../../images/Logo.png'
+import msi_laptop from '../../images/msi_laptop.png'
 
 const MainPage = observer(() => {
 

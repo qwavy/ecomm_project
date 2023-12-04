@@ -81,13 +81,13 @@
     text-align: center;
 }
 .msi_banner.laptop{
-    background-image: url(../images/msi_laptop.png);
+    background-image: url(../../images/msi_laptop.png);
 }
 .msi_banner.dekstop{
-    background-image: url(../images/msi_dekstop.png);
+    background-image: url(../../images/msi_dekstop.png);
 }
 .msi_banner.monitor{
-    background-image: url(../images//msi_monitor.png);
+    background-image: url(../../images//msi_monitor.png);
 }
 .msi_banner p{
     color: #FFF;

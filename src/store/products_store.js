@@ -3,9 +3,18 @@ import { makeAutoObservable } from "mobx"
  
 import product_image_1 from '../images/products/product_1.png' 
  
-import msi_laptop_1 from '../images/products/msi_laptop_1.png' 
+// import msi_laptop_1 from '../images/products/msi_laptop_1.png' 
 
-import msi_dekstop_1 from '../images/products/msi_dekstop_1.png'
+// import msi_dekstop_1 from '../images/products/msi_dekstop_1.png'
+
+
+
+// msi latops 27
+// msi dekstops 463
+// msi monitors 619
+// msi headphones 772
+// msi motherboards 953
+
 class Product{ 
  
     products=[ 
@@ -451,28 +460,13 @@ class Product{
     
    
 
-    // msi_dekstops = [
-    //     {id:1,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:2,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:3,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:4,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:5,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:6,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:7,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:8,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:9,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:10,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    //     {id:11,name:'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',price:449,old_price:500,image:msi_dekstop_1}, 
-    // ]
-
-    image_1 = 'https://cdn.citilink.ru/_5uYwUwybRVvCDl4opQlRv0DcNnja60cqCiBtDsc-i4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0746fb6a-347d-47fa-b548-787ccae3b0f5.jpg'
     msi_dekstops = [
         {id: 21, 
             name: 'MSI Infinite 11SI-1611XRU', 
             category: 'desktop', 
             price: 0, 
             old_price: 0, 
-            image: this.image_1 ,
+            image: 'https://cdn.citilink.ru/_5uYwUwybRVvCDl4opQlRv0DcNnja60cqCiBtDsc-i4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0746fb6a-347d-47fa-b548-787ccae3b0f5.jpg' ,
             characteristic: { 
                 processer:'intel', 
                 processer_model:'I5-11400F', 
@@ -1051,7 +1045,7 @@ class Product{
             name:'MSI MPG Z790 CARBON WIFI',
             price:0,
             old_price:0,
-            image:'img',
+            image:'https://c.dns-shop.kz/thumb/st1/fit/500/500/bef434572a89c672f5e4235581ceea53/aaa9420f72b3e66f014e3d0e6919f7134475459983e6547d4478d9db6e8626eb.png.webp' ,
             characteristic:{
                 socket:'Intel-LGA1700',
                 chipset:'Z790',
@@ -1264,9 +1258,6 @@ class Product{
         makeAutoObservable(this) 
     } 
  
-    test(){ 
-        console.log('test') 
-    } 
  
 } 
  
