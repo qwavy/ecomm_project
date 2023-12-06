@@ -6,6 +6,8 @@ const ProductsFilter = () => {
   return(
     <div>
       <Laptops/>
+      {/* <MonitorsFilter/>
+      <MotherboardFilter/> */}
     </div>
   )
 }

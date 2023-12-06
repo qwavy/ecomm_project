@@ -27,11 +27,11 @@ const MainPage = observer(() => {
   const [msiMotherboard,setMsiMotherboard] = useState(products_store.msi_motherboard)
   // console.log(products) 
 
-  const msiLaptopsFive = msiLaptops
+  const msiLaptopsFive = msiLaptops.slice(0,5)
   const msiDekstopsFive = msiDekstops.slice(0,5)
-  const msiMonitorsFive = msiMonitors
-  const msiHeadphonesFive = msiHeadphones
-  const msiMotherboardFive = msiMotherboard
+  const msiMonitorsFive = msiMonitors.slice(0,5)
+  const msiHeadphonesFive = msiHeadphones.slice(0,5)
+  const msiMotherboardFive = msiMotherboard.slice(0,5)
   return (
     <div className='site'>
       <div className="header">
