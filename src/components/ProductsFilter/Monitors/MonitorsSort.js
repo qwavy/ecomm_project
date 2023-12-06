@@ -6,12 +6,17 @@ const MonitorsSort = () => {
     const [msiProducts,setMsiProducts] = useState(products_store.msi_dekstops)
 
     const handleByPrice = () => {
-
+        msiProducts.
     }
 
     return(
         <div>
-            <button onClick={() => handleByPrice()}></button>
+            <button onClick={() => handleByPrice()}>sdfgsdlfkgjsdlfkgjlk</button>
+            {msiProducts.map((product) => (
+                <div>
+                    {product.name}
+                </div>
+            ))}
         </div>
     )
 }
