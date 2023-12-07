@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.header__navbar {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__navbar p {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header__navbar button {
+    border-radius: 50px;
+    border: 2px solid #0156FF;
+    padding: 8px 26px;
+    color: #0156FF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header__profile {
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+    align-items: center;
+}

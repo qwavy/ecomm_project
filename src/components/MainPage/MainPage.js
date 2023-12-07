@@ -13,8 +13,8 @@ import { observer } from "mobx-react-lite"
 import pfp from '../../images/pfp.png';
 import cart_icon from '../../images/cart_icon.png';
 import search_icon from '../../images/search_icon.png';
-import banner_1 from '../../images/banner_1.png';
 import logo from '../../images/Logo.png'
+import banner_1 from '../../images/banner_1.png';
 import msi_laptop from '../../images/msi_laptop.png'
 
 const MainPage = observer(() => {
@@ -34,7 +34,7 @@ const MainPage = observer(() => {
   const msiMotherboardFive = msiMotherboard.slice(0,5)
   return (
     <div className='site'>
-      <div className="header">
+      {/* <div className="header">
         <div>
           <img src={logo} />
         </div>
@@ -64,17 +64,17 @@ const MainPage = observer(() => {
 
 
         </div>
-      </div>
+      </div> */}
       <div className='content'>
         <div className='content__banner_1'>
           <img src={banner_1} />
         </div>
         <div className='content__products'>
-          {products.map((product) => <div className='content__product' key={product.id}>
+          {/* {products.map((product) => <div className='content__product' key={product.id}>
             <img src={product.image} />
             <h3 className='content__product__title'>{product.name}</h3>
             <span className='content__product__price'>{product.price}</span>
-          </div>)}
+          </div>)} */}
         </div>
         <div className='msi_content'>
           <div className='msi_banner laptop'>
