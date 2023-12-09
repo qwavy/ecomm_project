@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx" 
- 
+// import { makeAutoObservable } from 'mobx';
  
 import product_image_1 from '../images/products/product_1.png' 
  
@@ -16,10 +16,9 @@ import product_image_1 from '../images/products/product_1.png'
 // msi motherboards 953
 
 class Product{ 
+    counter = 0
  
-    // products=[...this.msi_dekstops, ...this.msi_headphones, ...this.msi_laptops, ...this.msi_monitors, ...this.msi_motherboard]
-    // products = [].concat(this.msi_dekstops,this.msi_headphones,this.msi_laptops,this.msi_monitors,this.msi_motherboard)
-    // products = [].concat(this.msi_dekstops)
+    filteredProductsArr = []
     
     msi_laptops = [
         {
@@ -1254,8 +1253,7 @@ class Product{
     constructor(){ 
         makeAutoObservable(this) 
     } 
- 
- 
+
 } 
  
 export default new Product()

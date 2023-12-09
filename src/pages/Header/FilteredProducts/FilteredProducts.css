@@ -1,16 +1,51 @@
-.filter_title{
-font-family: Poppins;
-font-size: 32px;
+.site {
+    margin: auto;
 }
 
 
-.filter_content{
+.filter_title {
+    font-family: Poppins;
+    font-size: 32px;
+}
+
+
+.filter_content {
     display: flex;
 }
-.filter_column{ 
+
+.filter_column {
     width: 400px;
     background-color: green;
 }
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+
+
+
+
 .msi_products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -27,10 +62,12 @@ font-size: 32px;
     align-items: center;
     border: #000 1px solid;
 }
-.msi_image{
+
+.msi_image {
     width: 150px;
     height: 150px;
 }
+
 .msi_laptop_name {
 
     display: flex;
@@ -55,6 +92,7 @@ font-size: 32px;
     font-weight: 600;
     line-height: 140%;
 }
+
 .msi_product s {
     color: grey;
     font-family: Poppins;

@@ -5,19 +5,20 @@ import ProductsFilter from './ProductsFilter/ProductsFilter'
 import Header from '../pages/Header/Header';
 import FilteredProducts from '../pages/Header/FilteredProducts/FilteredProducts';
 import MonitorsSort from './ProductsFilter/Monitors/MonitorsSort';
+import { observer } from 'mobx-react-lite';
 // import pr from '../store/products_store';
 
 const App = () => {
     return ( 
         <div>
             <Header/>
-            {/* <FilteredProducts/> */}
+            <FilteredProducts/>
             
-            <MainPage/>
+            {/* <MainPage/> */}
             {/* <ProductsPage/> */}
             {/* <ProductsFilter/> */}
         </div>    
     );
 }
  
-export default App;
+export default App

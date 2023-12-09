@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import products_store from "../../../store/products_store"
+// import filteredProductsArr from '../../../store/products_store'
 
+import { observer } from 'mobx-react-lite';
 
 const MotherboardFilter = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -15,9 +17,10 @@ const MotherboardFilter = () => {
     } else {
       setSelectedCategories([...selectedCategories, value]);
     }
+    products_store.counter += 1
   };
 
-  const filteredMotherboards = msiMotherboards.filter((item) => {
+  products_store.filteredProductsArr = msiMotherboards.filter((item) => {
     const isChipsetSelected = selectedChipsets.length === 0 || selectedChipsets.includes(item.characteristic.chipset);
     const isRamTypeSelected = selectedRamTypes.length === 0 || selectedRamTypes.includes(item.characteristic.type_ram);
     const isSocketSelected = selectedSocket.length == 0 || selectedSocket.includes(item.characteristic.socket)
@@ -69,9 +72,11 @@ const MotherboardFilter = () => {
           </label>
         ))}
       </div>
+      <h1>{products_store.counter}</h1>
+      {/* <button onClick={()}></button> */}
       <h3>Filtered Motherboards</h3>
       <ul>
-        {filteredMotherboards.map((item) => (
+        {products_store.filteredProductsArr.map((item) => (
           <li key={item.id}>
             <div>{item.name}</div>
             <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px' }} />
@@ -82,4 +87,4 @@ const MotherboardFilter = () => {
   );
 };
 
-export default MotherboardFilter;
+export default (MotherboardFilter);
