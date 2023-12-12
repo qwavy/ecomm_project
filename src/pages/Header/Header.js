@@ -16,11 +16,10 @@ const Header = () => {
         <div className='header__navbar'>
           <p>Laptops</p>
           <p>Desktop PCs</p>
-          <p>Networking Devices</p>
-          <p>Printers & Scanners</p>
-          <p>PC Parts</p>
-          <p>All Other Products</p>
-          <p>Repairs</p>
+          <p>Monitors</p>
+          <p>Motherboards</p>
+          <p>Sale</p>
+          <p>About us</p>
           <button>Our Deals</button>
 
         </div>

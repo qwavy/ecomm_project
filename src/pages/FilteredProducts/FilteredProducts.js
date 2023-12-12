@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react"
-import products_store from "../../../store/products_store"
-import '../FilteredProducts/FilteredProducts.css'
-import MotherboardFilter from "../../../components/ProductsFilter/Motherboards/MotherboardsFilter"
+import products_store from "../../store/products_store"
+import './FilteredProducts.css'
+import MotherboardFilter from "../../components/ProductsFilter/Motherboards/MotherboardsFilter"
 
-import filteredProductsArr from '../../../store/products_store'
+
+import opened_pointer from '../../images/opened_pointer.png'
+import closed_pointer from '../../images/closed_pointer.png'
+
+
+import filteredProductsArr from '../../store/products_store'
 import { observer } from "mobx-react-lite"
+import MonitorsFilter from "../../components/ProductsFilter/Monitors/MonitorsFilter"
+import Laptops from "../../components/ProductsFilter/Laptops/Laptops"
 // import { observer } from "mobx-react-lite"
 
 const FilteredProducts = () => {
@@ -12,8 +19,8 @@ const FilteredProducts = () => {
     const [filteredProducts, setFilteredProducts] = useState([])
     const [countFilteredProducts, setCountFilteredProducts] = useState(0)
 
-
-    
+    const [activeCollaps,setActiveCollaps] = useState(false)
+    const [activeCollapsContent,setActiveCollapsContent] = useState(false)
 
 
     // const [filtered]
@@ -24,11 +31,16 @@ const FilteredProducts = () => {
     useEffect(() => {
         setFilteredProducts(msiProducts)
     }, [])
-    const filterr = () => {
+    useEffect(() => {
+
+    },[activeCollaps])
+    const filter = () => {
         console.log(products_store.products)
         setFilteredProducts(products_store.filteredProductsArr)
     }
-
+    const clear = () => {
+        setFilteredProducts(msiProducts)
+    }
     return (
         <div className="site">
             <h1>
@@ -36,15 +48,17 @@ const FilteredProducts = () => {
             </h1>
 
             <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
-            <button onClick={() => filterr()}>button</button>
+            
             <div className="filter_content">
                 <div className="filter_column">
-                    <p>A Collapsible:</p>
-                    <button class="collapsible">Open Collapsible</button>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button class={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Motherboard Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer}/></button>
+                    <div class={activeCollaps ? "content activeContent" : "content"}>
+                        {/* <MotherboardFilter/> */}
+                        {/* <MonitorsFilter/> */}
+                        <Laptops/>
+                    <button onClick={() => filter()} className="apply_button">Apply Filters</button>
+                    <button onClick={() => clear()}>Clear Filters</button>
                     </div>
-                    {/* <MotherboardFilter/> */}
                 </div>
                 <div className="msi_products">
                     {products_store.filteredProductsArr.map((desktop) => <div className='msi_product'>

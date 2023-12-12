@@ -15,26 +15,35 @@
 
 .filter_column {
     width: 400px;
-    background-color: green;
 }
 
 .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins;
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
+    /* color: white; */
+    padding: 18px;
     font-size: 15px;
+    /* background-color: #777; */
+
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
-.active, .collapsible:hover {
-    background-color: #555;
+.active,
+.collapsible:hover {
+    /* background-color: #555; */
+}
+
+.activeContent {
+    max-height: 1200px !important;
 }
 
 .content {
+    font-family: Poppins;
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
@@ -42,7 +51,18 @@
     background-color: #f1f1f1;
 }
 
-
+.apply_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 8px 42px 8px 45px;
+    border-radius: 50px;
+    background: var(--Color---3, #0156FF);
+    border: none;
+    color: white;
+    font-family: Poppins;
+    cursor: pointer;
+}
 
 
 

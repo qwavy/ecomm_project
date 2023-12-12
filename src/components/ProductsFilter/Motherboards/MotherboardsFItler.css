@@ -1,0 +1,30 @@
+.collapsible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins;
+    width: 100%;
+    /* color: white; */
+    padding: 18px;
+    font-size: 15px;
+    /* background-color: #777; */
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.active, .collapsible:hover {
+    /* background-color: #555; */
+}
+.activeContent{
+    max-height: 1200px !important;
+}
+.content {
+    font-family: Poppins;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
