@@ -7,15 +7,22 @@ import FilteredProducts from '../pages/FilteredProducts/FilteredProducts';
 import NewsPage from '../pages/News/NewsPage';
 import MonitorsSort from './ProductsFilter/Monitors/MonitorsSort';
 import { observer } from 'mobx-react-lite';
+import Login from '../pages/Auth/Login/Login';
 // import pr from '../store/products_store';
 
 const App = () => {
     return ( 
         <div>
-            <Header/>
-            <NewsPage/>
+            {/* <Header/> */}
+            {/* <NewsPage/> */}
+
+            <Login/>
             {/* <FilteredProducts/> */}
+
+
             {/* <MainPage/> */}
+
+
             {/* <ProductsPage/> */}
             {/* <ProductsFilter/> */}
         </div>    

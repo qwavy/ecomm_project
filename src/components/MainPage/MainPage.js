@@ -17,7 +17,7 @@ import logo from '../../images/Logo.png'
 import banner_1 from '../../images/banner_1.png';
 import msi_laptop from '../../images/msi_laptop.png'
 
-const MainPage = observer(() => {
+const MainPage = () => {
 
   const [products, setProducts] = useState(products_store.products)
   const [msiLaptops, setMsiLaptops] = useState(products_store.msi_laptops)
@@ -65,7 +65,7 @@ const MainPage = observer(() => {
 
         </div>
       </div> */}
-      <div className='content'>
+      <div className='content_mainpage'>
         <div className='content__banner_1'>
           <img src={banner_1} />
         </div>
@@ -150,6 +150,6 @@ const MainPage = observer(() => {
       </div>
     </div>
   )
-})
+}
 
 export default MainPage
