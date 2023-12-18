@@ -17,7 +17,7 @@ import product_image_1 from '../images/products/product_1.png'
 
 class Product{ 
     counter = 0
- 
+    Filterpage = ""
     filteredProductsArr = []
     
     msi_laptops = [

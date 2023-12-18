@@ -1,3 +1,7 @@
+import { Route, Routes, Link } from 'react-router-dom';
+
+
+
 import '../Header/Header.css'
 
 import pfp from '../../images/pfp.png';
@@ -5,22 +9,47 @@ import cart_icon from '../../images/cart_icon.png';
 import search_icon from '../../images/search_icon.png';
 import logo from '../../images/Logo.png'
 
+import products_store from '../../store/products_store';
+
+
 const Header = () => {
-    return(
-        <div>
-               <div className="header">
+
+  const changePage = (page) => {
+    products_store.Filterpage = page
+    console.log(page)
+  }
+
+
+  return (
+    <div>
+      <div className="header">
         <div>
           <img src={logo} />
         </div>
 
         <div className='header__navbar'>
-          <p>Laptops</p>
-          <p>Desktop PCs</p>
-          <p>Monitors</p>
-          <p>Motherboards</p>
-          <p>Sale</p>
-          <p>About us</p>
-          <button>Our Deals</button>
+
+          <Link to="/">
+            <p onClick={() => changePage("laptop")}>Laptops</p>
+          </Link>
+          <Link to="/">
+            <p onClick={() => changePage("dekstop")}>Desktop PCs</p>
+          </Link>
+          <Link to="/">
+            <p onClick={() => changePage("monitor")}>Monitors</p>
+          </Link>
+          <Link to="/">
+            <p onClick={() => changePage("motherboard")}>Motherboards</p>
+          </Link>
+          <Link to="/">
+            <p>Sale</p>
+          </Link>
+          <Link to="/">
+            <p>About us</p>
+          </Link>
+          <Link to="/">
+            <button>Our Deals</button>
+          </Link>
 
         </div>
         <div className='header__profile'>
@@ -37,9 +66,9 @@ const Header = () => {
 
 
         </div>
-      </div>    
-        </div>
+      </div>
+    </div>
 
-    )
+  )
 }
 export default Header
