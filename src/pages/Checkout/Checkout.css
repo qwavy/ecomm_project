@@ -1,0 +1,17 @@
+
+.shipping_site{
+    display: flex;
+    justify-content: center;
+}
+.important{
+    color: red;
+}
+.shipping_input{
+    padding: 18px 60px;
+    border-radius: 8px;
+border:1px solid rgba(162, 166, 176, 1) ;
+}
+.shipping_input[type=text]{
+    font-size: 10002px;
+
+}

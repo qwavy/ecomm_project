@@ -11,6 +11,8 @@ import Login from '../pages/Auth/Login/Login';
 import { observer } from 'mobx-react-lite';
 
 import { Route,Routes,Link } from 'react-router-dom';
+import Checkout from '../pages/Checkout/Checkout';
+import Payment from '../pages/Payment/Payment';
 
 const App = () => {
     return ( 
@@ -30,7 +32,8 @@ const App = () => {
                 <Route path='*' element={<MainPage/>}/>
                 <Route path='/products' element={<FilteredProducts />}/>
                 <Route path='/news' element={<NewsPage/>}/>
-
+                <Route path='/checkout' element={<Checkout/>}/>
+                <Route path='/payment' element={<Payment/>}/>
             </Routes>
         </div>    
     );
