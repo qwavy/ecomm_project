@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx" 
-// import { makeAutoObservable } from 'mobx';
+import _ from 'lodash';
  
 import product_image_1 from '../images/products/product_1.png' 
  
@@ -19,7 +19,10 @@ class Product{
     counter = 0
     Filterpage = ""
     filteredProductsArr = []
-    
+
+    cart = []
+
+
     msi_laptops = [
         {
             id: 1,
@@ -1249,7 +1252,16 @@ class Product{
                     },
     ]
     
-    
+
+    combinedArray = [
+        ..._.cloneDeep(this.msi_motherboard),
+        ..._.cloneDeep(this.msi_dekstops),
+        ..._.cloneDeep(this.msi_laptops),
+        ..._.cloneDeep(this.msi_monitors),
+    ];
+
+
+
     constructor(){ 
         makeAutoObservable(this) 
     } 

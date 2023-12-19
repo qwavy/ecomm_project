@@ -24,31 +24,33 @@ const Header = () => {
     <div>
       <div className="header">
         <div>
-          <img src={logo} />
+          <Link to="/home">
+            <img src={logo} />
+          </Link>
         </div>
 
         <div className='header__navbar'>
 
-          <Link to="/">
+          <Link to="/products">
             <p onClick={() => changePage("laptop")}>Laptops</p>
           </Link>
-          <Link to="/">
+          <Link to="/products">
             <p onClick={() => changePage("dekstop")}>Desktop PCs</p>
           </Link>
-          <Link to="/">
+          <Link to="/products">
             <p onClick={() => changePage("monitor")}>Monitors</p>
           </Link>
-          <Link to="/">
+          <Link to="/products">
             <p onClick={() => changePage("motherboard")}>Motherboards</p>
           </Link>
-          <Link to="/">
-            <p>Sale</p>
+          <Link to="/news">
+            <p>News</p>
           </Link>
           <Link to="/">
             <p>About us</p>
           </Link>
           <Link to="/">
-            <button>Our Deals</button>
+            <button>Chekout</button>
           </Link>
 
         </div>

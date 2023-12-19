@@ -29,6 +29,8 @@ const App = () => {
             <Routes>
                 <Route path='*' element={<MainPage/>}/>
                 <Route path='/products' element={<FilteredProducts />}/>
+                <Route path='/news' element={<NewsPage/>}/>
+
             </Routes>
         </div>    
     );

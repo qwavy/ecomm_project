@@ -56,6 +56,9 @@ const FilteredProducts = () => {
     const clear = () => {
         setFilteredProducts(msiProducts)
     }
+    const addCart = (product) => {
+        products_store.cart.push(product)
+    }
     return (
         <div className="site">
             <h1>
@@ -69,28 +72,20 @@ const FilteredProducts = () => {
                     <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Motherboard Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer}/></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
                         <FilterComponent/>
-                        {/* {
-                            {
-                                'laptop':<Laptops/>,
-                                // 'dekstop',
-                                'monitor':<MonitorsFilter/>,
-                                'motherboard':<MotherboardFilter/>
-                            }[products_store.Filterpage]
-                        } */}
-                        {/* <MotherboardFilter/> */}
-                        {/* <MonitorsFilter/> */}
-                        {/* <Laptops/> */}
                     <button onClick={() => filter()} className="apply_button">Apply Filters</button>
                     <button onClick={() => clear()}>Clear Filters</button>
                     </div>
                 </div>
                 <div className="msi_products">
-                    {products_store.filteredProductsArr.map((desktop) => <div className='msi_product'>
-                        <img src={desktop.image} alt='car' className='msi_image' />
-                        <p className='msi_laptop_name'>{desktop.name}</p>
-                        <p><s>{desktop.old_price}$</s></p>
-                        <span>{desktop.price}$</span>
+                    {products_store.filteredProductsArr.map((product) => <div className='msi_product'>
+                        <img src={product.image} alt='car' className='msi_image' />
+                        <p className='msi_laptop_name'>{product.name}</p>
+                        <p><s>{product.old_price}$</s></p>
+                        <span>{product.price}$</span>
+
+                        <button onClick={() => addCart(product)}>asf</button>
                     </div>)}
+
                 </div>
 
             </div>

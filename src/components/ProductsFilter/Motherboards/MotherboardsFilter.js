@@ -21,6 +21,7 @@ const MotherboardFilter = () => {
   const [activeCollapsRamTypes, setActiveCollapsRamTypes] = useState(false);
   const [activeCollapsSocket, setActiveCollapsSocket] = useState(false)
 
+  const [value,setValue] = useState("")
 
   const handleCheckboxChange = (category, value, setSelectedCategories) => {
     if (selectedCategories.includes(value)) {
@@ -31,17 +32,26 @@ const MotherboardFilter = () => {
     products_store.counter += 1
   };
 
+  // products_store.filteredProductsArr = msiMotherboards.filter((product) => {
+  //   return product.name.toLowerCase().includes(value.toLowerCase())
+  // })
+
+
   products_store.filteredProductsArr = msiMotherboards.filter((item) => {
     const isChipsetSelected = selectedChipsets.length === 0 || selectedChipsets.includes(item.characteristic.chipset);
     const isRamTypeSelected = selectedRamTypes.length === 0 || selectedRamTypes.includes(item.characteristic.type_ram);
     const isSocketSelected = selectedSocket.length == 0 || selectedSocket.includes(item.characteristic.socket)
 
-    return isChipsetSelected && isRamTypeSelected && isSocketSelected;
+    const inputChange = item.name.toLowerCase().includes(value.toLowerCase())
+
+
+    return isChipsetSelected && isRamTypeSelected && isSocketSelected && inputChange;
   });
 
   return (
     <div>
       <div>
+        <input onChange={(event) => setValue(event.target.value)}/>dsfg
         <button class={activeCollapsChipsets ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsChipsets(!activeCollapsChipsets)}><h2>Chipset</h2><img src={activeCollapsChipsets ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsChipsets ? "content activeContent" : "content"}>
           {Array.from(new Set(msiMotherboards.map((item) => item.characteristic.chipset))).map((chipset) => (
