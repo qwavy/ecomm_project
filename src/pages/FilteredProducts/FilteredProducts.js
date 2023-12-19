@@ -50,6 +50,8 @@ const FilteredProducts = () => {
 
     },[activeCollaps])
     const filter = () => {
+
+        console.log('ff')
         console.log(products_store.products)
         setFilteredProducts(products_store.filteredProductsArr)
     }

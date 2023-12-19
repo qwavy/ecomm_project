@@ -1,11 +1,17 @@
 import { useState } from "react"
 import products_store from "../../../store/products_store"
 
+import { action } from "mobx"
+
 const MonitorsFilter = () => {
     const [selectedCategories, setSelectedCategories] = useState([])
     const [msiMonitors, setMsiMonitors] = useState(products_store.msi_monitors)
     const [selectedDisplay_hz, setSelectedDisplay_hz] = useState([])
     const [selectedDisplayResolution,setSelectedDisplayResolution] = useState([])
+
+
+    
+
     const handleCheckboxChange = (category, value, setSelectedCategories) => {
         if (selectedCategories.includes(value)) {
             setSelectedCategories(selectedCategories.filter((c) => c !== value))
@@ -13,12 +19,25 @@ const MonitorsFilter = () => {
             setSelectedCategories([...selectedCategories, value])
         }
     }
-    products_store.filteredProductsArr = msiMonitors.filter((item) => {
-        const isDisplay_hzSelected = selectedDisplay_hz.length == 0 || selectedDisplay_hz.includes(item.characteristic.display_hz)
-        const isDisplayResolutionSelected = selectedDisplayResolution.length == 0 || selectedDisplayResolution.includes(item.characteristic.resolution)
-        return isDisplay_hzSelected && isDisplayResolutionSelected
-    })
+    // products_store.setFilteredProductsArr(msiMonitors.filter((item) => {
+    //     const isDisplay_hzSelected = selectedDisplay_hz.length == 0 || selectedDisplay_hz.includes(item.characteristic.display_hz)
+    //     const isDisplayResolutionSelected = selectedDisplayResolution.length == 0 || selectedDisplayResolution.includes(item.characteristic.resolution)
+    //     return isDisplay_hzSelected && isDisplayResolutionSelected
+    // }))
 
+
+
+
+    const updateFilteredProducts = action(() => {
+        products_store.setFilteredProductsArr(
+          products_store.msi_monitors.filter((item) => {
+            const isDisplay_hzSelected = selectedDisplay_hz.length === 0 || selectedDisplay_hz.includes(item.characteristic.display_hz);
+            const isDisplayResolutionSelected = selectedDisplayResolution.length === 0 || selectedDisplayResolution.includes(item.characteristic.resolution);
+            return isDisplay_hzSelected && isDisplayResolutionSelected;
+          })
+        );
+      });
+    
     return (
         <div>
             <h2>Display Hz</h2>
@@ -46,7 +65,10 @@ const MonitorsFilter = () => {
                                 type="checkbox"
                                 value={resolution}
                                 checked={selectedDisplayResolution.includes(resolution)}
-                                onChange={() => handleCheckboxChange('resolution', resolution, setSelectedDisplayResolution)} />
+                                onChange={() => {
+                                    handleCheckboxChange("resolution", resolution, setSelectedDisplayResolution);
+                                    updateFilteredProducts(); // Call the action to update filtered products
+                                  }} />
                             {resolution}
                         </li>
                     </ul>
