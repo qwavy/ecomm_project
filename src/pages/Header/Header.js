@@ -62,7 +62,9 @@ const Header = () => {
             <img src={cart_icon} />
           </div>
           <div>
+            <Link to='/login'>
             <img src={pfp} />
+            </Link>
           </div>
 
 

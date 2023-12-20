@@ -1,17 +1,57 @@
 import { useState } from 'react'
 import './Login.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const notify = (data) => {
+        if(data === "No such user was found"){
+            return toast.error('No such user was found!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+        if(data === "incorrect password"){
+            return toast.error('incorrect password', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+        toast.success(' Success!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
 
     const handleSubmit = () => {
         const apiUrl = 'http://localhost:5000/api/user/login';
 
         // Замените данные в body на те, которые вы хотите отправить на сервер
         const postData = {
-            email: 'example@email.com',
-            password: 'securepassword',
+            email: email,
+            password: password,
         };
 
         fetch(apiUrl, {
@@ -24,12 +64,13 @@ const Login = () => {
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                    // throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 return response.json();
             })
             .then(data => {
                 console.log('Data received:', data);
+                notify(data.message)
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -64,11 +105,22 @@ const Login = () => {
                     <li>Track orders and more</li>
                 </ul>
                 <button>
-                Create An Account
+                    Create An Account
                 </button>
             </div>
 
-
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     )
 }
