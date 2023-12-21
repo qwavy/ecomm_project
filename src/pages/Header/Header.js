@@ -59,7 +59,9 @@ const Header = () => {
             <img src={search_icon} />
           </div>
           <div>
-            <img src={cart_icon} />
+            <Link to='/cart'>
+              <img src={cart_icon} />
+            </Link>
           </div>
           <div>
             <Link to='/login'>

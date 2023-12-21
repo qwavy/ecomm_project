@@ -1,9 +1,51 @@
 import { useState } from 'react'
-import './Login.css'
+// import './Login.css'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+
+    const notify = (data) => {
+        if (data === "No such user was found") {
+            return toast.error('No such user was found!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        if (data === "incorrect password") {
+            return toast.error('incorrect password', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        toast.success(' Success!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 
     const handleSubmit = () => {
         const apiUrl = 'http://localhost:5000/api/user/registration';
@@ -42,7 +84,7 @@ const Register = () => {
     return (
         <div className='login__site'>
             <div className='login__form'>
-                <h1>Login</h1>
+                <h1>Register</h1>
                 <div>
                     <h1>Your Email</h1>
                     <input type="email" placeholder='Your Email' onChange={(e) => setEmail(e.target.value)} />
@@ -64,10 +106,24 @@ const Register = () => {
                     <li>Track orders and more</li>
                 </ul>
                 <button>
-                Create An Account
+                    <Link to='/register'>
+
+                        Create An Account
+                    </Link>
                 </button>
             </div>
-
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
 
         </div>
     )

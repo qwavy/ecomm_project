@@ -6,26 +6,27 @@ import MotherboardFilter from "../../components/ProductsFilter/Motherboards/Moth
 
 import opened_pointer from '../../images/opened_pointer.png'
 import closed_pointer from '../../images/closed_pointer.png'
-
+import cart_icon from '../../images/cart_icon.png';
 
 import filteredProductsArr from '../../store/products_store'
 import { observer } from "mobx-react-lite"
 import MonitorsFilter from "../../components/ProductsFilter/Monitors/MonitorsFilter"
 import Laptops from "../../components/ProductsFilter/Laptops/Laptops"
 import DekstoFilter from "../../components/ProductsFilter/Dekstop/DekstopFilter"
+import Cart from "../Cart/Cart"
 // import { observer } from "mobx-react-lite"
 
 
 const FilterComponent = () => {
-    switch(products_store.Filterpage) {
+    switch (products_store.Filterpage) {
         case "laptop":
-            return <Laptops/>
+            return <Laptops />
         case "monitor":
-            return <MonitorsFilter/>
+            return <MonitorsFilter />
         case "motherboard":
-            return <MotherboardFilter/>
+            return <MotherboardFilter />
         case "dekstop":
-            return <DekstoFilter/>
+            return <DekstoFilter />
     }
 }
 
@@ -34,8 +35,8 @@ const FilteredProducts = () => {
     const [filteredProducts, setFilteredProducts] = useState([])
     const [countFilteredProducts, setCountFilteredProducts] = useState(0)
 
-    const [activeCollaps,setActiveCollaps] = useState(false)
-    const [activeCollapsContent,setActiveCollapsContent] = useState(false)
+    const [activeCollaps, setActiveCollaps] = useState(false)
+    const [activeCollapsContent, setActiveCollapsContent] = useState(false)
 
 
     // const [filtered]
@@ -48,7 +49,7 @@ const FilteredProducts = () => {
     }, [])
     useEffect(() => {
 
-    },[activeCollaps])
+    }, [activeCollaps])
     const filter = () => {
 
         console.log('ff')
@@ -60,7 +61,50 @@ const FilteredProducts = () => {
     }
     const addCart = (product) => {
         products_store.cart.push(product)
+
     }
+
+    const test = async (product) => {
+
+        try {
+            const url = 'http://localhost:5000/api/basket/basket'; // Замените на ваш эндпоинт для добавления в корзину
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // Дополнительные заголовки могут быть добавлены по необходимости
+                },
+                body: JSON.stringify(product),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const responseData = await response.json();
+            console.log('Полученные данные:', responseData);
+        } catch (error) {
+            console.error('Ошибка при выполнении POST-запроса:', error);
+        }
+    }
+    const getTest = async () => {
+            try {
+                const url = 'http://localhost:5000/api/basket/get'; // Замените на ваш URL-адрес
+
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const responseData = await response.json();
+                console.log(responseData);
+            } catch (error) {
+                console.error('Ошибка при выполнении GET-запроса:', error);
+            }
+    }
+
     return (
         <div className="site">
             <h1>
@@ -68,24 +112,31 @@ const FilteredProducts = () => {
             </h1>
 
             <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
-            
+
             <div className="filter_content">
                 <div className="filter_column">
-                    <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Motherboard Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer}/></button>
+                    <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Motherboard Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
-                        <FilterComponent/>
-                    <button onClick={() => filter()} className="apply_button">Apply Filters</button>
-                    <button onClick={() => clear()}>Clear Filters</button>
+                        <FilterComponent />
+                        <button onClick={() => filter()} className="apply_button">Apply Filters</button>
+                        <button onClick={() => clear()}>Clear Filters</button>
                     </div>
                 </div>
                 <div className="msi_products">
                     {products_store.filteredProductsArr.map((product) => <div className='msi_product'>
-                        <img src={product.image} alt='car' className='msi_image' />
+                        <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
                         <p className='msi_laptop_name'>{product.name}</p>
                         <p><s>{product.old_price}$</s></p>
-                        <span>{product.price}$</span>
+                        <div className="msi_product_container">
 
-                        <button onClick={() => addCart(product)}>asf</button>
+                            <span>{product.price}$</span>
+                            {/* <img src={cart_icon} className="msi_cart" onClick={() => test(product)} /> */}
+                            <img src={cart_icon} className="msi_cart" onClick={() => getTest()} />
+
+                            {/* <Cart data={product.id}/> */}
+
+                        </div>
+
                     </div>)}
 
                 </div>

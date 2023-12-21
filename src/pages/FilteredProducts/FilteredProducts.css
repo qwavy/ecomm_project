@@ -121,3 +121,9 @@
     font-weight: 600;
     line-height: 140%;
 }
+
+
+.msi_product_container{
+    display: flex;
+    justify-content: space-between;
+}

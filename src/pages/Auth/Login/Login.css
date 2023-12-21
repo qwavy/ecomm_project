@@ -1,5 +1,9 @@
 *{
     font-family: Poppins;
+    text-decoration: none;
+}
+body{
+    margin: auto;
 }
 .login__site{
     display: flex;
