@@ -27,6 +27,8 @@ const Admin = () => {
     const [productName, setProductName] = useState("")
     const [productPrice, setProductPrice] = useState(0)
     const [productImg, setProductImg] = useState("https://c.dns-shop.ru/thumb/st1/fit/500/500/589efa18969713b0b8e583cfcbda531e/6274664fe9eb2bcc9a3de254f1b082ba84c17ef6c79d65b245c525f56b5dfb4c.jpg.webp")
+    const [productCategory,setProductCategory] = useState()
+
 
     const addProduct = async () => {
         setProduct({

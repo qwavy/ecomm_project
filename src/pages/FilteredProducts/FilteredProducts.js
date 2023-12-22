@@ -14,6 +14,7 @@ import MonitorsFilter from "../../components/ProductsFilter/Monitors/MonitorsFil
 import Laptops from "../../components/ProductsFilter/Laptops/Laptops"
 import DekstoFilter from "../../components/ProductsFilter/Dekstop/DekstopFilter"
 import Cart from "../Cart/Cart"
+import { Link } from "react-router-dom"
 // import { observer } from "mobx-react-lite"
 
 
@@ -89,20 +90,20 @@ const FilteredProducts = () => {
         }
     }
     const getTest = async () => {
-            try {
-                const url = 'http://localhost:5000/api/basket/get'; // Замените на ваш URL-адрес
+        try {
+            const url = 'http://localhost:5000/api/basket/get'; // Замените на ваш URL-адрес
 
-                const response = await fetch(url);
+            const response = await fetch(url);
 
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const responseData = await response.json();
-                console.log(responseData);
-            } catch (error) {
-                console.error('Ошибка при выполнении GET-запроса:', error);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
+
+            const responseData = await response.json();
+            console.log(responseData);
+        } catch (error) {
+            console.error('Ошибка при выполнении GET-запроса:', error);
+        }
     }
 
     return (
@@ -124,18 +125,19 @@ const FilteredProducts = () => {
                 </div>
                 <div className="msi_products">
                     {products_store.filteredProductsArr.map((product) => <div className='msi_product'>
-                        <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
-                        <p className='msi_laptop_name'>{product.name}</p>
-                        <p><s>{product.old_price}$</s></p>
-                        <div className="msi_product_container">
+                        <Link to={`product${product.name}`}>
+                            <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
+                            <p className='msi_laptop_name'>{product.name}</p>
+                            <p><s>{product.old_price}$</s></p>
+                            <div className="msi_product_container">
 
-                            <span>{product.price}$</span>
-                            {/* <img src={cart_icon} className="msi_cart" onClick={() => test(product)} /> */}
-                            <img src={cart_icon} className="msi_cart" onClick={() => getTest()} />
+                                <span>{product.price}$</span>
+                                <img src={cart_icon} className="msi_cart" onClick={() => getTest()} />
 
-                            {/* <Cart data={product.id}/> */}
 
-                        </div>
+                            </div>
+                        </Link>
+
 
                     </div>)}
 
