@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Admin = () => {
 
@@ -27,14 +27,36 @@ const Admin = () => {
     const [productName, setProductName] = useState("")
     const [productPrice, setProductPrice] = useState(0)
     const [productImg, setProductImg] = useState("https://c.dns-shop.ru/thumb/st1/fit/500/500/589efa18969713b0b8e583cfcbda531e/6274664fe9eb2bcc9a3de254f1b082ba84c17ef6c79d65b245c525f56b5dfb4c.jpg.webp")
-    const [productCategory,setProductCategory] = useState()
+    const [productCategory, setProductCategory] = useState("laptop")
+    const [productCharacteristic, setProductCharacteristic] = useState([{name:'a'}])
+
+
+    useEffect(() => {
+        if (productCategory == "laptop") {
+            setProductCharacteristic([{
+                processer: '',
+                processer_model: '',
+                ram: 0,
+                ssd: 0,
+                display: 0,
+                display_hz: '',
+                video_card: ''
+            }])
+        }
+    }, [productCategory])
+
+    const handleCharacteristic = () => {
+        for(let i = 0;i < productCategory.length;i++){
+            if()
+        }
+    }
 
 
     const addProduct = async () => {
         setProduct({
             name: productName,
-            price:productPrice,
-            img:productImg
+            price: productPrice,
+            img: productImg
         })
         try {
             const url = 'http://localhost:5000/api/product/create'; // Замените на ваш эндпоинт для добавления в корзину
@@ -59,11 +81,11 @@ const Admin = () => {
         }
     }
 
-    const addCart = async() => {
+    const addCart = async () => {
         setProduct({
             name: productName,
-            price:productPrice,
-            img:productImg
+            price: productPrice,
+            img: productImg
         })
         try {
             const url = 'http://localhost:5000/api/basket/basket'; // Замените на ваш эндпоинт для добавления в корзину
@@ -93,6 +115,15 @@ const Admin = () => {
         <div>
             <input onChange={(e) => setProductName(e.target.value)} />
             <input onChange={(e) => setProductPrice(e.target.value)} />
+            <select name="select" onChange={(e) => setProductCategory(e.target.value)}>
+                <option value="laptop">Значение 1</option>
+                <option value="dekstop" selected>Значение 2</option>
+                <option value="monitor">Значение 3</option>
+                <option value="motherboard">Значение 3</option>
+            </select>
+            {productCharacteristic.map((item) => <div>
+                <input onChange={(e) => handleCharacteristic(e.target.value)}/>
+            </div>)}
             <button onClick={() => addProduct()}>add product</button>
             <button onClick={() => addCart()}>add cart</button>
         </div>
