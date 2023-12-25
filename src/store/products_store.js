@@ -23,6 +23,9 @@ class Product {
     cart = []
 
 
+    isLogin = false
+
+
     msi_laptops = [
         {
             id: 1,

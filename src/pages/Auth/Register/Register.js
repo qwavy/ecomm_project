@@ -11,8 +11,8 @@ const Register = () => {
 
 
     const notify = (data) => {
-        if (data === "No such user was found") {
-            return toast.error('No such user was found!', {
+        if (data === "This email is already taken") {
+            return toast.error('This email is already taken', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -23,8 +23,8 @@ const Register = () => {
                 theme: "light",
             });
         }
-        if (data === "incorrect password") {
-            return toast.error('incorrect password', {
+        if (data === "Empty email or password") {
+            return toast.error('Empty email or password', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -52,8 +52,8 @@ const Register = () => {
 
         // Замените данные в body на те, которые вы хотите отправить на сервер
         const postData = {
-            email: 'example@email.com',
-            password: 'securepassword',
+            email: email,
+            password: password,
         };
 
         fetch(apiUrl, {
@@ -65,13 +65,14 @@ const Register = () => {
             body: JSON.stringify(postData),
         })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
+                // if (!response.ok) {
+                //     throw new Error(`Network response was not ok: ${response.statusText}`);
+                // }
                 return response.json();
             })
             .then(data => {
                 console.log('Data received:', data);
+                notify(data.message)
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -98,7 +99,7 @@ const Register = () => {
                 </div>
             </div>
             <div className='banner__register'>
-                <h1>New Customer?</h1>
+                <h1>Do you already have an account?</h1>
                 <p>Creating an account has many benefits:</p>
                 <ul>
                     <li>Check out faster</li>
@@ -106,9 +107,9 @@ const Register = () => {
                     <li>Track orders and more</li>
                 </ul>
                 <button>
-                    <Link to='/register'>
+                    <Link to='/Login'>
 
-                        Create An Account
+                        I have account
                     </Link>
                 </button>
             </div>

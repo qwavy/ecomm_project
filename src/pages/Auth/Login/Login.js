@@ -4,6 +4,7 @@ import './Login.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
+import products_store from '../../../store/products_store';
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -44,6 +45,7 @@ const Login = () => {
             progress: undefined,
             theme: "light",
             });
+        products_store.isLogin = true
     }
 
     const handleSubmit = () => {

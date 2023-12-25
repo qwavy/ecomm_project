@@ -10,7 +10,7 @@ import Login from '../pages/Auth/Login/Login';
 
 import { observer } from 'mobx-react-lite';
 
-import { Route,Routes,Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import Checkout from '../pages/Checkout/Checkout';
 import Payment from '../pages/Payment/Payment';
 import Register from '../pages/Auth/Register/Register';
@@ -18,9 +18,9 @@ import Cart from '../pages/Cart/Cart';
 import Admin from '../pages/Admin/Admin';
 
 const App = () => {
-    return ( 
+    return (
         <div>
-            <Header/>
+            <Header />
             {/* <NewsPage/> */}
 
             {/* <Login/> */}
@@ -31,21 +31,31 @@ const App = () => {
 
 
             {/* <ProductsPage/> */}
+            {products_store.isLogin ? 
             <Routes>
-                <Route path='*' element={<MainPage/>}/>
-                
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/products' element={<FilteredProducts />}/>
-                <Route path='/cart' element={<Cart/>}/>
-                <Route path='/checkout' element={<Checkout/>}/>
-                <Route path='/payment' element={<Payment/>}/>
-                <Route path='/news' element={<NewsPage/>}/>
 
-                <Route path='/admin' element={<Admin/>}/>
+
+                <Route path='*' element={<MainPage/>}/>
+                <Route path='/register' element={<Register />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/products' element={<FilteredProducts />} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='/checkout' element={<Checkout />} />
+                <Route path='/payment' element={<Payment />} />
+                <Route path='/news' element={<NewsPage />} />
+
+                <Route path='/admin' element={<Admin />} />
             </Routes>
-        </div>    
+            :
+            <Routes>
+                <Route path='/register' element={<Register/>}/>
+                <Route path='/*' element={<Login/>}/>
+            
+            
+            </Routes>}
+
+        </div>
     );
 }
- 
-export default App
+
+export default observer(App)

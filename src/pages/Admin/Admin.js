@@ -47,7 +47,7 @@ const Admin = () => {
 
     const handleCharacteristic = () => {
         for(let i = 0;i < productCategory.length;i++){
-            if()
+            // if()
         }
     }
 
