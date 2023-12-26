@@ -1,0 +1,8 @@
+.cart__site{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart__container{
+    /* display: ; */
+}

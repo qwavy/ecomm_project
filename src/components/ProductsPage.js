@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 import products_store from "../store/products_store"
 
-import './ProductsPage.css'
+// import './ProductsPage.css'
 
 const ProductsPage = () => {
     const [msiMotherboards, setMsiMotherboards] = useState(products_store.msi_motherboard)

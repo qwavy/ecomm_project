@@ -22,9 +22,10 @@ class Product {
 
     cart = []
 
+    productIdProps = null
 
-    isLogin = false
-
+    isLogin = true
+    isAdmin = false
 
     msi_laptops = [
         {

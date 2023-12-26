@@ -15,6 +15,7 @@ import Laptops from "../../components/ProductsFilter/Laptops/Laptops"
 import DekstoFilter from "../../components/ProductsFilter/Dekstop/DekstopFilter"
 import Cart from "../Cart/Cart"
 import { Link } from "react-router-dom"
+import ProductPage from "../ProductPage/ProductPage"
 // import { observer } from "mobx-react-lite"
 
 
@@ -57,32 +58,12 @@ const FilteredProducts = () => {
         console.log(products_store.products)
         setFilteredProducts(products_store.filteredProductsArr)
     }
-    const clear = () => {
-        setFilteredProducts(msiProducts)
+    const changeId = (product) => {
+        products_store.productIdProps = product
     }
-    const addCart = async (product) => {
+    const addCart = (product) => {
         products_store.cart.push(product)
-        try {
-            const url = 'http://localhost:5000/api/basket/basket'; // Замените на ваш эндпоинт для добавления в корзину
-
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // Дополнительные заголовки могут быть добавлены по необходимости
-                },
-                body: JSON.stringify(product),
-            });
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const responseData = await response.json();
-            console.log('Полученные данные:', responseData);
-        } catch (error) {
-            console.error('Ошибка при выполнении POST-запроса:', error);
-        }
+        console.log(products_store.cart)
     }
 
     const test = async (product) => {
@@ -109,22 +90,7 @@ const FilteredProducts = () => {
             console.error('Ошибка при выполнении POST-запроса:', error);
         }
     }
-    const getTest = async () => {
-        try {
-            const url = 'http://localhost:5000/api/basket/get'; // Замените на ваш URL-адрес
 
-            const response = await fetch(url);
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const responseData = await response.json();
-            console.log(responseData);
-        } catch (error) {
-            console.error('Ошибка при выполнении GET-запроса:', error);
-        }
-    }
 
     return (
         <div className="site">
@@ -144,29 +110,30 @@ const FilteredProducts = () => {
                 </div>
                 <div className="msi_products">
                     {products_store.filteredProductsArr.map((product) => <div className='msi_product'>
-                        <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
-                        <p className='msi_laptop_name'>{product.name}</p>
-                        <p><s>{product.old_price}$</s></p>
-                        <div className="msi_product_container">
+                            <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
+                            <p className='msi_laptop_name'>{product.name}</p>
+                            <p><s>{product.old_price}$</s></p>
+                            <div className="msi_product_container">
 
-                            <span>{product.price}$</span>
-                            <button onClick={() => addCart(product)}>
+                                <span>{product.price}$</span>
+                                <button onClick={() => addCart(product)}>
 
-                                <img src={cart_icon} className="msi_cart" onClick={() => getTest()} />
-                            </button>
+                                    <img src={cart_icon} className="msi_cart"  />
+                                </button>
+
+                            </div>
 
 
-                        </div>
 
 
                     </div>)}
 
-                </div>
-
             </div>
 
-
         </div>
+
+
+        </div >
     )
 }
 export default (FilteredProducts)

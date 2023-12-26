@@ -49,14 +49,16 @@ const Header = () => {
           <Link to="/">
             <p>About us</p>
           </Link>
-          <Link to="/">
+          <Link to="/Checkout">
             <button>Chekout</button>
           </Link>
 
         </div>
         <div className='header__profile'>
           <div>
-            <img src={search_icon} />
+            <Link to="/admin">
+              <img src={search_icon} />
+            </Link>
           </div>
           <div>
             <Link to='/cart'>

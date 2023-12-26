@@ -46,6 +46,9 @@ const Login = () => {
             theme: "light",
             });
         products_store.isLogin = true
+        if(email == "admin"){
+            products_store.isAdmin = true
+        }
     }
 
     const handleSubmit = () => {
@@ -84,50 +87,6 @@ const Login = () => {
 
 
     return (
-        // <div className='login__site'>
-        //     <div className='login__form'>
-        //         <h1>Login</h1>
-        //         <div>
-        //             <h1>Your Email</h1>
-        //             <input type="email" placeholder='Your Email' onChange={(e) => setEmail(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <h1>Your Password</h1>
-        //             <input type='password' placeholder='Your Password' onChange={(e) => setPassword(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <button onClick={() => handleSubmit()}>Login</button>
-        //         </div>
-        //     </div>
-        //     <div className='banner__register'>
-        //         <h1>New Customer?</h1>
-        //         <p>Creating an account has many benefits:</p>
-        //         <ul>
-        //             <li>Check out faster</li>
-        //             <li>Keep more than one address</li>
-        //             <li>Track orders and more</li>
-        //         </ul>
-        //         <button>
-        //         <Link to='/register'>
-                
-        //             Create An Account
-        //         </Link>
-        //         </button>
-        //     </div>
-
-        //     <ToastContainer
-        //         position="top-center"
-        //         autoClose={5000}
-        //         hideProgressBar={false}
-        //         newestOnTop={false}
-        //         closeOnClick
-        //         rtl={false}
-        //         pauseOnFocusLoss
-        //         draggable
-        //         pauseOnHover
-        //         theme="light"
-        //     />
-        // </div>
         <div className='login__site'>
         <div className='login__form'>
             <h1>Login</h1>

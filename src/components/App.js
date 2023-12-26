@@ -16,6 +16,11 @@ import Payment from '../pages/Payment/Payment';
 import Register from '../pages/Auth/Register/Register';
 import Cart from '../pages/Cart/Cart';
 import Admin from '../pages/Admin/Admin';
+import ProductPage from '../pages/ProductPage/ProductPage';
+import Footer from '../pages/Footer/Footer';
+
+import './App.css'
+
 
 const App = () => {
     return (
@@ -31,28 +36,38 @@ const App = () => {
 
 
             {/* <ProductsPage/> */}
-            {products_store.isLogin ? 
-            <Routes>
+            <div style={{minHeight:"980px"}} >
+                {products_store.isLogin ?
+                    <Routes>
 
 
-                <Route path='*' element={<MainPage/>}/>
-                <Route path='/register' element={<Register />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/products' element={<FilteredProducts />} />
-                <Route path='/cart' element={<Cart />} />
-                <Route path='/checkout' element={<Checkout />} />
-                <Route path='/payment' element={<Payment />} />
-                <Route path='/news' element={<NewsPage />} />
+                        <Route path='*' element={<MainPage />} />
+                        <Route path='/register' element={<Register />} />
+                        <Route path='/login' element={<Login />} />
+                        <Route path='/products' element={<FilteredProducts />} />
+                        <Route path='/productPage' element={<ProductPage />} />
+                        <Route path='/cart' element={<Cart />} />
+                        <Route path='/checkout' element={<Checkout />} />
+                        <Route path='/payment' element={<Payment />} />
+                        <Route path='/news' element={<NewsPage />} />
 
-                <Route path='/admin' element={<Admin />} />
-            </Routes>
-            :
-            <Routes>
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/*' element={<Login/>}/>
-            
-            
-            </Routes>}
+                        <Route path='/admin' element={<Admin />} />
+                    </Routes>
+                    :
+                    <Routes>
+                        <Route path='/register' element={<Register />} />
+                        <Route path='/*' element={<Login />} />
+
+                        {products_store.isAdmin ?
+                            <Route path='/admin' element={<Admin />} /> :
+                            <Route path='/admin' element={<MainPage />} />
+
+                        }
+                    </Routes>}
+            </div>
+
+
+            <Footer />
 
         </div>
     );
