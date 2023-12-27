@@ -63,7 +63,7 @@ const FilteredProducts = () => {
     }
     const addCart = (product) => {
         products_store.cart.push(product)
-        console.log(products_store.cart)
+        products_store.cart_total += product.price
     }
 
     const test = async (product) => {

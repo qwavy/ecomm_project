@@ -1,8 +1,13 @@
-.cart__site{
-    display: flex;
-    justify-content: space-around;
+.cart__site {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
 }
 
-.cart__container{
+.cart__container {
     /* display: ; */
 }

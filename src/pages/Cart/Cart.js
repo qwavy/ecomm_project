@@ -31,7 +31,7 @@ const Cart = () => {
             </div>
             {products_store.cart.map((product) => (
                 <div className='cart__container'>
-                    <div key={product.id} className='msi_product'>
+                    <div key={product.id} className='msi_product' style={{border:"none"}}>
                         <img src={product.image} alt={product.name} className='msi_image' style={{ width: "170px" }} />
                         <p className='msi_laptop_name'>{product.name}</p>
                         <p><s>{product.old_price}$</s></p>
@@ -90,6 +90,7 @@ const Cart = () => {
                     </div>
                 </div>
             ))}
+            {products_store.cart_total}
         </div>
     );
 };
