@@ -92,34 +92,6 @@ const MainPage = () => {
           </div>
         </div>
 
-        <div className='msi_content'>
-          <div className='msi_banner'>
-            <p>msi laptops</p>
-            <p><a>all products</a></p>
-          </div>
-          <div className='msi_products'>
-            {msiHeadphonesFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} alt='car' className='msi_image' />
-              <p className='msi_laptop_name'>{laptop.name}</p>
-              <p><s>{laptop.old_price}$</s></p>
-              <span>{laptop.price}$</span>
-            </div>)}
-          </div>
-        </div>
-        <div className='msi_content'>
-          <div className='msi_banner'>
-            <p>msi laptops</p>
-            <p><a>all products</a></p>
-          </div>
-          <div className='msi_products'>
-            {msiMotherboardFive.map((laptop) => <div className='msi_product'>
-              <img src={laptop.image} alt='car' className='msi_image' />
-              <p className='msi_laptop_name'>{laptop.name}</p>
-              <p><s>{laptop.old_price}$</s></p>
-              <span>{laptop.price}$</span>
-            </div>)}
-          </div>
-        </div>
         
       </div>
     </div>

@@ -99,7 +99,7 @@ const Login = () => {
                 <input type='password' placeholder='Your Password' onChange={(e) => setPassword(e.target.value)} />
             </div>
             <div>
-                <button onClick={() => handleSubmit()}>Login</button>
+                <button onClick={() => handleSubmit()} style={{marginTop:"40px",width:"200px"}}>Login</button>
             </div>
         </div>
         <div className='banner__register'>
@@ -110,12 +110,12 @@ const Login = () => {
                 <li>Keep more than one address</li>
                 <li>Track orders and more</li>
             </ul>
-            <button>
             <Link to='/register'>
+            <button style={{color:"white"}}>
                 
                 Create An Account
-            </Link>
             </button>
+            </Link>
         </div>
         <ToastContainer
                 position="top-center"

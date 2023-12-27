@@ -95,23 +95,19 @@ const Register = () => {
                     <input type='password' placeholder='Your Password' onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div>
-                    <button onClick={() => handleSubmit()}>Login</button>
+                    <button onClick={() => handleSubmit()} style={{marginTop:"40px",width:"200px"}}>Register</button>
                 </div>
             </div>
             <div className='banner__register'>
                 <h1>Do you already have an account?</h1>
-                <p>Creating an account has many benefits:</p>
-                <ul>
-                    <li>Check out faster</li>
-                    <li>Keep more than one address</li>
-                    <li>Track orders and more</li>
-                </ul>
-                <button>
+                <p>You cun currently login to your account</p>
+
                     <Link to='/Login'>
+                <button style={{color:"white"}}>
 
                         I have account
-                    </Link>
                 </button>
+                    </Link>
             </div>
             <ToastContainer
                 position="top-center"

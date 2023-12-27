@@ -46,12 +46,6 @@ const Header = () => {
           <Link to="/news">
             <p>News</p>
           </Link>
-          <Link to="/">
-            <p>About us</p>
-          </Link>
-          <Link to="/Checkout">
-            <button>Chekout</button>
-          </Link>
 
         </div>
         <div className='header__profile'>

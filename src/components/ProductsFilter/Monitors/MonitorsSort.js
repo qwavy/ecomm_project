@@ -13,6 +13,7 @@ const MonitorsSort = () => {
         const sorted = msiProducts.sort(compare)
         setMsiProducts(sorted)
         console.log(sorted)
+        
         // setMsiProducts([])
     }
 

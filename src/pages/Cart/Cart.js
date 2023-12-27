@@ -4,6 +4,9 @@ import products_store from '../../store/products_store';
 
 import './Cart.css'
 
+
+import bin from '../../images/bin.png'
+
 const Cart = () => {
 
     const products = [{
@@ -39,7 +42,7 @@ const Cart = () => {
                             <span>{product.price}$</span>
                         </div>
                     </div>
-
+                    
                     <div>
                         {/* Добавляем блок для характеристик в зависимости от категории продукта */}
                         {product.category === 'laptop' && (
@@ -88,9 +91,10 @@ const Cart = () => {
                             </div>
                         )}
                     </div>
+                    <button style={{backgroundColor:"white",border:"none"}}><img src={bin} style={{width:"30px",height:"30px"}}/></button>
                 </div>
             ))}
-            {products_store.cart_total}
+            {/* {products_store.cart_total} */}
         </div>
     );
 };

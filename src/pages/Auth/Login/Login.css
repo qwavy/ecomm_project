@@ -31,3 +31,6 @@ body{
     color: #FFF;
     border: none;
 }
+.banner__register button{
+    color: white !important;
+}

@@ -8,6 +8,7 @@
 
 }
 
-.cart__container {
-    /* display: ; */
+.cart__site {
+    display: flex;
+    justify-content: center;
 }

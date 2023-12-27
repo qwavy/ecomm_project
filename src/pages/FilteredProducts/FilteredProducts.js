@@ -94,15 +94,13 @@ const FilteredProducts = () => {
 
     return (
         <div className="site">
-            <h1>
-                {products_store.counter}
-            </h1>
+
 
             <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
 
             <div className="filter_content">
                 <div className="filter_column">
-                    <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Motherboard Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
+                    <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
                         <FilterComponent />
                         <button onClick={() => filter()} className="apply_button">Apply Filters</button>
@@ -116,7 +114,7 @@ const FilteredProducts = () => {
                             <div className="msi_product_container">
 
                                 <span>{product.price}$</span>
-                                <button onClick={() => addCart(product)}>
+                                <button onClick={() => addCart(product)} style={{backgroundColor:"white",border:"none",paddingBottom:"10px"}}>
 
                                     <img src={cart_icon} className="msi_cart"  />
                                 </button>

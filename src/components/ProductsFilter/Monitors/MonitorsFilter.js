@@ -4,6 +4,7 @@ import products_store from "../../../store/products_store"
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
 
+import search_icon from '../../../images/search_icon.png';
 
 const MonitorsFilter = () => {
 
@@ -61,9 +62,7 @@ const MonitorsFilter = () => {
 
     return (
         <div>
-      <input onChange={(e) => setValue(e.target.value)}/>        <h2>
-      search
-        </h2>
+      <input onChange={(e) => setValue(e.target.value)}/> 
             <button class={activeCollapsResponseTime ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsResponseTime(!activeCollapsResponseTime)}><h2>Response Time</h2><img src={activeCollapsResponseTime ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsResponseTime ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiMonitors.map((item) => item.characteristic.response_time))).map((response_time) => (
