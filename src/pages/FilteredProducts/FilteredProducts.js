@@ -64,12 +64,12 @@ const FilteredProducts = () => {
         // products_store.productIdProps = product
     }
     const addCart = (product) => {
-        products_store.cart.addProduct(product)
+        products_store.addProduct(product)
         // products_store.cart_total += product.price
     }
 
     const addFavourites = (product) => {
-        products_store.favourites.addFavourite(product)
+        products_store.addFavourite(product)
         console.log(products_store.favourites)
     }
 

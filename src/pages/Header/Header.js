@@ -8,6 +8,9 @@ import pfp from '../../images/pfp.png';
 import cart_icon from '../../images/cart_icon.png';
 import search_icon from '../../images/search_icon.png';
 import logo from '../../images/Logo.png'
+import favorite_icon from '../../images/Favorite.png'
+
+
 
 import products_store from '../../store/products_store';
 
@@ -50,8 +53,9 @@ const Header = () => {
         </div>
         <div className='header__profile'>
           <div>
-            <Link to="/admin">
-              <img src={search_icon} />
+            <Link to="/favourite">
+              {/* <img src={search_icon} /> */}
+              <img src={favorite_icon}/>
             </Link>
           </div>
           <div>
