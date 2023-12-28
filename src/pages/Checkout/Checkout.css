@@ -1,17 +1,33 @@
-
-.shipping_site{
+.shipping_site {
     display: flex;
     justify-content: center;
 }
-.important{
+
+.important {
     color: red;
 }
-.shipping_input{
+
+.shipping_input {
     padding: 18px 60px;
     border-radius: 8px;
-border:1px solid rgba(162, 166, 176, 1) ;
+    border: 1px solid rgba(162, 166, 176, 1);
 }
-.shipping_input[type=text]{
+
+.shipping_input[type=text] {
     font-size: 10002px;
 
+}
+
+.payment__button {
+    border-radius: 50px;
+    border: 2px solid var(--Color---3, #0156FF);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: white;
+    color: 0156FF;
+    margin-top:40px
 }

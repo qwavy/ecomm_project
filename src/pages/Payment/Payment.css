@@ -67,3 +67,16 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+
+
+.payment__input{
+  border: 1px solid #0156FF;
+  padding: 12px;
+  margin: 30px 0 0 30px;
+  border-radius: 12px;
+}
+.payment__input::placeholder{
+  color: black;
+  font-weight: 12px;
+}
