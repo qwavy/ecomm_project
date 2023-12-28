@@ -20,8 +20,23 @@ class Product {
     Filterpage = ""
     filteredProductsArr = []
 
+
+
     cart = []
     cart_total = 0 
+
+    deleteProduct(productId) {
+        this.cart = this.cart.filter((product) => product.id !== productId);
+    }
+    addProduct(product){
+        this.cart.push(product)
+    }
+
+    favourites = []
+
+    addFavourite(product){
+        this.favourites.push(product)
+    }
     productIdProps = null
 
     isLogin = true

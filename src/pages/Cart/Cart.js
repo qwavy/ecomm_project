@@ -1,11 +1,12 @@
 import React from 'react';
-
+// observer
 import products_store from '../../store/products_store';
 
 import './Cart.css'
 
-
+import useStore from '../../store/products_store' 
 import bin from '../../images/bin.png'
+import { observer } from 'mobx-react-lite';
 
 const Cart = () => {
 
@@ -27,6 +28,13 @@ const Cart = () => {
         }
     }]
 
+     
+    // const store = useStore(); // замените на реальное получение вашего MobX-стора
+
+    const handleDelete = (productId) => {
+      products_store.deleteProduct(productId);
+    };
+
     return (
         <div className='cart__site'>
             <div>
@@ -34,7 +42,7 @@ const Cart = () => {
             </div>
             {products_store.cart.map((product) => (
                 <div className='cart__container'>
-                    <div key={product.id} className='msi_product' style={{border:"none"}}>
+                    <div key={product.id} className='msi_product' style={{ border: "none" }}>
                         <img src={product.image} alt={product.name} className='msi_image' style={{ width: "170px" }} />
                         <p className='msi_laptop_name'>{product.name}</p>
                         <p><s>{product.old_price}$</s></p>
@@ -42,7 +50,7 @@ const Cart = () => {
                             <span>{product.price}$</span>
                         </div>
                     </div>
-                    
+
                     <div>
                         {/* Добавляем блок для характеристик в зависимости от категории продукта */}
                         {product.category === 'laptop' && (
@@ -91,7 +99,7 @@ const Cart = () => {
                             </div>
                         )}
                     </div>
-                    <button style={{backgroundColor:"white",border:"none"}}><img src={bin} style={{width:"30px",height:"30px"}}/></button>
+                    <button style={{ backgroundColor: "white", border: "none" }}><img src={bin} style={{ width: "30px", height: "30px" }} onClick={() => handleDelete(product.id)} /></button>
                 </div>
             ))}
             {/* {products_store.cart_total} */}
@@ -99,4 +107,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default observer(Cart);

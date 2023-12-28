@@ -7,6 +7,8 @@ import MotherboardFilter from "../../components/ProductsFilter/Motherboards/Moth
 import opened_pointer from '../../images/opened_pointer.png'
 import closed_pointer from '../../images/closed_pointer.png'
 import cart_icon from '../../images/cart_icon.png';
+import favorite_icon from '../../images/Favorite.png'
+
 
 import filteredProductsArr from '../../store/products_store'
 import { observer } from "mobx-react-lite"
@@ -59,11 +61,16 @@ const FilteredProducts = () => {
         setFilteredProducts(products_store.filteredProductsArr)
     }
     const changeId = (product) => {
-        products_store.productIdProps = product
+        // products_store.productIdProps = product
     }
     const addCart = (product) => {
-        products_store.cart.push(product)
-        products_store.cart_total += product.price
+        products_store.cart.addProduct(product)
+        // products_store.cart_total += product.price
+    }
+
+    const addFavourites = (product) => {
+        products_store.favourites.addFavourite(product)
+        console.log(products_store.favourites)
     }
 
     const test = async (product) => {
@@ -114,8 +121,10 @@ const FilteredProducts = () => {
                             <div className="msi_product_container">
 
                                 <span>{product.price}$</span>
+                                <button onClick={() => addFavourites(product)} style={{backgroundColor:"white",border:"none",paddingBottom:"10px"}}>
+                                    <img src={favorite_icon} />
+                                </button>
                                 <button onClick={() => addCart(product)} style={{backgroundColor:"white",border:"none",paddingBottom:"10px"}}>
-
                                     <img src={cart_icon} className="msi_cart"  />
                                 </button>
 
