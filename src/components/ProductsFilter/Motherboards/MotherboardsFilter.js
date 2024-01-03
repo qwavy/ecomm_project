@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import products_store from "../../../store/products_store"
 
 
 
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
-// import '../../../pages/FilteredProducts'
 
 import { observer } from 'mobx-react-lite';
 
@@ -32,12 +31,8 @@ const MotherboardFilter = () => {
     products_store.counter += 1
   };
 
-  // products_store.filteredProductsArr = msiMotherboards.filter((product) => {
-  //   return product.name.toLowerCase().includes(value.toLowerCase())
-  // })
 
-
-  products_store.filteredProductsArr = msiMotherboards.filter((item) => {
+  const filtered = msiMotherboards.filter((item) => {
     const isChipsetSelected = selectedChipsets.length === 0 || selectedChipsets.includes(item.characteristic.chipset);
     const isRamTypeSelected = selectedRamTypes.length === 0 || selectedRamTypes.includes(item.characteristic.type_ram);
     const isSocketSelected = selectedSocket.length == 0 || selectedSocket.includes(item.characteristic.socket)
@@ -46,7 +41,19 @@ const MotherboardFilter = () => {
 
 
     return isChipsetSelected && isRamTypeSelected && isSocketSelected && inputChange;
-  });
+  })
+
+  useEffect(() => {
+    products_store.setFilteredProductsArr(filtered)
+
+  },[])
+
+  const applyFilter = () => {
+    products_store.setFilteredProductsArr(filtered)
+  }
+
+
+
 
   return (
     <div>
@@ -112,10 +119,11 @@ const MotherboardFilter = () => {
             </label>
           ))}
         </div>
+        <button onClick={() => applyFilter()} className="apply_button">Apply Filters</button>
 
       </div>
     </div>
   );
 };
 
-export default (MotherboardFilter);
+export default observer(MotherboardFilter);

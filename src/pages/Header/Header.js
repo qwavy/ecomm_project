@@ -18,7 +18,7 @@ import products_store from '../../store/products_store';
 const Header = () => {
 
   const changePage = (page) => {
-    products_store.Filterpage = page
+    products_store.setFilterPage(page)
     console.log(page)
   }
 
@@ -34,16 +34,16 @@ const Header = () => {
 
         <div className='header__navbar'>
 
-          <Link to="/products">
+          <Link to="/laptops">
             <p onClick={() => changePage("laptop")}>Laptops</p>
           </Link>
-          <Link to="/products">
+          <Link to="/dekstops">
             <p onClick={() => changePage("dekstop")}>Desktop PCs</p>
           </Link>
-          <Link to="/products">
+          <Link to="/monitors">
             <p onClick={() => changePage("monitor")}>Monitors</p>
           </Link>
-          <Link to="/products">
+          <Link to="/motherboards">
             <p onClick={() => changePage("motherboard")}>Motherboards</p>
           </Link>
           <Link to="/news">

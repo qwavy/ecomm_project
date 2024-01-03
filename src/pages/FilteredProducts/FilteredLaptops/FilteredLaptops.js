@@ -1,38 +1,20 @@
 import { useEffect, useState } from "react"
-import products_store from "../../store/products_store"
-import './FilteredProducts.css'
-import MotherboardFilter from "../../components/ProductsFilter/Motherboards/MotherboardsFilter"
+import products_store from "../../../store/products_store"
+import MotherboardFilter from "../../../components/ProductsFilter/Motherboards/MotherboardsFilter"
 
 
-import opened_pointer from '../../images/opened_pointer.png'
-import closed_pointer from '../../images/closed_pointer.png'
-import cart_icon from '../../images/cart_icon.png';
-import favorite_icon from '../../images/Favorite.png'
+import opened_pointer from '../../../images/opened_pointer.png'
+import closed_pointer from '../../../images/closed_pointer.png'
+import cart_icon from '../../../images/cart_icon.png';
+import favorite_icon from '../../../images/Favorite.png'
 
 
-import filteredProductsArr from '../../store/products_store'
 import { observer } from "mobx-react-lite"
-import MonitorsFilter from "../../components/ProductsFilter/Monitors/MonitorsFilter"
-import Laptops from "../../components/ProductsFilter/Laptops/Laptops"
-import DekstoFilter from "../../components/ProductsFilter/Dekstop/DekstopFilter"
-import Cart from "../Cart/Cart"
-import { Link } from "react-router-dom"
-import ProductPage from "../ProductPage/ProductPage"
+import Laptops from "../../../components/ProductsFilter/Laptops/Laptops"
 // import { observer } from "mobx-react-lite"
 
 
-const FilterComponent = () => {
-    switch (products_store.Filterpage) {
-        case "laptop":
-            return <Laptops />
-        case "monitor":
-            return <MonitorsFilter />
-        case "motherboard":
-            return <MotherboardFilter />
-        case "dekstop":
-            return <DekstoFilter />
-    }
-}
+
 
 const FilteredProducts = () => {
     const [msiProducts, setMsiProducts] = useState(products_store.msi_motherboard)
@@ -103,7 +85,7 @@ const FilteredProducts = () => {
                 <div className="filter_column">
                     <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
-                        <FilterComponent />
+                        <Laptops/>
                     </div>
                 </div>
                 <div className="msi_products">

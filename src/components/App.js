@@ -20,6 +20,10 @@ import ProductPage from '../pages/ProductPage/ProductPage';
 import Footer from '../pages/Footer/Footer';
 
 import './App.css'
+import FilteredMonitors from '../pages/FilteredProducts/FilteredMonitors/FilteredMonitors';
+import FilteredDekstops from '../pages/FilteredProducts/FilteredDekstops/FilteredDekstops';
+import FilteredMotherboards from '../pages/FilteredProducts/FilteredMotherboards/FilteredMotherboards';
+import FilteredLaptops from '../pages/FilteredProducts/FilteredLaptops/FilteredLaptops';
 
 
 const App = () => {
@@ -44,7 +48,10 @@ const App = () => {
                         <Route path='*' element={<MainPage />} />
                         <Route path='/register' element={<Register />} />
                         <Route path='/login' element={<Login />} />
-                        <Route path='/products' element={<FilteredProducts />} />
+                        <Route path='/laptops' element={<FilteredLaptops />} />
+                        <Route path='/monitors' element={<FilteredMonitors />} />
+                        <Route path='/dekstops' element={<FilteredDekstops />} />
+                        <Route path='/motherboards' element={<FilteredMotherboards />} />
                         <Route path='/productPage' element={<ProductPage />} />
                         <Route path='/cart' element={<Cart />} />
                         <Route path='/checkout' element={<Checkout />} />

@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import products_store from "../../../store/products_store"
 
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
+import { observer } from "mobx-react-lite"
 
 
 
@@ -12,10 +13,10 @@ const Laptops = () => {
     const [selectedSsd, setSelectedSsd] = useState([])
     const [selectedProcesser, setSelectedProcesser] = useState([])
     const [selectedProcesser_model, setSelectedProcesser_model] = useState([])
-    const [selectedRam,setSelectedRam] = useState([])
-    const [selectedDisplay,setSelectedDisplay] = useState([])
-    const [selectedDisplay_hz,setSelectedDisplay_hz] = useState([])
-    const [selectedVideocard,setSelectedVideocard] = useState([]) 
+    const [selectedRam, setSelectedRam] = useState([])
+    const [selectedDisplay, setSelectedDisplay] = useState([])
+    const [selectedDisplay_hz, setSelectedDisplay_hz] = useState([])
+    const [selectedVideocard, setSelectedVideocard] = useState([])
 
     const [activeCollapsProduct, setActiveCollapsProduct] = useState(false);
     const [activeCollapsSsd, setActiveCollapsSsd] = useState(false);
@@ -33,7 +34,10 @@ const Laptops = () => {
             setSelectedCategories([...selectedCategories, value])
         }
     }
-    products_store.filteredProductsArr = msiLaptops.filter((item) => {
+    // products_store.filteredProductsArr =
+
+
+    const filtered = msiLaptops.filter((item) => {
         const isSelectedSsd = selectedSsd.length == 0 || selectedSsd.includes(item.characteristic.ssd)
         const isSelectedProcesser = selectedProcesser.length == 0 || selectedProcesser.includes(item.characteristic.processer)
         const isSelectedProcesser_model = selectedProcesser_model.length == 0 || selectedProcesser_model.includes(item.characteristic.processer_model)
@@ -46,82 +50,95 @@ const Laptops = () => {
         return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model && isSelectedRam && isSelectedDisplay && isSelectedDisplay_hz && isSelectedVideocard
     })
 
+    useEffect(() => {
+        products_store.setFilteredProductsArr(filtered)
+
+    }, [])
+
+    const applyFilter = () => {
+        products_store.setFilteredProductsArr(filtered)
+        
+    }
+
+
+
+
     return (
-    <div>
-    
+        <div>
 
-        <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>Ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsSsd ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
-                <label><ul>
-                    <li>
-                        <input
-                            type="checkbox"
-                            value={ssd}
-                            checked={selectedSsd.includes(ssd)}
-                            onChange={() => handleCheckboxChange('ssd', ssd, setSelectedSsd)} />
-                        {ssd} GB
 
-                    </li>
-                </ul>
-                </label>
-             
-            ))}
-        </div>
-        <button class={activeCollapsProcesser_model ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser_model(!activeCollapsProcesser_model)}><h2>Processer Model</h2><img src={activeCollapsProcesser_model ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsProcesser_model ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer_model))).map((processer_model) => (
-                <label><ul>
-                    <li>
-                        <input
-                            type="checkbox"
-                            value={processer_model}
-                            checked={selectedProcesser_model.includes(processer_model)}
-                            onChange={() => handleCheckboxChange('processer_model', processer_model, setSelectedProcesser_model)}
-                        />
-                        {processer_model}
-                    </li>
-                </ul>
-                </label>
-            ))}
-        </div>
-        <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>processer company</h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsProcesser ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer))).map((processer) => (
-                <label><ul>
-                    <li>
-                        <input
-                            type="checkbox"
-                            value={processer}
-                            checked={selectedProcesser.includes(processer)}
-                            onChange={() => handleCheckboxChange('processer', processer, setSelectedProcesser)}
-                        />
-                        {processer}
-                    </li>
-                </ul>
+            <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>Ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsSsd ? "content activeContent" : "content"}>
+                {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
+                    <label><ul>
+                        <li>
+                            <input
+                                type="checkbox"
+                                value={ssd}
+                                checked={selectedSsd.includes(ssd)}
+                                onChange={() => handleCheckboxChange('ssd', ssd, setSelectedSsd)} />
+                            {ssd} GB
 
-                </label>
-            ))}
-        </div>
-        <button class={activeCollapsRam ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRam (!activeCollapsRam)}><h2>ram</h2><img src={activeCollapsRam ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsRam ? "content activeContent" : "content"}>
-            {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ram))).map((ram) => (
-                <label><ul>
-                    <li>
-                        <input
-                            type="checkbox"
-                            value={ram}
-                            checked={selectedRam.includes(ram)}
-                            onChange={() => handleCheckboxChange('ram', ram, setSelectedRam)}
-                        />
-                        {ram}
-                    </li>
-                </ul>
-                </label>
-            ))}
-        </div>
-        <button class={activeCollapsDisplay ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay (!activeCollapsDisplay)}><h2>display</h2><img src={activeCollapsDisplay ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsDisplay ? "content activeContent" : "content"}></div>
+                        </li>
+                    </ul>
+                    </label>
+
+                ))}
+            </div>
+            <button class={activeCollapsProcesser_model ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser_model(!activeCollapsProcesser_model)}><h2>Processer Model</h2><img src={activeCollapsProcesser_model ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsProcesser_model ? "content activeContent" : "content"}>
+                {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer_model))).map((processer_model) => (
+                    <label><ul>
+                        <li>
+                            <input
+                                type="checkbox"
+                                value={processer_model}
+                                checked={selectedProcesser_model.includes(processer_model)}
+                                onChange={() => handleCheckboxChange('processer_model', processer_model, setSelectedProcesser_model)}
+                            />
+                            {processer_model}
+                        </li>
+                    </ul>
+                    </label>
+                ))}
+            </div>
+            <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>processer company</h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsProcesser ? "content activeContent" : "content"}>
+                {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer))).map((processer) => (
+                    <label><ul>
+                        <li>
+                            <input
+                                type="checkbox"
+                                value={processer}
+                                checked={selectedProcesser.includes(processer)}
+                                onChange={() => handleCheckboxChange('processer', processer, setSelectedProcesser)}
+                            />
+                            {processer}
+                        </li>
+                    </ul>
+
+                    </label>
+                ))}
+            </div>
+            <button class={activeCollapsRam ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRam(!activeCollapsRam)}><h2>ram</h2><img src={activeCollapsRam ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsRam ? "content activeContent" : "content"}>
+                {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ram))).map((ram) => (
+                    <label><ul>
+                        <li>
+                            <input
+                                type="checkbox"
+                                value={ram}
+                                checked={selectedRam.includes(ram)}
+                                onChange={() => handleCheckboxChange('ram', ram, setSelectedRam)}
+                            />
+                            {ram}
+                        </li>
+                    </ul>
+                    </label>
+                ))}
+            </div>
+            <button class={activeCollapsDisplay ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay(!activeCollapsDisplay)}><h2>display</h2><img src={activeCollapsDisplay ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsDisplay ? "content activeContent" : "content"}></div>
             {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display))).map((display) => (
                 <label><ul>
                     <li>
@@ -136,8 +153,8 @@ const Laptops = () => {
                 </ul>
                 </label>
             ))}
-        <button class={activeCollapsDisplay_hz ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay_hz (!activeCollapsDisplay_hz)}><h2>display_hz</h2><img src={activeCollapsDisplay_hz ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsDisplay_hz ? "content activeContent" : "content"}></div>   
+            <button class={activeCollapsDisplay_hz ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay_hz(!activeCollapsDisplay_hz)}><h2>display_hz</h2><img src={activeCollapsDisplay_hz ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsDisplay_hz ? "content activeContent" : "content"}></div>
             {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display_hz))).map((display_hz) => (
                 <label><ul>
                     <li>
@@ -150,10 +167,10 @@ const Laptops = () => {
                         {display_hz}
                     </li>
                 </ul>
-                </label>   
+                </label>
             ))}
-        <button class={activeCollapsVideocard ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsVideocard(!activeCollapsVideocard)}><h2>videocard</h2><img src={activeCollapsVideocard ? opened_pointer : closed_pointer} /></button>
-        <div class={activeCollapsVideocard ? "content activeContent" : "content"}></div>
+            <button class={activeCollapsVideocard ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsVideocard(!activeCollapsVideocard)}><h2>videocard</h2><img src={activeCollapsVideocard ? opened_pointer : closed_pointer} /></button>
+            <div class={activeCollapsVideocard ? "content activeContent" : "content"}></div>
             {Array.from(new Set(msiLaptops.map((item) => item.characteristic.video_card))).map((videocard) => (
                 <label><ul>
                     <li>
@@ -169,6 +186,8 @@ const Laptops = () => {
 
                 </label>
             ))}
+            <button onClick={() => applyFilter()} className="apply_button">Apply Filters</button>
+
             {/* {filteredLaptops.map((laptop) => <div>
                 <li key={laptop.id}>
                     <div>{laptop.name}</div>
@@ -180,4 +199,4 @@ const Laptops = () => {
 
     )
 }
-export default Laptops
+export default observer(Laptops)

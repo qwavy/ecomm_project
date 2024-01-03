@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import products_store from "../../../store/products_store"
 
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
 
 import search_icon from '../../../images/search_icon.png';
+import { observer } from "mobx-react-lite";
 
 const MonitorsFilter = () => {
 
@@ -34,7 +35,7 @@ const MonitorsFilter = () => {
     const [activeCollapsBrightness, setActiveCollapsBrightness] = useState(false);
 
 
-  const [value,setValue] = useState("")
+    const [value, setValue] = useState("")
 
 
 
@@ -46,7 +47,8 @@ const MonitorsFilter = () => {
             setSelectedCategories([...selectedCategories, value])
         }
     }
-    products_store.filteredProductsArr = msiMonitors.filter((item) => {
+
+    const filtered = msiMonitors.filter((item) => {
         const isDisplay_hzSelected = selectedDisplay_hz.length == 0 || selectedDisplay_hz.includes(item.characteristic.display_hz)
         const isDisplayResolutionSelected = selectedDisplayResolution.length == 0 || selectedDisplayResolution.includes(item.characteristic.resolution)
         const isResponseTimeSelected = selectedResponseTime.length == 0 || selectedResponseTime.includes(item.characteristic.response_time)
@@ -60,9 +62,20 @@ const MonitorsFilter = () => {
         return isDisplay_hzSelected && isDisplayResolutionSelected && isResponseTimeSelected && isDisplaySelected && isMatrixSelected && isColordepthSelected && isBrightnessSelected && inputChange
     })
 
+    useEffect(() => {
+        products_store.setFilteredProductsArr(filtered)
+        console.log('component clicked')
+    }, [])
+
+    const applyFilter = () => {
+        products_store.setFilteredProductsArr(filtered)
+
+    }
+
+
     return (
         <div>
-      <input onChange={(e) => setValue(e.target.value)}/> 
+            <input onChange={(e) => setValue(e.target.value)} />
             <button class={activeCollapsResponseTime ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsResponseTime(!activeCollapsResponseTime)}><h2>Response Time</h2><img src={activeCollapsResponseTime ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsResponseTime ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiMonitors.map((item) => item.characteristic.response_time))).map((response_time) => (
@@ -119,7 +132,7 @@ const MonitorsFilter = () => {
                     </label>
                 ))}
             </div>
-            
+
             <button class={activeCollapsDisplay_hz ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay_hz(!activeCollapsDisplay_hz)}><h2>Display Hz</h2><img src={activeCollapsDisplay_hz ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsDisplay_hz ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiMonitors.map((item) => item.characteristic.display_hz))).map((display_hz) => (
@@ -172,7 +185,9 @@ const MonitorsFilter = () => {
 
                     </label>
                 ))}</div>
+            <button onClick={() => applyFilter()} className="apply_button">Apply Filters</button>
+
         </div>
     )
 }
-export default MonitorsFilter
+export default observer(MonitorsFilter)

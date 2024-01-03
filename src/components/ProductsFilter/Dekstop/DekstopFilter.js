@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import products_store from "../../../store/products_store"
+import { observer } from "mobx-react-lite"
 
 const DekstoFilter = () => {
     const [selectedCategories, setSelectedCategories] = useState([])
@@ -15,12 +16,20 @@ const DekstoFilter = () => {
         }
     }
 
-    products_store.filteredProductsArr = msiLaptops.filter((item) => {
+
+    const filtered = msiLaptops.filter((item) => {
         const isSelectedSsd = selectedSsd.length == 0 || selectedSsd.includes(item.characteristic.ssd)
         const isSelectedProcesser = selectedProcesser.length == 0 || selectedProcesser.includes(item.characteristic.processer)
         const isSelectedProcesser_model = selectedProcesser_model.length == 0 || selectedProcesser_model.includes(item.characteristic.processer_model)
         return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model
     })
+
+    useEffect(() => {
+        products_store.setFilteredProductsArr(filtered)
+
+    },[])
+
+
 
     return (
         <div>
@@ -71,15 +80,8 @@ const DekstoFilter = () => {
 
                 </label>
             ))}
-
-            {/* {filteredLaptops.map((laptop) => <div>
-                <li key={laptop.id}>
-                    <div>{laptop.name}</div>
-                    <img src={laptop.image} alt={laptop.name} style={{ width: '100px', height: '100px' }} />
-                </li>
-
-            </div>)} */}
+            
         </div>
     )
 }
-export default DekstoFilter
+export default observer(DekstoFilter)
