@@ -56,7 +56,7 @@ class Product {
                 ram: 8,
                 ssd: 256,
                 display: 14,
-                display_hz: '60 hz',
+                display_hz: 60,
                 video_card: 'UHD Graphics Xe G4 48EUs'
             }
         },
@@ -295,7 +295,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 17.3,
-                display_hz: '240 hz',
+                display_hz: 240,
                 video_card: 'RTX 4080'
             }
         },
@@ -313,7 +313,7 @@ class Product {
                 ram: 16,
                 ssd: 1024,
                 display: 15.6,
-                display_hz: '144 hz',
+                display_hz: 144,
                 video_card: 'RTX 4070'
             }
         },
@@ -331,7 +331,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 16,
-                display_hz: '144 hz',
+                display_hz: 144,
                 video_card: 'RTX 4060'
             }
         },
@@ -349,7 +349,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 17.3,
-                display_hz: '240 hz',
+                display_hz: 240,
                 video_card: 'RTX 4070'
             }
         },
@@ -367,7 +367,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 17.3,
-                display_hz: '240 hz',
+                display_hz: 240,
                 video_card: 'RTX 4080'
             }
         },
@@ -385,7 +385,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 16,
-                display_hz: '240 hz',
+                display_hz: 240,
                 video_card: 'RTX 4070'
             }
         },
@@ -403,7 +403,7 @@ class Product {
                 ram: 32,
                 ssd: 1024,
                 display: 17.3,
-                display_hz: '240 hz',
+                display_hz: 240,
                 video_card: 'RTX 4080'
             }
         },

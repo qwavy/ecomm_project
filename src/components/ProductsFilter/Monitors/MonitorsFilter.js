@@ -170,16 +170,16 @@ const MonitorsFilter = () => {
                 ))}</div>
             <button class={activeCollapsBrightness ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsBrightness(!activeCollapsBrightness)}><h2>Brightness</h2><img src={activeCollapsBrightness ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsBrightness ? "content activeContent" : "content"}>
-                {Array.from(new Set(msiMonitors.map((item) => item.characteristic.brightness))).map((resolution) => (
-                    <label key={resolution}>
+                {Array.from(new Set(msiMonitors.map((item) => item.characteristic.brightness))).map((brightness) => (
+                    <label key={brightness}>
                         <ul>
                             <li style={{ listStyleType: "none" }}>
                                 <input
                                     type="checkbox"
-                                    value={resolution}
-                                    checked={selectedDisplayResolution.includes(resolution)}
-                                    onChange={() => handleCheckboxChange('resolution', resolution, setSelectedDisplayResolution)} />
-                                {resolution}
+                                    value={brightness}
+                                    checked={selectedBrightness.includes(brightness)}
+                                    onChange={() => handleCheckboxChange('brightness', brightness, setSelectedBrightness)} />
+                                {brightness}
                             </li>
                         </ul>
 
