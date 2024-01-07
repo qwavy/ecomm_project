@@ -127,3 +127,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width:480px) {
+    .filter_content{
+        display: flex;
+        flex-direction: column;
+    }
+}

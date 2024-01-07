@@ -191,7 +191,7 @@ font-weight: 700
         flex-direction: column;
     }
     .msi_products {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
     }
 
