@@ -58,8 +58,11 @@ const MainPage = () => {
             {msiLaptopsFive.map((laptop) => <div className='msi_product'>
               <img src={laptop.image} className='msi_image' />
               <p className='msi_laptop_name'>{laptop.name}</p>
+              <div className='msi_product_price'>
+
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
+              </div>
             </div>)}
           </div>
         </div>
@@ -72,8 +75,11 @@ const MainPage = () => {
             {msiDekstopsFive.map((desktop) => <div className='msi_product'>
               <img src={desktop.image} alt='car' className='msi_image' />
               <p className='msi_laptop_name'>{desktop.name}</p>
+              <div className='msi_product_price'>
+
               <p><s>{desktop.old_price}$</s></p>
               <span>{desktop.price}$</span>
+              </div>
             </div>)}
           </div>
         </div>
@@ -86,8 +92,11 @@ const MainPage = () => {
             {msiMonitorsFive.map((laptop) => <div className='msi_product'>
               <img src={laptop.image} alt='car' className='msi_image' />
               <p className='msi_laptop_name'>{laptop.name}</p>
+              <div className='msi_product_price'>
+
               <p><s>{laptop.old_price}$</s></p>
               <span>{laptop.price}$</span>
+              </div>
             </div>)}
           </div>
         </div>
