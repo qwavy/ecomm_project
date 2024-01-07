@@ -156,3 +156,33 @@ font-weight: 700
     font-weight: 600;
     line-height: 140%;
 }
+
+
+@media (max-width:480px) {
+    .site{
+        width: 360px;
+    }
+    .header{
+        width: 360px;
+        
+    }
+    .header img{
+        width: 30px;
+    }
+    .header__profile{
+        width: 30px;
+    }
+    .header__navbar {
+        width: 360px;
+    }
+    .header__navbar p{
+        font-size:7px !important;
+    }
+    .content__banner_1 img{
+        width: 360px;
+    }
+    .msi_image{
+        width: 130px !important; 
+        height: 140px !important; 
+    }
+}
