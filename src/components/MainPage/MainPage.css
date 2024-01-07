@@ -149,6 +149,7 @@ font-weight: 700
     line-height: 140%;
 }
 .msi_product s {
+    text-decoration: line-through;
     color: grey;
     font-family: Poppins;
     font-size: 15px;
@@ -160,7 +161,7 @@ font-weight: 700
 
 @media (max-width:480px) {
     .site{
-        width: 360px;
+        width: 100%;
     }
     .header{
         width: 100%;
@@ -172,15 +173,17 @@ font-weight: 700
         /* width: 30px; */
     }
     .header__navbar {
-        width: 360px;
+        width: 100%;
     }
     .header__navbar p{
         font-size:7px !important;
     }
     .content__banner_1 img{
         width: 100%;
+        display: none !important;
     }
     .msi_banner {
+        display: none !important;
         width: 100% !important;
         height: 146px !important;
         text-align: center;
@@ -208,9 +211,9 @@ font-weight: 700
     }
 
     .msi_laptop_name{
-        width: 70px !important;
-        height: 40px !important;
-        font-size: 9px !important;
+        width: 80px !important;
+        height: 50px !important;
+        font-size: 11px !important;
     }
 
     .msi_image{

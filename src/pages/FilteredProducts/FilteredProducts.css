@@ -66,7 +66,7 @@
 
 
 
-.msi_products {
+/* .msi_products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr;
@@ -80,7 +80,6 @@
     width: 230px;
     padding: 18px;
     align-items: center;
-    /* border: #000 1px solid; */
 }
 
 .msi_image {
@@ -120,7 +119,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
-}
+} */
 
 
 .msi_product_container{
@@ -129,8 +128,28 @@
 }
 
 @media (max-width:480px) {
+    .filter_title{
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+    }
+    .filter_column{
+        width: 100%;
+    }
     .filter_content{
         display: flex;
         flex-direction: column;
+    }
+    .collapsible{
+        font-size: 10px;
+        padding: 10px;
+    }
+    .collapsible h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .msi_product_container{
+        align-items: flex-end;
     }
 }
