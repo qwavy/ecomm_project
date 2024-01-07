@@ -181,8 +181,31 @@ font-weight: 700
     .content__banner_1 img{
         width: 360px;
     }
+
+    .msi_content{
+        margin-top: 15%;
+    }
+    .msi_products {
+        display: grid;
+        grid-template-columns:0fr 0fr 0fr 0fr 0fr 0fr;
+        grid-template-rows: 0.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . . . .";
+    }
+
+    .msi_product{
+        width: 100px !important;
+        height: 70px !important;
+    }
+
+    .msi_laptop_name{
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 6px;
+    }
     .msi_image{
-        width: 130px !important; 
-        height: 140px !important; 
+        width: 60px !important; 
+        height: 30px !important; 
     }
 }
