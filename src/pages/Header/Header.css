@@ -34,3 +34,16 @@
     width: 10%;
     align-items: center;
 }
+
+@media (max-width:480px) {
+    .header{
+        width: 100%;
+    }
+    .header__profile {
+        display: flex;
+        justify-content: space-around;
+    }
+    .header__profile img{
+        width: 13px !important; 
+    }
+}
