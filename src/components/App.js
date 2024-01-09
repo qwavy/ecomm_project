@@ -45,7 +45,7 @@ const App = () => {
                     <Routes>
 
 
-                        <Route path='*' element={<MainPage />} />
+                        <Route path='/home' element={<MainPage />} />
                         <Route path='/register' element={<Register />} />
                         <Route path='/login' element={<Login />} />
                         <Route path='/laptops' element={<FilteredLaptops />} />

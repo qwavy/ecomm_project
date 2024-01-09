@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 // components 
@@ -33,8 +33,25 @@ const MainPage = () => {
   const msiMonitorsFive = msiMonitors.slice(0, 5)
   const msiHeadphonesFive = msiHeadphones.slice(0, 5)
   const msiMotherboardFive = msiMotherboard.slice(0, 5)
+
+  const [data,setData] = useState()
+ 
+  useEffect(() => {
+    fetch('/api/test/')
+      .then((res) => res.json())
+      .then((data) => {
+        // for(let i = 0;i < data.length;i++){
+          console.log(data)
+        // }
+      })
+      .catch((e) => console.log(e))
+  }, [])
+
+
+
   return (
     <div className='site'>
+      {/* <button onClick={console.log(data)}>TEST</button> */}
       <div className='content_mainpage'>
         <div className='content__banner_1'>
           <img src={banner_1} />
@@ -60,8 +77,8 @@ const MainPage = () => {
               <p className='msi_laptop_name'>{laptop.name}</p>
               <div className='msi_product_price'>
 
-              <p><s>{laptop.old_price}$</s></p>
-              <span>{laptop.price}$</span>
+                <p><s>{laptop.old_price}$</s></p>
+                <span>{laptop.price}$</span>
               </div>
             </div>)}
           </div>
@@ -77,8 +94,8 @@ const MainPage = () => {
               <p className='msi_laptop_name'>{desktop.name}</p>
               <div className='msi_product_price'>
 
-              <p><s>{desktop.old_price}$</s></p>
-              <span>{desktop.price}$</span>
+                <p><s>{desktop.old_price}$</s></p>
+                <span>{desktop.price}$</span>
               </div>
             </div>)}
           </div>
@@ -94,17 +111,17 @@ const MainPage = () => {
               <p className='msi_laptop_name'>{laptop.name}</p>
               <div className='msi_product_price'>
 
-              <p><s>{laptop.old_price}$</s></p>
-              <span>{laptop.price}$</span>
+                <p><s>{laptop.old_price}$</s></p>
+                <span>{laptop.price}$</span>
               </div>
             </div>)}
           </div>
         </div>
 
-        
+
       </div>
     </div>
   )
 }
 
-export default  MainPage
+export default MainPage

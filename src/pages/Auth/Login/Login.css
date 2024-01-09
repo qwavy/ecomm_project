@@ -34,3 +34,18 @@ body{
 .banner__register button{
     color: white !important;
 }
+
+@media (max-width:480px) {
+    .login__site{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .login__site input {
+        width: 70%;
+        height: 40%;
+        border-radius: 4px;
+        padding: 15px;
+    }
+}

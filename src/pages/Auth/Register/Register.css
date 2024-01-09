@@ -1,0 +1,7 @@
+@media (max-width:480px) {
+    .banner__register{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
