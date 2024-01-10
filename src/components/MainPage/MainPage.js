@@ -21,28 +21,36 @@ import msi_laptop from '../../images/msi_laptop.png'
 const MainPage = () => {
 
   const [products, setProducts] = useState(products_store.products)
-  const [msiLaptops, setMsiLaptops] = useState(products_store.msi_laptops)
-  const [msiDekstops, setMsiDekstops] = useState(products_store.msi_dekstops)
+  const [msiLaptops, setMsiLaptops] = useState([])
+  const [msiDekstops, setMsiDekstops] = useState([])
   const [msiMonitors, setMsiMonitors] = useState(products_store.msi_monitors)
   const [msiHeadphones, setMsiHeadphones] = useState(products_store.msi_headphones)
   const [msiMotherboard, setMsiMotherboard] = useState(products_store.msi_motherboard)
   // console.log(products) 
 
+  // const [msiLaptopsFive,setMsiLaptopsFive] = useState([])
   const msiLaptopsFive = msiLaptops.slice(0, 5)
   const msiDekstopsFive = msiDekstops.slice(0, 5)
   const msiMonitorsFive = msiMonitors.slice(0, 5)
   const msiHeadphonesFive = msiHeadphones.slice(0, 5)
   const msiMotherboardFive = msiMotherboard.slice(0, 5)
 
-  const [data,setData] = useState()
- 
+  const [data, setData] = useState()
+
   useEffect(() => {
-    fetch('/api/test/')
+    // запрос на ноутбуки
+    fetch('/products/laptops/')
       .then((res) => res.json())
       .then((data) => {
-        // for(let i = 0;i < data.length;i++){
-          console.log(data)
-        // }
+        setMsiLaptops(data)
+      })
+      .catch((e) => console.log(e))
+
+
+    fetch('/products/desktops/')
+      .then((res) => res.json())
+      .then((data) => {
+        setMsiDekstops(data)
       })
       .catch((e) => console.log(e))
   }, [])

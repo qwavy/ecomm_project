@@ -1,0 +1,623 @@
+[
+    {
+        "id": 1,
+        "name": "MSI Modern 14 B11MOU",
+        "category": "laptop",
+        "price": 440,
+        "old_price": 600,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/589efa18969713b0b8e583cfcbda531e/6274664fe9eb2bcc9a3de254f1b082ba84c17ef6c79d65b245c525f56b5dfb4c.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I3-1115G4",
+            "ram": 8,
+            "ssd": 256,
+            "display": 14,
+            "display_hz": 60,
+            "video_card": "UHD Graphics Xe G4 48EUs"
+        }
+    },
+    {
+        "id": 2,
+        "name": "MSI Thin GF63 12VE",
+        "category": "laptop",
+        "price": 1070,
+        "old_price": 1300,
+        "image": "https://cdn.citilink.ru/kobZKB224EoJSghU71KoAeAndy4OkmrHQ6VVwj5Q0S0/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/a74fe01d-6483-43a8-aef2-de25e5ef14fb.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12450H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4050"
+        }
+    },
+    {
+        "id": 3,
+        "name": "MSI GF63 Thin 11UC",
+        "category": "laptop",
+        "price": 880,
+        "old_price": 1080,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/0d62166e4bdd58c7ec05422239661f99/5022d7cc914b8eb792155c71ba77be58618598e28b1a528f64eb31932a9bfca8.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-11400H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 3050"
+        }
+    },
+    {
+        "id": 4,
+        "name": "MSI Katana GF66 11UC",
+        "category": "laptop",
+        "price": 1270,
+        "old_price": 1500,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/3c1da5b0d40f6f72b1293d4b1fa617f7/f6b7920246f54a4dbf45543f41dd93d4053c2cc6cf66ae57e9a2fc9116688272.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-11400H",
+            "ram": 16,
+            "ssd": 512,
+            "display": 17.3,
+            "display_hz": 144,
+            "video_card": "RTX 3050"
+        }
+    },
+    {
+        "id": 5,
+        "name": "MSI Thin GF63 12VF",
+        "category": "laptop",
+        "price": 1085,
+        "old_price": 1200,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/a6109f2cda6cfedc97559f8986598674/f494f6d28cec9cd84e5fc9157ea88f4b197c2828768bd3626b6f6a04d9427322.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12450H",
+            "ram": 16,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 6,
+        "name": "MSI Katana 15 B12VFK",
+        "category": "laptop",
+        "price": 1400,
+        "old_price": 1500,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/491a8ae821c1c31ad0364a6421d52e90/ab5ec9f53950677cdc29656f3bf87a82aed1db13f4895ec11bd14b2f593a82a0.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12450H",
+            "ram": 16,
+            "ssd": 1024,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 7,
+        "name": "MSI Cyborg 15 A12VF",
+        "category": "laptop",
+        "price": 1400,
+        "old_price": 1600,
+        "image": "https://storage-asset.msi.com/global/picture/image/feature/nb/Cyborg15-A13V/images/cyborg-gpu-laptop.png",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12450H",
+            "ram": 16,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 8,
+        "name": "MSI Katana GF66 12UD",
+        "category": "laptop",
+        "price": 990,
+        "old_price": 1100,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/3c1da5b0d40f6f72b1293d4b1fa617f7/f6b7920246f54a4dbf45543f41dd93d4053c2cc6cf66ae57e9a2fc9116688272.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-12700H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 3050 Ti"
+        }
+    },
+    {
+        "id": 9,
+        "name": "MSI Katana GF76 12UEOK",
+        "category": "laptop",
+        "price": 1290,
+        "old_price": 1400,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/3a29b5d1238435da2fc879cfe3d5d599/bd6547111327deddda01ab3927ae405fa3345c8d90923148ad2a0361d659c934.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-12700H",
+            "ram": 16,
+            "ssd": 512,
+            "display": 17.3,
+            "display_hz": 144,
+            "video_card": "RTX 3060"
+        }
+    },
+    {
+        "id": 10,
+        "name": "MSI Summit E16 Flip Evo A12MT",
+        "category": "laptop",
+        "price": 1500,
+        "old_price": 1700,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/d92eddcf6ded840871a41e8bda2aa22b/bc135067ced39e9354790760265959c58a8082af90b85b498b74287c18abf657.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-1280P",
+            "ram": 16,
+            "ssd": 1024,
+            "display": 16,
+            "display_hz": 165,
+            "video_card": "integrated"
+        }
+    },
+    {
+        "id": 11,
+        "name": "MSI Pulse 15 B13VFK",
+        "category": "laptop",
+        "price": 1300,
+        "old_price": 1500,
+        "image": "https://cdn.citilink.ru/ymhUu4b0S4Hz4ZvrM9P-LObDJped74hq1X466cZBk5c/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ee8e08b2-012d-43ec-963b-638da930a915.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-13620H",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 12,
+        "name": "MSI Katana 17 B12VFK",
+        "category": "laptop",
+        "price": 1300,
+        "old_price": 1400,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/fa8429dae6573ef848a64d9a1e7a0719/7bfc873a6409937233f4d9bd2d5c4e198ada4ac7f194b13e4c38ee905569d899.jpg.webp",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-12650H",
+            "ram": 16,
+            "ssd": 1024,
+            "display": 17.3,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 13,
+        "name": "MSI Pulse 15 B13VGK",
+        "category": "laptop",
+        "price": 2750,
+        "old_price": 3000,
+        "image": "https://akyol.com.tm/image/cache/catalog/Notebook/MSI/PULSE/MSI%20PULSE%2015%20B13VGK/MSI%20PULSE%2015%20B13VGK_2_1000x1000-1000x1000.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-13620H",
+            "ram": 8,
+            "ssd": 1024,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4070"
+        }
+    },
+    {
+        "id": 14,
+        "name": "MSI Pulse 15 B13VGK",
+        "category": "laptop",
+        "price": 3000,
+        "old_price": 3150,
+        "image": "https://akyol.com.tm/image/cache/catalog/Notebook/MSI/PULSE/MSI%20PULSE%2015%20B13VGK/MSI%20PULSE%2015%20B13VGK_2_1000x1000-1000x1000.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-13620H",
+            "ram": 8,
+            "ssd": 1024,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4070"
+        }
+    },
+    {
+        "id": 15,
+        "name": "MSI Raider GE78HX 13VH",
+        "category": "laptop",
+        "price": 4025,
+        "old_price": 4200,
+        "image": "https://e-katalog.kz/jpg_zoom1/2385712.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13950HX ",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 17.3,
+            "display_hz": 240,
+            "video_card": "RTX 4080"
+        }
+    },
+    {
+        "id": 16,
+        "name": "MSI Katana 15 B13VGK",
+        "category": "laptop",
+        "price": 1200,
+        "old_price": 1300,
+        "image": "https://e-katalog.kz/jpg_zoom1/2479782.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13900H",
+            "ram": 16,
+            "ssd": 1024,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RTX 4070"
+        }
+    },
+    {
+        "id": 17,
+        "name": "MSI Raider GE68HX 13VF",
+        "category": "laptop",
+        "price": 1800,
+        "old_price": 1900,
+        "image": "https://e-katalog.kz/jpg_zoom1/2385749.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13950HX",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 16,
+            "display_hz": 144,
+            "video_card": "RTX 4060"
+        }
+    },
+    {
+        "id": 18,
+        "name": "MSI Vector GP77 13VG",
+        "category": "laptop",
+        "price": 2700,
+        "old_price": 2850,
+        "image": "https://e-katalog.kz/jpg_zoom1/2416720.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13700H",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 17.3,
+            "display_hz": 240,
+            "video_card": "RTX 4070"
+        }
+    },
+    {
+        "id": 19,
+        "name": "MSI Stealth 17 Studio A13VH",
+        "category": "laptop",
+        "price": 3620,
+        "old_price": 3800,
+        "image": "https://e-katalog.kz/jpg_zoom1/2385754.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13900H",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 17.3,
+            "display_hz": 240,
+            "video_card": "RTX 4080"
+        }
+    },
+    {
+        "id": 20,
+        "name": "MSI Raider GE68HX 13VG",
+        "category": "laptop",
+        "price": 2400,
+        "old_price": 2550,
+        "image": "https://e-katalog.kz/jpg_zoom1/2385748.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13980HX",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 16,
+            "display_hz": 240,
+            "video_card": "RTX 4070"
+        }
+    },
+    {
+        "id": 21,
+        "name": "MSI Raider GE78HX 13VH",
+        "category": "laptop",
+        "price": 3000,
+        "old_price": 3200,
+        "image": "https://e-katalog.kz/jpg_zoom1/2385712.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I9-13950HX",
+            "ram": 32,
+            "ssd": 1024,
+            "display": 17.3,
+            "display_hz": 240,
+            "video_card": "RTX 4080"
+        }
+    },
+    {
+        "id": 22,
+        "name": "MSI Bravo 15 B5DD",
+        "category": "laptop",
+        "price": 1050,
+        "old_price": 1190,
+        "image": "https://cdn.citilink.ru/D0sFqNEs1UPqN-y8evAJUNWPQC8cMvUDVTN3u5ggRn0/resizing_type:fit/gravity:sm/width:1200/height:1200/plain/product-images/8df2ba04-f12a-4088-8367-36fbf5966dab.jpg",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen5-5600H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RX 5500M"
+        }
+    },
+    {
+        "id": 23,
+        "name": "MSI Alpha 15 B5EEK",
+        "category": "laptop",
+        "price": 1400,
+        "old_price": 1600,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/0/0/ee91dd5bfa137b9a20d575fbfd923c46/96d216b34d48b8d202db8f9fe9caca69fceedb13ff5c336cd89be42d14cf6d46.jpg.webp",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen5-5600H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RX 6600M"
+        }
+    },
+    {
+        "id": 24,
+        "name": "MSI Bravo 15 B5DD",
+        "category": "laptop",
+        "price": 1100,
+        "old_price": 1200,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/2622605317a3be8a34b2c59c2898de2a/45d131b976f9c90e7d47156974d75a013c521487bc1c1da1104fd2c78800817c.jpg.webp",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen5-5600H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RX 5500M"
+        }
+    },
+    {
+        "id": 25,
+        "name": "MSI Alpha 15 B5EEK",
+        "category": "laptop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/165d07bef3c3004cd53013f22db11070/96d216b34d48b8d202db8f9fe9caca69fceedb13ff5c336cd89be42d14cf6d46.jpg.webp",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen5-5600H",
+            "ram": 8,
+            "ssd": 512,
+            "display": 15.6,
+            "display_hz": 144,
+            "video_card": "RX 6600M"
+        }
+    },
+    {
+        "id": 26,
+        "name": "MSI Bravo 17 C7VE",
+        "category": "laptop",
+        "price": 1600,
+        "old_price": 1750,
+        "image": "https://cdn.citilink.ru/Hz0IvruarKRPRHvrFTwHNnOkIat1mFlPK9eo_RIBdB8/resizing_type:fit/gravity:sm/width:1200/height:1200/plain/product-images/ac1dbc6d-892c-4070-9094-57c35371cb96.jpg",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen7-7535HS",
+            "ram": 16,
+            "ssd": 512,
+            "display": 17.3,
+            "display_hz": 144,
+            "video_card": "RTX 4050"
+        }
+    },
+    {
+        "id": 27,
+        "name": "MSI Bravo 17 C7VE",
+        "category": "laptop",
+        "price": 2100,
+        "old_price": 2300,
+        "image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/95f4c21322c82572a8270602ae176d38/91c62bc133c06e02e037fe69de10c4ce37674ac5fe4e32c98f8236cc6093432f.jpg.webp",
+        "characteristic": {
+            "processer": "amd",
+            "processer_model": "Ryzen7-7535HS",
+            "ram": 16,
+            "ssd": 512,
+            "display": 17.3,
+            "display_hz": 144,
+            "video_card": "RTX 4050"
+        }
+    },
+    {
+        "id": 21,
+        "name": "MSI Infinite 11SI-1611XRU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/_5uYwUwybRVvCDl4opQlRv0DcNnja60cqCiBtDsc-i4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0746fb6a-347d-47fa-b548-787ccae3b0f5.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "z590",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 22,
+        "name": "MSI PRO DP130 12-477XRU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/4Aov_Q8to1s-txLa-Y8pHUnqhycfBCGWRwd7Hu7-4F4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0dc9f7a2-737e-4956-be73-e6d4603e606f.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12400",
+            "motherboard": "H610",
+            "ram": 8,
+            "ssd": 256,
+            "video_card": "integrated",
+            "block_power": 350,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 23,
+        "name": "MSI trident 3 13TC-069RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/JeLdcRdDP3rR5sozY5_L81DLtZCcyKslLkXuz0F3VkI/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/3b83f77e-6ce5-4607-8af1-85f08362795a.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I7-13700F",
+            "motherboard": "H610",
+            "ram": 16,
+            "ssd": 1024,
+            "video_card": "RTX 3060",
+            "block_power": 330,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 24,
+        "name": "MSI Pro DP130 12RK-474RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/vJr0mtKn9OVw6dP-CCxZJ_VeB5WoQds4aob0nSqkCZo/resizing_type:fit/gravity:sm/width:1200/height:1200/plain/product-images/cba02278-a07a-469c-bc56-4fdcf6c8bc28.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-12400F",
+            "motherboard": "z590",
+            "ram": 8,
+            "ssd": 512,
+            "video_card": "GT 1030",
+            "block_power": 350,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 25,
+        "name": "MSI infinite S3 13TC-678RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/fYMMImy03VdUxhclCfZYTU-dwLiQG5yoxHB5vIQVcUY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/f49d19a8-1441-45c6-9aef-185c748aedd4.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-13400F",
+            "motherboard": "H610",
+            "ram": 16,
+            "ssd": 1024,
+            "video_card": "RTX 3060",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 26,
+        "name": "MSI Trident 3 A 11SI-077XRU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/CprZKXOE_LBqB3KoV7IU0wCLIgPY9AwwDVlmKOKORFU/resizing_type:fit/gravity:sm/width:400/height:400/plain/items/1618181_v01_b.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-1400F",
+            "motherboard": "z590",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 230,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 27,
+        "name": "MSI Pro DP20ZA 5M-217RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/oTOZ372sambeFZG6SP_M9zBM1WgRS7shSGtUf6qastE/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/05ea2045-566d-4b96-8d2f-6736f2d74ff9.jpg",
+        "characteristic": {
+            "processer": "Ryzen",
+            "processer_model": "5 5600g",
+            "motherboard": "B300",
+            "ram": 8,
+            "ssd": 512,
+            "video_card": "integrated",
+            "block_power": 230,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 28,
+        "name": "MSI Infinite 11TH-1610XRU",
+        "category": "dekstop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/sVXTXDgok5LsjIF6NXqYtjLx0YvJBN9daCkOGr0E2r0/resizing_type:fit/gravity:sm/width:400/height:400/plain/items/1794761_v01_b.jpg",
+        "characteristic": {
+            "processer": "intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "H510",
+            "ram": 16,
+            "ssd": 1024,
+            "video_card": "RTX 3050",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 29,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    }
+]

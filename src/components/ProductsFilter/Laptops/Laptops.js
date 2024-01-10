@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react"
-import products_store from "../../../store/products_store"
+
 
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
+
+
 import { observer } from "mobx-react-lite"
 
 
 
-const Laptops = () => {
+const Laptops = (products) => {
+    const [msiLaptops, setMsiLaptops] = useState(products.laptops)
+
     const [selectedCategories, setSelectedCategories] = useState([])
-    const [msiLaptops, setMsiLaptops] = useState(products_store.msi_laptops)
+
     const [selectedSsd, setSelectedSsd] = useState([])
     const [selectedProcesser, setSelectedProcesser] = useState([])
     const [selectedProcesser_model, setSelectedProcesser_model] = useState([])
@@ -27,14 +31,7 @@ const Laptops = () => {
     const [activeCollapsDisplay_hz, setActiveCollapsDisplay_hz] = useState(false)
     const [activeCollapsVideocard, setActiveCollapsVideocard] = useState(false)
 
-    const handleCheckboxChange = (category, value, setSelectedCategories) => {
-        if (selectedCategories.includes(value)) {
-            setSelectedCategories(selectedCategories.filter((c) => c !== value))
-        } else {
-            setSelectedCategories([...selectedCategories, value])
-        }
-    }
-    // products_store.filteredProductsArr =
+
 
 
     const filtered = msiLaptops.filter((item) => {
@@ -50,17 +47,52 @@ const Laptops = () => {
         return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model && isSelectedRam && isSelectedDisplay && isSelectedDisplay_hz && isSelectedVideocard
     })
 
-    useEffect(() => {
-        products_store.setFilteredProductsArr(filtered)
 
-    }, [])
-
-    const applyFilter = () => {
-        products_store.setFilteredProductsArr(filtered)
-
+    const handleCheckboxChange = (category, value, setSelectedCategories) => {
+        if (selectedCategories.includes(value)) {
+            setSelectedCategories(selectedCategories.filter((c) => c !== value))
+        } else {
+            setSelectedCategories([...selectedCategories, value])
+        }
     }
 
 
+    useEffect(() => {
+        fetch('/products/laptops/')
+            .then((res) => res.json())
+            .then((data) => {
+                setMsiLaptops(data)
+            })
+            .catch((e) => console.log(e))
+
+
+    }, [])
+
+
+    const applyFilter = () => {
+        products.setLaptops(filtered)
+    }
+
+    const clearFilter = () => {
+        products.setLaptops(msiLaptops)
+        setSelectedCategories([])
+        
+        setSelectedSsd([])
+        setSelectedProcesser([])
+        setSelectedProcesser_model([])
+        setSelectedRam([])
+        setSelectedDisplay([])
+        setSelectedDisplay_hz([])
+        setSelectedVideocard([])
+
+        setActiveCollapsSsd(false);
+        setActiveCollapsProcesser(false);
+        setActiveCollapsProcesser_model(false)
+        setActiveCollapsRam(false)
+        setActiveCollapsDisplay(false)
+        setActiveCollapsDisplay_hz(false)
+        setActiveCollapsVideocard(false)
+    }
 
 
     return (
@@ -193,14 +225,8 @@ const Laptops = () => {
                 ))}
             </div>
             <button onClick={() => applyFilter()} className="apply_button">Apply Filters</button>
+            <button onClick={() => clearFilter()} className="apply_button">Clear Filters</button>
 
-            {/* {filteredLaptops.map((laptop) => <div>
-                <li key={laptop.id}>
-                    <div>{laptop.name}</div>
-                    <img src={laptop.image} alt={laptop.name} style={{ width: '100px', height: '100px' }} />
-                </li>
-
-            </div>)} */}
         </div>
 
     )

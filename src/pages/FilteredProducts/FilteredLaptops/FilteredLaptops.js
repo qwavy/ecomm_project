@@ -3,6 +3,8 @@ import products_store from "../../../store/products_store"
 import MotherboardFilter from "../../../components/ProductsFilter/Motherboards/MotherboardsFilter"
 
 
+import '..//FilteredProducts.css'
+
 import opened_pointer from '../../../images/opened_pointer.png'
 import closed_pointer from '../../../images/closed_pointer.png'
 import cart_icon from '../../../images/cart_icon.png';
@@ -17,7 +19,7 @@ import Laptops from "../../../components/ProductsFilter/Laptops/Laptops"
 
 
 const FilteredProducts = () => {
-    const [msiProducts, setMsiProducts] = useState(products_store.msi_motherboard)
+    const [msiProducts, setMsiProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [countFilteredProducts, setCountFilteredProducts] = useState(0)
 
@@ -25,23 +27,26 @@ const FilteredProducts = () => {
     const [activeCollapsContent, setActiveCollapsContent] = useState(false)
 
 
-    // const [filtered]
-
     useEffect(() => {
-        setCountFilteredProducts(filteredProducts.length)
-    }, [filteredProducts])
-    useEffect(() => {
-        setFilteredProducts(msiProducts)
+        fetch('/products/laptops/')
+            .then((res) => res.json())
+            .then((data) => {
+                console.log({msiProducts})
+                setMsiProducts(data)
+            })
+            .catch((e) => console.log(e))
+        // setFilteredProducts(msiProducts)
     }, [])
-    useEffect(() => {
 
-    }, [activeCollaps])
-    const changeId = (product) => {
-        // products_store.productIdProps = product
-    }
     const addCart = (product) => {
-        products_store.addProduct(product)
-        // products_store.cart_total += product.price
+        fetch('/posts/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(product)
+          });
+
     }
 
     const addFavourites = (product) => {
@@ -49,30 +54,6 @@ const FilteredProducts = () => {
         console.log(products_store.favourites)
     }
 
-    const test = async (product) => {
-
-        try {
-            const url = 'http://localhost:5000/api/basket/basket'; // Замените на ваш эндпоинт для добавления в корзину
-
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // Дополнительные заголовки могут быть добавлены по необходимости
-                },
-                body: JSON.stringify(product),
-            });
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const responseData = await response.json();
-            console.log('Полученные данные:', responseData);
-        } catch (error) {
-            console.error('Ошибка при выполнении POST-запроса:', error);
-        }
-    }
 
 
     return (
@@ -85,34 +66,34 @@ const FilteredProducts = () => {
                 <div className="filter_column">
                     <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
-                        <Laptops/>
+                        <Laptops laptops={msiProducts} setLaptops={setMsiProducts}/>
                     </div>
                 </div>
                 <div className="msi_products">
-                    {products_store.filteredProductsArr.map((product) => <div className='msi_product'>
-                            <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
-                            <p className='msi_laptop_name'>{product.name}</p>
-                            <p><s>{product.old_price}$</s></p>
-                            <div className="msi_product_container">
+                    {msiProducts.map((product) => <div className='msi_product'>
+                        <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
+                        <p className='msi_laptop_name'>{product.name}</p>
+                        <p><s>{product.old_price}$</s></p>
+                        <div className="msi_product_container">
 
-                                <span>{product.price}$</span>
-                                <button onClick={() => addFavourites(product)} style={{backgroundColor:"white",border:"none",paddingBottom:"10px"}}>
-                                    <img src={favorite_icon} />
-                                </button>
-                                <button onClick={() => addCart(product)} style={{backgroundColor:"white",border:"none",paddingBottom:"10px"}}>
-                                    <img src={cart_icon} className="msi_cart"  />
-                                </button>
+                            <span>{product.price}$</span>
+                            <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                                <img src={favorite_icon} />
+                            </button>
+                            <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                                <img src={cart_icon} className="msi_cart" />
+                            </button>
 
-                            </div>
+                        </div>
 
 
 
 
                     </div>)}
 
-            </div>
+                </div>
 
-        </div>
+            </div>
 
 
         </div >

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // observer
 import products_store from '../../store/products_store';
 
@@ -10,6 +10,9 @@ import { observer } from 'mobx-react-lite';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
+
+
+    const [cartProducts,setCartProducts] = useState([])
 
     const products = [{
         id: 1,
@@ -29,6 +32,14 @@ const Cart = () => {
         }
     }]
 
+    useEffect(() => {
+        fetch('/cartProducts/')
+            .then((res) => res.json())
+            .then((data) => {
+                setCartProducts(data)
+            })
+            .catch((e) => console.log(e))
+    }, [])
 
     // const store = useStore(); // замените на реальное получение вашего MobX-стора
 
@@ -36,14 +47,21 @@ const Cart = () => {
         products_store.deleteProduct(productId);
     };
 
+    const test = () => {
+
+    }
+
+
     return (
         <div>
 
             <div className='cart__site'>
                 <div>
-
+                    <button onClick={() => test()}>
+                        TEst
+                    </button>
                 </div>
-                {products_store.cart.map((product) => (
+                {cartProducts.map((product) => (
                     <div className='cart__container'>
                         <div key={product.id} className='msi_product' style={{ border: "none" }}>
                             <img src={product.image} alt={product.name} className='msi_image' style={{ width: "170px" }} />
