@@ -13,6 +13,7 @@ import favorite_icon from '../../../images/Favorite.png'
 
 import { observer } from "mobx-react-lite"
 import Laptops from "../../../components/ProductsFilter/Laptops/Laptops"
+import LaptopsSort from "../../../components/ProductsFilter/Laptops/LaptopsSort"
 // import { observer } from "mobx-react-lite"
 
 
@@ -37,6 +38,11 @@ const FilteredProducts = () => {
             .catch((e) => console.log(e))
         // setFilteredProducts(msiProducts)
     }, [])
+
+
+    useEffect(() => {
+        setCountFilteredProducts(msiProducts.length)
+    },[msiProducts])
 
     const addCart = (product) => {
         fetch('/posts/', {
@@ -92,7 +98,9 @@ const FilteredProducts = () => {
                     </div>)}
 
                 </div>
-
+                <div className="filter_sort">
+                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts}/>
+                </div>
             </div>
 
 

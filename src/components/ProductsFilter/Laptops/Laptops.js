@@ -98,7 +98,6 @@ const Laptops = (products) => {
     return (
         <div>
 
-
             <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>Ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsSsd ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
