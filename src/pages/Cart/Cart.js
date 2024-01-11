@@ -11,8 +11,9 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
+    const [totalAmount,setTotalAmount] = useState(0)
 
-    const [cartProducts,setCartProducts] = useState([])
+    const [cartProducts, setCartProducts] = useState([])
 
     const products = [{
         id: 1,
@@ -39,6 +40,10 @@ const Cart = () => {
                 setCartProducts(data)
             })
             .catch((e) => console.log(e))
+
+        for(let i = 0;i < cartProducts.length;i++){
+            setTotalAmount(totalAmount+cartProducts[i].price)
+        }
     }, [])
 
     // const store = useStore(); // замените на реальное получение вашего MobX-стора
@@ -56,24 +61,30 @@ const Cart = () => {
         <div>
 
             <div className='cart__site'>
-                <div>
-                    <button onClick={() => test()}>
-                        TEst
-                    </button>
-                </div>
-                {cartProducts.map((product) => (
-                    <div className='cart__container'>
-                        <div key={product.id} className='msi_product' style={{ border: "none" }}>
-                            <img src={product.image} alt={product.name} className='msi_image' style={{ width: "170px" }} />
-                            <p className='msi_laptop_name'>{product.name}</p>
-                            <p><s>{product.old_price}$</s></p>
-                            <div className="msi_product_container">
-                                <span>{product.price}$</span>
-                            </div>
-                        </div>
 
-                        <div>
-                            {/* Добавляем блок для характеристик в зависимости от категории продукта */}
+                <div className='cart_products'>
+
+                    {cartProducts.map((product) => (
+                        <div >
+                            <div className='cart_container'>
+
+                                <div key={product.id} className='cart_product' style={{ border: "none" }}>
+                                    <div>
+
+                                        <img src={product.image} alt={product.name} className='cart_image' style={{ width: "170px" }} />
+                                    </div>
+                                    <div>
+
+                                        <p className='cart_name'>{product.name}</p>
+                                    </div>
+
+                                    <p><s>{product.old_price}$</s></p>
+                                    <div className="msi_product_container">
+                                        <span className='cart_price'>{product.price}$</span>
+                                    </div>
+                                </div>
+
+                                {/* <div>
                             {product.category === 'laptop' && (
                                 <div>
                                     <p>Processor: {product.characteristic.processer} {product.characteristic.processer_model}</p>
@@ -119,19 +130,37 @@ const Cart = () => {
                                     <p>Audio Chip: {product.characteristic.audio_chip}</p>
                                 </div>
                             )}
+                        </div> */}
+                                <button style={{ backgroundColor: "white", border: "none" }}><img src={bin} style={{ width: "30px", height: "30px" }} onClick={() => handleDelete(product.id)} /></button>
+                            </div>
+                            <hr className='cart_vektor'></hr>
                         </div>
-                        <button style={{ backgroundColor: "white", border: "none" }}><img src={bin} style={{ width: "30px", height: "30px" }} onClick={() => handleDelete(product.id)} /></button>
-                    </div>
-                ))}
-                <div>
+                    ))}
                 </div>
-                {/* {products_store.cart_total} */}
-            </div>
-            <div className='checkout__button'>
-                <Link to="/Checkout">
 
-                    <button className='checkout__button'>Checkout</button>
-                </Link>
+                <div className='checkout_side'>
+                    <h1>Summary</h1>
+                    <p>Estimate Shipping and Tax</p>
+                    <div className='summary_side'>
+                        <h2>Shipping</h2>
+                        <h2>21 $</h2>
+                    </div>
+                    <div className='summary_side'>
+                        <h2>Tax</h2>
+                        <h2>2 $</h2>
+                    </div>
+                    <div className='summary_side'>
+                        <h2>GST</h2>
+                        <h2>11 $</h2>
+                    </div>
+                    <div className='summary_side'>
+                        <h2>Order total</h2>
+                        <h2>{totalAmount}$</h2>
+                    </div>
+                    <Link to="/Checkout">
+                        <button className='checkout__button'>Checkout</button>
+                    </Link>
+                </div>
             </div>
 
         </div>

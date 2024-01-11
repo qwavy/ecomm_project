@@ -13,15 +13,8 @@ const LaptopsSort = (products) => {
     const [selectedOptionValue, setSelectedOptionValue] = useState(options[0].value)
 
 
-    const handleChange = (event) => {
-        setSelectedOptionValue(event.target.value)
-    }
 
     useEffect(() => {
-
-        // const sorted = products.laptops.sort((product1, product2) => {
-        //     return product1.price - product2.price
-        // })
 
         if(selectedOptionValue == "PriceLow"){
             sortPriceLow()
@@ -32,6 +25,11 @@ const LaptopsSort = (products) => {
         }
         
     }, [selectedOptionValue])
+
+
+    const handleChange = (event) => {
+        setSelectedOptionValue(event.target.value)
+    }
 
     const sortPriceLow = () => {
         const sorted = products.laptops.sort((product1, product2) => {
@@ -53,6 +51,9 @@ const LaptopsSort = (products) => {
         })
         products.setLaptops([...sorted])
     }
+
+
+
 
     return (
         <div>
