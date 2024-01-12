@@ -24,6 +24,7 @@ import FilteredMonitors from '../pages/FilteredProducts/FilteredMonitors/Filtere
 import FilteredDekstops from '../pages/FilteredProducts/FilteredDekstops/FilteredDekstops';
 import FilteredMotherboards from '../pages/FilteredProducts/FilteredMotherboards/FilteredMotherboards';
 import FilteredLaptops from '../pages/FilteredProducts/FilteredLaptops/FilteredLaptops';
+import ContactUs from '../pages/ContactUs/ContactUs';
 
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
                         <Route path='/checkout' element={<Checkout />} />
                         <Route path='/payment' element={<Payment />} />
                         <Route path='/news' element={<NewsPage />} />
+                        <Route path='/contactUs' element={<ContactUs/>}/>
 
                         <Route path='/admin' element={<Admin />} />
                     </Routes>

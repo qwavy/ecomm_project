@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
-    const [totalAmount,setTotalAmount] = useState(0)
+    const [totalAmount, setTotalAmount] = useState(0)
 
     const [cartProducts, setCartProducts] = useState([])
 
@@ -41,8 +41,8 @@ const Cart = () => {
             })
             .catch((e) => console.log(e))
 
-        for(let i = 0;i < cartProducts.length;i++){
-            setTotalAmount(totalAmount+cartProducts[i].price)
+        for (let i = 0; i < cartProducts.length; i++) {
+            setTotalAmount(totalAmount + cartProducts[i].price)
         }
     }, [])
 
@@ -60,8 +60,8 @@ const Cart = () => {
     return (
         <div>
 
+            <h1>Shopping cart</h1>
             <div className='cart__site'>
-
                 <div className='cart_products'>
 
                     {cartProducts.map((product) => (

@@ -60,6 +60,6 @@ export const handlers = [
     return HttpResponse.json(cartProducts)
   })
 
-  http.delete('/cart/')
+  // http.delete('/cart/:id')
 
 ]

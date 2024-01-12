@@ -8,6 +8,7 @@ import news__ssd from '../../images/news__ssd.png'
 import news__ram from '../../images/news__ram.png'
 
 import './NewsPage.css'
+import { Link } from 'react-router-dom'
 
 
 
@@ -40,7 +41,9 @@ const NewsPage = () => {
                 </div>
                 <div className='news__contactform'>
                     <div className='news__contactform__description'>
-                        <button>Contact Us</button>
+                        <Link to="/contactUs">
+                            <button>Contact Us</button>
+                        </Link>
                     </div>
                     <div className='news__contactform__baner'>
                         <img src={contactform_banner} />

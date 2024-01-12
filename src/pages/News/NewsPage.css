@@ -84,16 +84,23 @@
     background-color: #000;
     color: white;
     font-family: Poppins;
+    padding: 5%;
     /* display: ; */
     /* justify-content: center; */
 }
 .news__brands__description{
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
 }
 .news__brands__container{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
 .news__brand p{
     width: 254px;
