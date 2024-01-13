@@ -49,6 +49,13 @@ const Header = () => {
           <Link to="/news">
             <p>News</p>
           </Link>
+          <Link to="/ContactUs">
+            <p>Contact Us</p>
+          </Link>
+          <Link to="/AboutUs">
+            <p>About Us</p>
+          </Link>
+
 
         </div>
         <div className='header__profile'>

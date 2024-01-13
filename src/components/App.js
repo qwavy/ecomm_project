@@ -25,6 +25,7 @@ import FilteredDekstops from '../pages/FilteredProducts/FilteredDekstops/Filtere
 import FilteredMotherboards from '../pages/FilteredProducts/FilteredMotherboards/FilteredMotherboards';
 import FilteredLaptops from '../pages/FilteredProducts/FilteredLaptops/FilteredLaptops';
 import ContactUs from '../pages/ContactUs/ContactUs';
+import AboutUs from '../pages/AboutUs/AboutUs';
 
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
                         <Route path='/payment' element={<Payment />} />
                         <Route path='/news' element={<NewsPage />} />
                         <Route path='/contactUs' element={<ContactUs/>}/>
+                        <Route path='/aboutUs' element={<AboutUs/>}/>
 
                         <Route path='/admin' element={<Admin />} />
                     </Routes>

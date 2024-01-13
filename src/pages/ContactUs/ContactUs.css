@@ -4,6 +4,14 @@
     align-items: center;
 }
 
+.contact__us__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 .contact__us__forms__container{
     display: flex;
     justify-content: space-between;
@@ -45,5 +53,9 @@
 .contact__us__info{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    /* margin-right: 5%; */
+}
+
+.contact__us__info__logo{
+    margin-right: 5%;
 }

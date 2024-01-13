@@ -10,10 +10,12 @@ const ContactUs = () => {
     return (
         <div>
             <div className="contact__us__title">
+                <div>
 
-                <h1>Contact Us</h1>
-                <p>We love hearing from you, our Shop customers.
-                    Please contact us and we will make sure to get back to you as soon as we possibly can.</p>
+                    <h1>Contact Us</h1>
+                    <p>We love hearing from you, our Shop customers.
+                        Please contact us and we will make sure to get back to you as soon as we possibly can.</p>
+                </div>
             </div>
             <div className="contact__us">
 
@@ -48,21 +50,30 @@ const ContactUs = () => {
                 </div>
                 <div className='contact__us__side'>
                     <div className='contact__us__info'>
-                        <img src={address_logo} alt='address_logo' />
+                        <div className='contact__us__info__logo'>
+
+                            <img src={address_logo} alt='address_logo' />
+                        </div>
                         <div>
                             <h3>Address:</h3>
                             <span>1234 Street Adress City Address, 1234</span>
                         </div>
                     </div>
                     <div className='contact__us__info'>
-                        <img src={phone_logo} alt='phone_logo' />
+                        <div className='contact__us__info__logo'>
+
+                            <img src={phone_logo} alt='phone_logo' />
+                        </div>
                         <div>
                             <h3>Phone:</h3>
                             <span>(00)1234 5678</span>
                         </div>
                     </div>
                     <div className='contact__us__info'>
-                        <img src={time_logo} alt='time_logo' />
+                        <div className='contact__us__info__logo'>
+
+                            <img src={time_logo} alt='time_logo' />
+                        </div>
                         <div>
                             <h3>We are open:</h3>
                             <p>Monday - Thursday: 9:00 AM - 5:30 PM<p>
@@ -72,7 +83,10 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className='contact__us__info'>
-                        <img src={mail_logo} alt='mail_logo' />
+                        <div className='contact__us__info__logo'>
+
+                            <img src={mail_logo} alt='mail_logo' />
+                        </div>
                         <div>
                             <h3>E-mail:</h3>
                             <span>shop@email.com</span>

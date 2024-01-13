@@ -1,0 +1,13 @@
+
+
+.about__us__office{
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.about__us__office__info{
+}
+.about__us__office__description{
+    width: 50%;
+}
