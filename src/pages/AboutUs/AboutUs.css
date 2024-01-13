@@ -1,13 +1,98 @@
-
-
-.about__us__office{
-    /* background-color: black; */
+.about__us {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+
+    align-items: center;
+    padding: 5%;
+}
+
+.about__us.black {
+    background-color: black;
+    color: white;
+}
+
+.about__us__info {
+    width: 50%;
+}
+
+.about__us__title {
+    display: flex;
+}
+
+.about__us__title img {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    align-content: center;
+}
+
+
+.about__us__history {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+
 
 }
-.about__us__office__info{
+
+
+.about__us__experience {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+    padding: 5%;
+
+
 }
-.about__us__office__description{
+
+
+
+
+.about__us__quality {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+
+
+}
+
+
+.about__us__delivery {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+
+
+
+}
+
+
+
+.about__us__reviews {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.about__us__review{
+    
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
     width: 50%;
+}
+
+.about__us__reviews__author{
+    display: flex;
+    justify-content: flex-end;
 }
