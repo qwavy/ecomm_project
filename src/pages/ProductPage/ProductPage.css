@@ -1,0 +1,12 @@
+.product__page{
+    padding-top: 15%;
+}
+
+.product__page__card{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product__page__info__old__price{
+    text-decoration: line-through #000 !important;
+}

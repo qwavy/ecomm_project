@@ -1,7 +1,7 @@
 // 1. Import the "HttpResponse" class from the library.
 import { http, HttpResponse } from 'msw'
 import products from '../storage/data.json'
-
+import reviews from '../storage/reviews.json'
 const url = '/api/test/'
 
 let laptops = []
@@ -9,8 +9,11 @@ let desktops = []
 let monitors = []
 let motherboards = []
 
+let product = []
+
 let cartProducts = []
-const allPosts = new Map()
+
+
 
 
 products.forEach(product => {
@@ -24,6 +27,7 @@ products.forEach(product => {
     motherboards.push(product)
   }
 })
+
 
 
 export const handlers = [
@@ -42,22 +46,34 @@ export const handlers = [
     return HttpResponse.json(motherboards)
   }),
 
+  http.get('/product/:id', ({params}) => {
+    let productId = products.findIndex((product) => {
+      return product.id == params.id
+    })
+    // console.log(`Captured a "DELETE /posts/${params.id}" request`)
+    return HttpResponse.json(products[productId])
+  }),
+  http.get('/product/1', () => {
+    return HttpResponse.json(products[1])
+  }),
 
-  http.post('/posts', async ({ request }) => {
-    // Read the intercepted request body as JSON.
-    const newPost = await request.json()
+  http.post('/addCart/', async ({ request }) => {
+    const newProduct = await request.json()
+
+
+
+    
+    cartProducts.push(newProduct)
  
-    // Push the new post to the map of all posts.
-    allPosts.set(newPost.id, newPost)
-    cartProducts.push(newPost)
- 
-    // Don't forget to declare a semantic "201 Created"
-    // response and send back the newly created post!
-    return HttpResponse.json(newPost, { status: 201 })
+    return HttpResponse.json(newProduct, { status: 201 })
   }),
 
   http.get('/cartProducts' , () => {
     return HttpResponse.json(cartProducts)
+  }),
+
+  http.get('/reviews/', () => {
+    return HttpResponse.json(reviews)
   })
 
   // http.delete('/cart/:id')

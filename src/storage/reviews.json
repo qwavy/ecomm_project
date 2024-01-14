@@ -1,0 +1,22 @@
+[
+    {
+        "review_text": "Excellent product! Everything works flawlessly, high-quality. Highly recommend!",
+        "author": "Ivan Petrov",
+        "rating": 5
+    },
+    {
+        "review_text": "Not impressed. Weak functionality and frequent glitches. Not worth the money.",
+        "author": "Elena Sidorova",
+        "rating": 2
+    },
+    {
+        "review_text": "Wonderful user experience. User-friendly interface, fast performance. Everything you need!",
+        "author": "Alexey Ivanov",
+        "rating": 4
+    },
+    {
+        "review_text": "Decent product for its price. But some features are not very intuitive. Overall satisfied.",
+        "author": "Marina Kozlova",
+        "rating": 3
+    }
+]

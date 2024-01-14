@@ -14,6 +14,8 @@ import favorite_icon from '../../../images/Favorite.png'
 import { observer } from "mobx-react-lite"
 import Laptops from "../../../components/ProductsFilter/Laptops/Laptops"
 import LaptopsSort from "../../../components/ProductsFilter/Laptops/LaptopsSort"
+import { Link } from "react-router-dom"
+import ProductPage from "../../ProductPage/ProductPage"
 // import { observer } from "mobx-react-lite"
 
 
@@ -32,7 +34,7 @@ const FilteredProducts = () => {
         fetch('/products/laptops/')
             .then((res) => res.json())
             .then((data) => {
-                console.log({msiProducts})
+                console.log({ msiProducts })
                 setMsiProducts(data)
             })
             .catch((e) => console.log(e))
@@ -42,17 +44,16 @@ const FilteredProducts = () => {
 
     useEffect(() => {
         setCountFilteredProducts(msiProducts.length)
-    },[msiProducts])
+    }, [msiProducts])
 
     const addCart = (product) => {
-        fetch('/posts/', {
+        fetch('/addCart/', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json;charset=utf-8'
+                'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify(product)
-          });
-
+        });
     }
 
     const addFavourites = (product) => {
@@ -72,25 +73,28 @@ const FilteredProducts = () => {
                 <div className="filter_column">
                     <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
                     <div className={activeCollaps ? "content activeContent" : "content"}>
-                        <Laptops laptops={msiProducts} setLaptops={setMsiProducts}/>
+                        <Laptops laptops={msiProducts} setLaptops={setMsiProducts} />
                     </div>
                 </div>
                 <div className="msi_products">
+
                     {msiProducts.map((product) => <div className='msi_product'>
-                        <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
-                        <p className='msi_laptop_name'>{product.name}</p>
-                        <p><s>{product.old_price}$</s></p>
-                        <div className="msi_product_container">
+                        <Link to={`/ProductPage/${product.id}`}>
+                            <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
+                            <p className='msi_laptop_name'>{product.name}</p>
+                            <p><s>{product.old_price}$</s></p>
+                            <div className="msi_product_container">
 
-                            <span>{product.price}$</span>
-                            <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                                <img src={favorite_icon} />
-                            </button>
-                            <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                                <img src={cart_icon} className="msi_cart" />
-                            </button>
+                                <span>{product.price}$</span>
+                                <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                                    <img src={favorite_icon} />
+                                </button>
+                                <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                                    <img src={cart_icon} className="msi_cart" />
+                                </button>
 
-                        </div>
+                            </div>
+                        </Link>
 
 
 
@@ -99,7 +103,7 @@ const FilteredProducts = () => {
 
                 </div>
                 <div className="filter_sort">
-                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts}/>
+                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
                 </div>
             </div>
 
