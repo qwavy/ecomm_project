@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import products_store from "../../../store/products_store"
 import MotherboardFilter from "../../../components/ProductsFilter/Motherboards/MotherboardsFilter"
 
@@ -18,7 +18,7 @@ import { Link } from "react-router-dom"
 import ProductPage from "../../ProductPage/ProductPage"
 // import { observer } from "mobx-react-lite"
 
-
+import { ProductContext } from "../../../context/ProductIdContext"
 
 
 const FilteredProducts = () => {
@@ -29,6 +29,7 @@ const FilteredProducts = () => {
     const [activeCollaps, setActiveCollaps] = useState(false)
     const [activeCollapsContent, setActiveCollapsContent] = useState(false)
 
+    const { changeId } = useContext(ProductContext);
 
     useEffect(() => {
         fetch('/products/laptops/')
@@ -79,22 +80,23 @@ const FilteredProducts = () => {
                 <div className="msi_products">
 
                     {msiProducts.map((product) => <div className='msi_product'>
-                        <Link to={`/ProductPage/${product.id}`}>
+                        <Link to={`/ProductPage/${product.id}`} onClick={() => changeId(product.id)}>
                             <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
                             <p className='msi_laptop_name'>{product.name}</p>
                             <p><s>{product.old_price}$</s></p>
                             <div className="msi_product_container">
 
                                 <span>{product.price}$</span>
-                                <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                                    <img src={favorite_icon} />
-                                </button>
-                                <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                                    <img src={cart_icon} className="msi_cart" />
-                                </button>
+
 
                             </div>
                         </Link>
+                        <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                            <img src={favorite_icon} />
+                        </button>
+                        <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
+                            <img src={cart_icon} className="msi_cart" />
+                        </button>
 
 
 

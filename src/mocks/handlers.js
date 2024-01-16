@@ -46,16 +46,24 @@ export const handlers = [
     return HttpResponse.json(motherboards)
   }),
 
-  http.get('/product/:id', ({params}) => {
+  http.post('/product/:id', async ( req,res,ctx) => {
+    const {params,body} = req
     let productId = products.findIndex((product) => {
       return product.id == params.id
     })
     // console.log(`Captured a "DELETE /posts/${params.id}" request`)
     return HttpResponse.json(products[productId])
   }),
-  http.get('/product/1', () => {
-    return HttpResponse.json(products[1])
-  }),
+  // http.get('/product/1', () => {
+  //   return HttpResponse.json(products[1])
+  // }),
+  // http.get('/product/2', () => {
+  //   return HttpResponse.json(products[2])
+  // }),
+  // http.get('/product/3', () => {
+  //   return HttpResponse.json(products[3])
+  // }),
+  
 
   http.post('/addCart/', async ({ request }) => {
     const newProduct = await request.json()

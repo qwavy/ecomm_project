@@ -1,3 +1,9 @@
+import React from 'react';
+import { observer } from 'mobx-react-lite';
+import { Route, Routes, Link } from 'react-router-dom';
+
+import { ProductProvider } from '../context/ProductIdContext';
+
 import MainPage from '../components/MainPage/MainPage'
 import products_store from '../store/products_store';
 import ProductsPage from './ProductsPage';
@@ -6,11 +12,9 @@ import FilteredProducts from '../pages/FilteredProducts/FilteredProducts';
 import NewsPage from '../pages/News/NewsPage';
 import MonitorsSort from './ProductsFilter/Monitors/MonitorsSort';
 import Login from '../pages/Auth/Login/Login';
-// import pr from '../store/products_store';
 
-import { observer } from 'mobx-react-lite';
 
-import { Route, Routes, Link } from 'react-router-dom';
+
 import Checkout from '../pages/Checkout/Checkout';
 import Payment from '../pages/Payment/Payment';
 import Register from '../pages/Auth/Register/Register';
@@ -28,59 +32,53 @@ import ContactUs from '../pages/ContactUs/ContactUs';
 import AboutUs from '../pages/AboutUs/AboutUs';
 
 
+
 const App = () => {
     return (
-        <div>
-            <Header />
-            {/* <NewsPage/> */}
+        <ProductProvider>
 
-            {/* <Login/> */}
-            {/* <FilteredProducts/> */}
-
-
-            {/* <MainPage/>  */}
+            <div>
+                <Header />
+                <div style={{ minHeight: "980px" }} >
+                    {products_store.isLogin ?
+                        <Routes>
 
 
-            {/* <ProductsPage/> */}
-            <div style={{minHeight:"980px"}} >
-                {products_store.isLogin ?
-                    <Routes>
+                            <Route path='/home' element={<MainPage />} />
+                            <Route path='/register' element={<Register />} />
+                            <Route path='/login' element={<Login />} />
+                            <Route path='/laptops' element={<FilteredLaptops />} />
+                            <Route path='/monitors' element={<FilteredMonitors />} />
+                            <Route path='/dekstops' element={<FilteredDekstops />} />
+                            <Route path='/motherboards' element={<FilteredMotherboards />} />
+                            <Route path='/productPage/:id' element={<ProductPage />} />
+                            <Route path='/cart' element={<Cart />} />
+                            <Route path='/checkout' element={<Checkout />} />
+                            <Route path='/payment' element={<Payment />} />
+                            <Route path='/news' element={<NewsPage />} />
+                            <Route path='/contactUs' element={<ContactUs />} />
+                            <Route path='/aboutUs' element={<AboutUs />} />
+
+                            <Route path='/admin' element={<Admin />} />
+                        </Routes>
+                        :
+                        <Routes>
+                            <Route path='/register' element={<Register />} />
+                            <Route path='/*' element={<Login />} />
+
+                            {products_store.isAdmin ?
+                                <Route path='/admin' element={<Admin />} /> :
+                                <Route path='/admin' element={<MainPage />} />
+
+                            }
+                        </Routes>}
+                </div>
 
 
-                        <Route path='/home' element={<MainPage />} />
-                        <Route path='/register' element={<Register />} />
-                        <Route path='/login' element={<Login />} />
-                        <Route path='/laptops' element={<FilteredLaptops />} />
-                        <Route path='/monitors' element={<FilteredMonitors />} />
-                        <Route path='/dekstops' element={<FilteredDekstops />} />
-                        <Route path='/motherboards' element={<FilteredMotherboards />} />
-                        <Route path='/productPage/:id' element={<ProductPage />} />
-                        <Route path='/cart' element={<Cart />} />
-                        <Route path='/checkout' element={<Checkout />} />
-                        <Route path='/payment' element={<Payment />} />
-                        <Route path='/news' element={<NewsPage />} />
-                        <Route path='/contactUs' element={<ContactUs/>}/>
-                        <Route path='/aboutUs' element={<AboutUs/>}/>
+                <Footer />
 
-                        <Route path='/admin' element={<Admin />} />
-                    </Routes>
-                    :
-                    <Routes>
-                        <Route path='/register' element={<Register />} />
-                        <Route path='/*' element={<Login />} />
-
-                        {products_store.isAdmin ?
-                            <Route path='/admin' element={<Admin />} /> :
-                            <Route path='/admin' element={<MainPage />} />
-
-                        }
-                    </Routes>}
             </div>
-
-
-            <Footer />
-
-        </div>
+        </ProductProvider>
     );
 }
 

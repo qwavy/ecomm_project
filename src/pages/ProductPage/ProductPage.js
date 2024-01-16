@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState,useContext  } from "react"
 
 import cart_icon from '../../images/cart_icon.png'
 
 
+import { ProductContext } from "../../context/ProductIdContext"
 
 import './ProductPage.css'
 
@@ -10,11 +11,20 @@ const ProductPage = () => {
 
     const [product, setProduct] = useState([])
 
+    const { id } = useContext(ProductContext);
 
     useEffect(() => {
-        fetch(`/product/${2}`)
-            .then((res) => res.json())
-            .then((data) => setProduct([data]))
+        
+        fetch(`/product/${id}`, {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body:JSON.stringify(product)
+            
+        })
+        .then((res) => res.json())
+        .then((data) => setProduct([data]))
     }, [])
 
 
