@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const NewsPage = () => {
+const News = () => {
     return (
         <div>
             <div className="header__content">
@@ -80,4 +80,4 @@ const NewsPage = () => {
         </div>
     )
 }
-export default NewsPage
+export default News

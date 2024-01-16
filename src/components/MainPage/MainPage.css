@@ -82,22 +82,27 @@
     height: 346px;
     text-align: center;
 }
-.msi_banner.laptop{
+
+.msi_banner.laptop {
     background-image: url(../../images/msi_laptop.png);
 }
-.msi_banner.dekstop{
+
+.msi_banner.dekstop {
     background-image: url(../../images/msi_dekstop.png);
 }
-.msi_banner.monitor{
+
+.msi_banner.monitor {
     background-image: url(../../images//msi_monitor.png);
 }
-.msi_banner p{
+
+.msi_banner p {
     color: #FFF;
-/* text-align: center; */
-font-family: Poppins;
-font-size: 22px;
-font-weight: 700
+    /* text-align: center; */
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700
 }
+
 .msi_content {
     margin-top: 100px;
     display: flex;
@@ -120,10 +125,12 @@ font-weight: 700
     align-items: center;
     /* border: #000 1px solid; */
 }
-.msi_image{
+
+.msi_image {
     width: 150px;
     height: 150px;
 }
+
 .msi_laptop_name {
 
     display: flex;
@@ -148,6 +155,7 @@ font-weight: 700
     font-weight: 600;
     line-height: 140%;
 }
+
 .msi_product s {
     text-decoration: line-through;
     color: grey;
@@ -159,29 +167,53 @@ font-weight: 700
 }
 
 
+.content__news__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3);
+}
+
+.content__news__card{
+    /* display: flex; */
+}
+.content__news__card img{
+    width: 400px;
+}
+.content__news__card__text{
+    width: 250px;
+}
+
+
 @media (max-width:480px) {
-    .site{
+    .site {
         width: 100%;
     }
-    .header{
+
+    .header {
         width: 100%;
     }
-    .header img{
+
+    .header img {
         width: 30px;
     }
-    .header__profile{
+
+    .header__profile {
         /* width: 30px; */
     }
+
     .header__navbar {
         width: 100%;
     }
-    .header__navbar p{
-        font-size:7px !important;
+
+    .header__navbar p {
+        font-size: 7px !important;
     }
-    .content__banner_1 img{
+
+    .content__banner_1 img {
         width: 100%;
         display: none !important;
     }
+
     .msi_banner {
         display: none !important;
         width: 100% !important;
@@ -192,17 +224,19 @@ font-weight: 700
         justify-content: center;
         flex-direction: column;
     }
-    .msi_content{
+
+    .msi_content {
         margin-top: 15%;
         display: flex;
         flex-direction: column;
     }
+
     .msi_products {
         display: flex !important;
         flex-direction: column;
     }
 
-    .msi_product{
+    .msi_product {
         display: flex;
         /* flex-direction: column; */
         justify-content: space-evenly;
@@ -210,22 +244,23 @@ font-weight: 700
         height: 70px !important;
     }
 
-    .msi_laptop_name{
+    .msi_laptop_name {
         width: 80px !important;
         height: 50px !important;
         font-size: 11px !important;
     }
 
-    .msi_image{
-        width: 60px !important; 
-        height: 50px !important; 
+    .msi_image {
+        width: 60px !important;
+        height: 50px !important;
     }
 
     .msi_product span {
         font-size: 12px !important;
     }
+
     .msi_product s {
         font-size: 8px !important;
     }
-    
+
 }

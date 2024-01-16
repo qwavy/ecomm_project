@@ -1,7 +1,8 @@
 // 1. Import the "HttpResponse" class from the library.
 import { http, HttpResponse } from 'msw'
 import products from '../storage/data.json'
-import reviews from '../storage/reviews.json'
+import reviewsSite from '../storage/reviewsSite.json'
+import news from '../storage/news.json'
 const url = '/api/test/'
 
 let laptops = []
@@ -12,6 +13,7 @@ let motherboards = []
 let product = []
 
 let cartProducts = []
+let reviewsProducts = []
 
 
 
@@ -42,47 +44,63 @@ export const handlers = [
   http.get('/products/monitors', () => {
     return HttpResponse.json(monitors)
   }),
-  http.get('/products/motherboards',() => {
+  http.get('/products/motherboards', () => {
     return HttpResponse.json(motherboards)
   }),
 
-  http.post('/product/:id', async ( req,res,ctx) => {
-    const {params,body} = req
+  http.post('/product/:id', async (req, res, ctx) => {
+    const { params, body } = req
     let productId = products.findIndex((product) => {
       return product.id == params.id
     })
-    // console.log(`Captured a "DELETE /posts/${params.id}" request`)
     return HttpResponse.json(products[productId])
   }),
-  // http.get('/product/1', () => {
-  //   return HttpResponse.json(products[1])
-  // }),
-  // http.get('/product/2', () => {
-  //   return HttpResponse.json(products[2])
-  // }),
-  // http.get('/product/3', () => {
-  //   return HttpResponse.json(products[3])
-  // }),
-  
+
+
 
   http.post('/addCart/', async ({ request }) => {
     const newProduct = await request.json()
 
 
 
-    
     cartProducts.push(newProduct)
- 
+
     return HttpResponse.json(newProduct, { status: 201 })
   }),
+  http.post('/addReviews/', async ({ request }) => {
+    const newReview = await request.json()
 
-  http.get('/cartProducts' , () => {
+    reviewsProducts.push(newReview)
+
+    return HttpResponse.json(newReview, { status: 201 })
+
+  }),
+
+  http.get('/cartProducts', () => {
     return HttpResponse.json(cartProducts)
   }),
 
   http.get('/reviews/', () => {
-    return HttpResponse.json(reviews)
+    return HttpResponse.json(reviewsSite)
+  }),
+
+
+  http.get('/news', () => {
+    return HttpResponse.json(news)
+  }),
+
+  http.post('/news/:id', async (req, res, ctx) => {
+
+    const { params, body } = req
+
+    let newsId = news.findIndex((item) => {
+      return item.id == params.id
+    })
+
+    return HttpResponse.json(news[newsId])
   })
+
+
 
   // http.delete('/cart/:id')
 

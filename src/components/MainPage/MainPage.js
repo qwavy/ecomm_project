@@ -17,6 +17,7 @@ import search_icon from '../../images/search_icon.png';
 import logo from '../../images/Logo.png'
 import banner_1 from '../../images/banner_1.png';
 import msi_laptop from '../../images/msi_laptop.png'
+import content_news_1 from '../../images/content_news_1.png'
 
 const MainPage = () => {
 
@@ -27,6 +28,17 @@ const MainPage = () => {
   const [msiHeadphones, setMsiHeadphones] = useState(products_store.msi_headphones)
   const [msiMotherboard, setMsiMotherboard] = useState(products_store.msi_motherboard)
   // console.log(products) 
+
+  const [contentNews,setContentNews] = useState([
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+  ])
 
   // const [msiLaptopsFive,setMsiLaptopsFive] = useState([])
   const msiLaptopsFive = msiLaptops.slice(0, 5)
@@ -53,6 +65,10 @@ const MainPage = () => {
         setMsiDekstops(data)
       })
       .catch((e) => console.log(e))
+
+    fetch('/news')
+      .then((res) => res.json())
+      .then((data) => setContentNews(data))
   }, [])
 
 
@@ -122,6 +138,15 @@ const MainPage = () => {
                 <p><s>{laptop.old_price}$</s></p>
                 <span>{laptop.price}$</span>
               </div>
+            </div>)}
+          </div>
+        </div>
+        <div className='content__news'>
+          <h1>Follow us on Instagram for News, Offers & More</h1>
+          <div className='content__news__container'>
+            {contentNews.map((news) => <div className='content__news__card'>
+              <img src={news.image}/>
+              <p className='content__news__card__text'>{news.title}</p>
             </div>)}
           </div>
         </div>

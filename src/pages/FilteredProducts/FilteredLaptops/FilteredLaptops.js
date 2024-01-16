@@ -1,8 +1,11 @@
+import { observer } from "mobx-react-lite"
 import { useEffect, useState, useContext } from "react"
-import products_store from "../../../store/products_store"
-import MotherboardFilter from "../../../components/ProductsFilter/Motherboards/MotherboardsFilter"
+import { Link } from "react-router-dom"
 
 
+
+
+// design
 import '..//FilteredProducts.css'
 
 import opened_pointer from '../../../images/opened_pointer.png'
@@ -11,17 +14,18 @@ import cart_icon from '../../../images/cart_icon.png';
 import favorite_icon from '../../../images/Favorite.png'
 
 
-import { observer } from "mobx-react-lite"
+// components 
 import Laptops from "../../../components/ProductsFilter/Laptops/Laptops"
 import LaptopsSort from "../../../components/ProductsFilter/Laptops/LaptopsSort"
-import { Link } from "react-router-dom"
-import ProductPage from "../../ProductPage/ProductPage"
-// import { observer } from "mobx-react-lite"
+
+// react context
 
 import { ProductContext } from "../../../context/ProductIdContext"
 
 
 const FilteredProducts = () => {
+
+
     const [msiProducts, setMsiProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [countFilteredProducts, setCountFilteredProducts] = useState(0)
@@ -29,7 +33,9 @@ const FilteredProducts = () => {
     const [activeCollaps, setActiveCollaps] = useState(false)
     const [activeCollapsContent, setActiveCollapsContent] = useState(false)
 
+
     const { changeId } = useContext(ProductContext);
+
 
     useEffect(() => {
         fetch('/products/laptops/')
@@ -39,7 +45,6 @@ const FilteredProducts = () => {
                 setMsiProducts(data)
             })
             .catch((e) => console.log(e))
-        // setFilteredProducts(msiProducts)
     }, [])
 
 
@@ -57,9 +62,8 @@ const FilteredProducts = () => {
         });
     }
 
-    const addFavourites = (product) => {
-        products_store.addFavourite(product)
-        console.log(products_store.favourites)
+    const addFavourites = () => {
+
     }
 
 
@@ -67,9 +71,16 @@ const FilteredProducts = () => {
     return (
         <div className="site">
 
-
             <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
+            <div className="filter_header">
 
+                <div >
+                    <input className="filter_search"/>
+                </div>
+                <div >
+                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
+                </div>
+            </div>
             <div className="filter_content">
                 <div className="filter_column">
                     <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
@@ -98,15 +109,10 @@ const FilteredProducts = () => {
                             <img src={cart_icon} className="msi_cart" />
                         </button>
 
-
-
-
                     </div>)}
 
                 </div>
-                <div className="filter_sort">
-                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
-                </div>
+
             </div>
 
 

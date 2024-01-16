@@ -9,7 +9,8 @@ import products_store from '../store/products_store';
 import ProductsPage from './ProductsPage';
 import Header from '../pages/Header/Header';
 import FilteredProducts from '../pages/FilteredProducts/FilteredProducts';
-import NewsPage from '../pages/News/NewsPage';
+import News from '../pages/News/News';
+import NewsPage from '../pages/NewsPage/NewsPage';
 import MonitorsSort from './ProductsFilter/Monitors/MonitorsSort';
 import Login from '../pages/Auth/Login/Login';
 
@@ -55,7 +56,8 @@ const App = () => {
                             <Route path='/cart' element={<Cart />} />
                             <Route path='/checkout' element={<Checkout />} />
                             <Route path='/payment' element={<Payment />} />
-                            <Route path='/news' element={<NewsPage />} />
+                            <Route path='/news' element={<News />} />
+                            <Route path='/newsPage/:id' element={<NewsPage />} />
                             <Route path='/contactUs' element={<ContactUs />} />
                             <Route path='/aboutUs' element={<AboutUs />} />
 

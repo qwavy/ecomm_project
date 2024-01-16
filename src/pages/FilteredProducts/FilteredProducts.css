@@ -9,12 +9,36 @@
 }
 
 
+.filter_header{
+    display: flex;
+    justify-content: space-between;
+}
+.filter_search{
+    border-radius: 8px;
+    align-items: center;
+    border: 1px solid black;
+    width: 200px;
+    height: 25px;
+}
+
+.filter_sort{
+    padding:  5px;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: #0156FF;
+}
+.filter_sort:active{
+    border: 1px solid #0156FF;
+
+}
+
 .filter_content {
     display: flex;
 }
 
 .filter_column {
-    width: 400px;
+    width: 700px;
 }
 
 .collapsible {
@@ -65,61 +89,6 @@
 }
 
 
-
-/* .msi_products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        ". . . . . .";
-}
-
-.msi_product {
-    height: 305px;
-    width: 230px;
-    padding: 18px;
-    align-items: center;
-}
-
-.msi_image {
-    width: 150px;
-    height: 150px;
-}
-
-.msi_laptop_name {
-
-    display: flex;
-    width: 185px;
-    height: 65px;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    color: #000;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.msi_product span {
-    color: #000;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-}
-
-.msi_product s {
-    color: grey;
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-} */
 
 
 .msi_product_container{
