@@ -7,7 +7,7 @@ import closed_pointer from '../../../images/closed_pointer.png'
 import search_icon from '../../../images/search_icon.png';
 import { observer } from "mobx-react-lite";
 
-const MonitorsFilter = () => {
+const MonitorsFilter = (products) => {
 
 
     // display: 23.8,
@@ -16,7 +16,7 @@ const MonitorsFilter = () => {
     // brightness: 250
 
     const [selectedCategories, setSelectedCategories] = useState([])
-    const [msiMonitors, setMsiMonitors] = useState(products_store.msi_monitors)
+    const [msiMonitors, setMsiMonitors] = useState(products.products)
     const [selectedDisplay_hz, setSelectedDisplay_hz] = useState([])
     const [selectedDisplayResolution, setSelectedDisplayResolution] = useState([])
     const [selectedResponseTime, setSelectedResponseTime] = useState([])
@@ -63,12 +63,15 @@ const MonitorsFilter = () => {
     })
 
     useEffect(() => {
-        products_store.setFilteredProductsArr(filtered)
-        console.log('component clicked')
+        fetch('/products/monitors')
+            .then((res) => res.json())
+            .then((data) => setMsiMonitors(data))
+            .then((e) => console.log(e))
     }, [])
 
     const applyFilter = () => {
-        products_store.setFilteredProductsArr(filtered)
+
+        products.setProducts(filtered)
 
     }
 

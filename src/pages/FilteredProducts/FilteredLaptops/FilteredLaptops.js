@@ -2,6 +2,9 @@ import { observer } from "mobx-react-lite"
 import { useEffect, useState, useContext } from "react"
 import { Link } from "react-router-dom"
 
+import { ToastContainer, toast } from 'react-toastify';
+
+
 
 
 
@@ -29,6 +32,8 @@ const FilteredProducts = () => {
     const [msiProducts, setMsiProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [countFilteredProducts, setCountFilteredProducts] = useState(0)
+
+    const [searchFilter, setSearchFitler] = useState("")
 
     const [activeCollaps, setActiveCollaps] = useState(false)
     const [activeCollapsContent, setActiveCollapsContent] = useState(false)
@@ -60,6 +65,17 @@ const FilteredProducts = () => {
             },
             body: JSON.stringify(product)
         });
+        toast.success('Product Added to Cart', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+
     }
 
     const addFavourites = () => {
@@ -74,8 +90,8 @@ const FilteredProducts = () => {
             <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
             <div className="filter_header">
 
-                <div >
-                    <input className="filter_search"/>
+                <div>
+                    {/* <input className="filter_search" onChange={(e) => setSearchFitler(e.target.value)}/> */}
                 </div>
                 <div >
                     <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
@@ -99,15 +115,17 @@ const FilteredProducts = () => {
 
                                 <span>{product.price}$</span>
 
-
                             </div>
+
                         </Link>
-                        <button onClick={() => addFavourites(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                            <img src={favorite_icon} />
-                        </button>
-                        <button onClick={() => addCart(product)} style={{ backgroundColor: "white", border: "none", paddingBottom: "10px" }}>
-                            <img src={cart_icon} className="msi_cart" />
-                        </button>
+                        <div className="msi_product_buttons">
+
+                            <img src={favorite_icon} onClick={() => addFavourites(product)} />
+                            <img src={cart_icon} className="msi_cart" onClick={() => {
+                                addCart(product)
+                            }} />
+                        </div>
+
 
                     </div>)}
 
@@ -116,6 +134,18 @@ const FilteredProducts = () => {
             </div>
 
 
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div >
     )
 }

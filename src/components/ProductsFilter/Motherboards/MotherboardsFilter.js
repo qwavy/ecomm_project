@@ -8,7 +8,7 @@ import closed_pointer from '../../../images/closed_pointer.png'
 
 import { observer } from 'mobx-react-lite';
 
-const MotherboardFilter = () => {
+const MotherboardFilter = (products) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [msiMotherboards, setMsiMotherboards] = useState(products_store.msi_motherboard)
 
@@ -44,12 +44,15 @@ const MotherboardFilter = () => {
   })
 
   useEffect(() => {
-    products_store.setFilteredProductsArr(filtered)
+    fetch('/products/motherboards')
+      .then((res) => res.json())
+      .then((data) => setMsiMotherboards(data))
+      .catch((e) => console.log(e))
 
   },[])
 
   const applyFilter = () => {
-    products_store.setFilteredProductsArr(filtered)
+    
   }
 
 

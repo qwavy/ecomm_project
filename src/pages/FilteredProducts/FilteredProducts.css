@@ -20,6 +20,9 @@
     width: 200px;
     height: 25px;
 }
+.filter_search::placeholder{
+    padding: 8px;
+}
 
 .filter_sort{
     padding:  5px;
@@ -38,7 +41,17 @@
 }
 
 .filter_column {
-    width: 700px;
+    width: 350px;
+    background-color: #FFF;
+    /* background-color: ; */
+    /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);  */
+    border-radius: 20px;
+    /* border: 1px solid black; */
+    padding: 8px;
+}
+
+.filter_column_list{
+    list-style: none;
 }
 
 .collapsible {
@@ -47,10 +60,8 @@
     justify-content: space-between;
     font-family: Poppins;
     width: 100%;
-    /* color: white; */
     padding: 18px;
     font-size: 15px;
-    /* background-color: #777; */
 
     cursor: pointer;
     border: none;
@@ -58,8 +69,8 @@
 }
 
 .active,
-.collapsible:hover {
-    /* background-color: #555; */
+.collapsible {
+    background-color: #fff;
 }
 
 .activeContent {
@@ -71,8 +82,15 @@
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    transition: max-height 0.3s ease-out;
+    /* background-color: #f1f1f1; */
+    background-color: #FFF;
+
+}
+.content button{
+    background-color: #FFF;
+    /* background-color: aqua; */
+
 }
 
 .apply_button {
@@ -81,7 +99,7 @@
     margin-top: 50px;
     padding: 8px 42px 8px 45px;
     border-radius: 50px;
-    background: var(--Color---3, #0156FF);
+    background: var(--Color---3, #0156FF) !important;
     border: none;
     color: white;
     font-family: Poppins;
@@ -89,11 +107,19 @@
 }
 
 
-
+.msi_product{
+    display: flex;
+    /* justify-content: space-between; */
+}
 
 .msi_product_container{
     display: flex;
     justify-content: space-between;
+}
+
+.msi_product_buttons{
+    padding-top: 300px;
+    display: flex;
 }
 
 @media (max-width:480px) {

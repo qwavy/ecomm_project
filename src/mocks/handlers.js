@@ -23,7 +23,7 @@ products.forEach(product => {
     laptops.push(product)
   } else if (product.category == "desktop") {
     desktops.push(product)
-  } else if (product.category == "monitoir") {
+  } else if (product.category == "monitor") {
     monitors.push(product)
   } else if (product.category == "motherboard") {
     motherboards.push(product)

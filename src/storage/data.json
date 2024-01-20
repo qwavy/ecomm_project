@@ -619,5 +619,732 @@
             "block_power": 500,
             "type_ram": "ddr4"
         }
-    }
+    },
+    {
+        "id": 30,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 31,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 32,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 33,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 34,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 35,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 36,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 37,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 38,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 39,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 40,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 41,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 42,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 43,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 44,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 45,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 46,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 47,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 48,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 49,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 50,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 51,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 52,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 53,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 54,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 55,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 56,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 57,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 58,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 59,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 0,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },
+    {
+        "id": 60,
+        "name": "MSI Codex 5 11SI-851RU",
+        "category": "desktop",
+        "price": 100,
+        "old_price": 0,
+        "image": "https://cdn.citilink.ru/LtMVsGx62W91-DG0XTLLimZSvZl7hjNoNsKeR5H_O28/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9d4e6dba-ff1b-4046-b29c-0a18f1b42d5f.jpg",
+        "characteristic": {
+            "processer": "Intel",
+            "processer_model": "I5-11400F",
+            "motherboard": "B300",
+            "ram": 16,
+            "ssd": 512,
+            "video_card": "GTX 1660 Super",
+            "block_power": 500,
+            "type_ram": "ddr4"
+        }
+    },{
+        "id":61,
+        "name":"MSI Optix G2412",
+        "category":"monitor",
+        "price":190,
+        "old_price":250,
+        "image":"https://c.dns-shop.kz/thumb/st1/fit/0/0/28f70f107fea4e7fa2d85fc4940f2280/4ab89ff6f56559fadb6945590251624f08ffb968b77e88151d438ba8fc6462e0.jpg.webp",
+        "characteristic":{
+          "response_time":"1ms",
+          "display":23.8,
+          "display_hz":170,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"8 bit",
+          "brightness":250
+        }
+      },
+      {
+        "id":62,
+        "name":"MSI Optix G24C4",
+        "category":"monitor",
+        "price":200,
+        "old_price":250,
+        "image":"https://c.dns-shop.kz/thumb/st4/fit/0/0/8ce1eb9b9294bd5a7abc583c788e675e/3e3f2534117df79e31297e37c9c99b46f8cf5c787aceff6f09223a1bf776de01.jpg.webp",
+        "characteristic":{
+          "response_time":"1ms",
+          "display":24,
+          "display_hz":144,
+          "matrix":"VA",
+          "resolution":"1920x1080",
+          "color_depth":"8 bit",
+          "brightness":250
+        }
+      },
+      {
+        "id":63,
+        "name":"MSI Pro MP242V",
+        "category":"monitor",
+        "price":120,
+        "old_price":200,
+        "image":"https://c.dns-shop.ru/thumb/st1/fit/500/500/875db7972c9387922e90a38fe43ac0b3/c60a2ed8a8d2acb6b1957ca395f4a66578c3aa89f070b4bb9b76862709a1d966.png.webp",
+        "characteristic":{
+          "response_time":"5ms",
+          "display":23.8,
+          "display_hz":75,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"6 bit+FRC",
+          "brightness":250
+        }
+      },
+      {
+        "id":64,
+        "name":"MSI Pro MP241X",
+        "category":"monitor",
+        "price":130,
+        "old_price":200,
+        "image":"https://c.dns-shop.ru/thumb/st4/fit/500/500/3794a3765cefd85e76eb47f23c1964d0/78c2737bd0f85d00bc4d9b007ffa4cea5f5c08e3ebf23c3a5fe8db68faf64a17.jpg.webp",
+        "characteristic":{
+          "response_time":"4ms",
+          "display":23.8,
+          "display_hz":75,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"8 bit",
+          "brightness":220
+        }
+      },
+      {
+        "id":65,
+        "name":"MSI PRO MP273A",
+        "category":"monitor",
+        "price":140,
+        "old_price":190,
+        "image":"https://storage-asset.msi.com/global/picture/product/product_16946568566f9c800be924943d057187d687073e79.png",
+        "characteristic":{
+          "response_time":"4ms",
+          "display":27,
+          "display_hz":100,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"6 bit + FRC",
+          "brightness":300
+        }
+      },
+      {
+        "id":66,
+        "name":"MSI PRO MP243X",
+        "category":"monitor",
+        "price":110,
+        "old_price":180,
+        "image":"https://storage-asset.msi.com/global/picture/product/product_16950225027023f9e0e5f86cdb7e4d8de73e468b1b.png",
+        "characteristic":{
+          "response_time":"4ms",
+          "display":23.8,
+          "display_hz":100,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"8 bit",
+          "brightness":250
+        }
+      },
+      {
+        "id":67,
+        "name":"MSI Optix G27CQ4E2",
+        "category":"monitor",
+        "price":270,
+        "old_price":300,
+        "image":"https://c.dns-shop.ru/thumb/st4/fit/0/0/f8066380ae26d621a7b9c4724642b968/4269a0aee38cb43fbcbab268dc3369950dbb2a9b7e05d55919932f6f9a650480.jpg.webp",
+        "characteristic":{
+          "response_time":"4ms",
+          "display":27,
+          "display_hz":170,
+          "matrix":"VA",
+          "resolution":"2560x1440",
+          "color_depth":"8 bit",
+          "brightness":250
+        }
+      },
+      {
+        "id":68,
+        "name":"MSI PRO MP243",
+        "category":"monitor",
+        "price":100,
+        "old_price":150,
+        "image":"https://storage-asset.msi.com/global/picture/product/product_16902717792b529f0d2c26807d73bcd46bf9c45ee2.png",
+        "characteristic":{
+          "response_time":"5ms",
+          "display":23.8,
+          "display_hz":75,
+          "matrix":"IPS",
+          "resolution":"1920x1080",
+          "color_depth":"8 bit",
+          "brightness":250
+        }
+      },
+      {
+        "id":69,
+        "name":"MSI Optix G274QPX",
+        "category":"monitor",
+        "price":610,
+        "old_price":700,
+        "image":"https://storage-asset.msi.com/global/picture/product/product_168179964345fcf73eda69b642a3c5426f30e53ae1.png",
+        "characteristic":{
+          "response_time":"1ms",
+          "display":27,
+          "display_hz":240,
+          "matrix":"IPS",
+          "resolution":"2560x1440",
+          "color_depth":"8 bit + FRC",
+          "brightness":400
+        }
+      },
+      {
+        "id":70,
+        "name":"MSI Optix MPG321UR-QD",
+        "category":"monitor",
+        "price":500,
+        "old_price":600,
+        "image":"https://c.dns-shop.ru/thumb/st4/fit/0/0/304af2c819343725cbb8a5688bb796f1/3e4cd86cfad807ab037353026953c63a12f25a8b87145327a0c8e6b6fa6ae41f.jpg.webp",
+        "characteristic":{
+          "response_time":"4ms",
+          "display":32,
+          "display_hz":144,
+          "matrix":"QLED",
+          "resolution":"3840x2160",
+          "color_depth":"10 bit",
+          "brightness":600
+        }
+      }
 ]

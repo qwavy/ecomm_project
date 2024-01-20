@@ -41,9 +41,10 @@ const Cart = () => {
             })
             .catch((e) => console.log(e))
 
-        for (let i = 0; i < cartProducts.length; i++) {
-            setTotalAmount(totalAmount + cartProducts[i].price)
-        }
+        cartProducts.forEach((product) => {
+            console.log(cartProducts)
+            setTotalAmount(totalAmount+=product.price)
+        })
     }, [])
 
     // const store = useStore(); // замените на реальное получение вашего MobX-стора

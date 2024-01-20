@@ -31,7 +31,7 @@ const Laptops = (products) => {
     const [activeCollapsDisplay_hz, setActiveCollapsDisplay_hz] = useState(false)
     const [activeCollapsVideocard, setActiveCollapsVideocard] = useState(false)
 
-
+    const [searchValue,setSearchValue] = useState("")
 
 
     const filtered = msiLaptops.filter((item) => {
@@ -43,8 +43,9 @@ const Laptops = (products) => {
         const isSelectedDisplay_hz = selectedDisplay_hz.length == 0 || selectedDisplay_hz.includes(item.characteristic.display_hz)
         const isSelectedVideocard = selectedVideocard.length == 0 || selectedVideocard.includes(item.characteristic.video_card)
 
+        const isSearchValue = item.name.toLowerCase().includes(searchValue.toLowerCase())
 
-        return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model && isSelectedRam && isSelectedDisplay && isSelectedDisplay_hz && isSelectedVideocard
+        return isSelectedSsd && isSelectedProcesser && isSelectedProcesser_model && isSelectedRam && isSelectedDisplay && isSelectedDisplay_hz && isSelectedVideocard && isSearchValue
     })
 
 
@@ -71,6 +72,7 @@ const Laptops = (products) => {
 
     const applyFilter = () => {
         products.setLaptops(filtered)
+        console.log(searchValue)
     }
 
     const clearFilter = () => {
@@ -92,16 +94,18 @@ const Laptops = (products) => {
         setActiveCollapsDisplay(false)
         setActiveCollapsDisplay_hz(false)
         setActiveCollapsVideocard(false)
+
+        setSearchValue("")
     }
 
 
     return (
         <div>
-
+            <input className="filter_search" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} placeholder="Search"/>
             <button class={activeCollapsSsd ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsSsd(!activeCollapsSsd)}><h2>Ssd</h2><img src={activeCollapsSsd ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsSsd ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ssd))).map((ssd) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -119,7 +123,7 @@ const Laptops = (products) => {
             <button class={activeCollapsProcesser_model ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser_model(!activeCollapsProcesser_model)}><h2>Processer Model</h2><img src={activeCollapsProcesser_model ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsProcesser_model ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer_model))).map((processer_model) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -133,10 +137,10 @@ const Laptops = (products) => {
                     </label>
                 ))}
             </div>
-            <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>Processer Company</h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
+            <button class={activeCollapsProcesser ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsProcesser(!activeCollapsProcesser)}><h2>Processer </h2><img src={activeCollapsProcesser ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsProcesser ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.processer))).map((processer) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -147,14 +151,13 @@ const Laptops = (products) => {
                             {processer}
                         </li>
                     </ul>
-
                     </label>
                 ))}
             </div>
             <button class={activeCollapsRam ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRam(!activeCollapsRam)}><h2>Ram</h2><img src={activeCollapsRam ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsRam ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.ram))).map((ram) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -171,7 +174,7 @@ const Laptops = (products) => {
             <button class={activeCollapsDisplay ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsDisplay(!activeCollapsDisplay)}><h2>Display</h2><img src={activeCollapsDisplay ? opened_pointer : closed_pointer} /></button>
             <div class={activeCollapsDisplay ? "content activeContent" : "content"}>
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display))).map((display) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -190,7 +193,7 @@ const Laptops = (products) => {
             <div class={activeCollapsDisplay_hz ? "content activeContent" : "content"}>
 
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.display_hz))).map((display_hz) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
@@ -208,7 +211,7 @@ const Laptops = (products) => {
             <div class={activeCollapsVideocard ? "content activeContent" : "content"}>
 
                 {Array.from(new Set(msiLaptops.map((item) => item.characteristic.video_card))).map((videocard) => (
-                    <label><ul>
+                    <label><ul className="filter_column_list">
                         <li>
                             <input
                                 type="checkbox"
