@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import products_store from "../../../store/products_store"
 
 
 
@@ -10,7 +9,7 @@ import { observer } from 'mobx-react-lite';
 
 const MotherboardFilter = (products) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [msiMotherboards, setMsiMotherboards] = useState(products_store.msi_motherboard)
+  const [msiMotherboards, setMsiMotherboards] = useState(products.products)
 
   const [selectedChipsets, setSelectedChipsets] = useState([]);
   const [selectedRamTypes, setSelectedRamTypes] = useState([]);
@@ -20,7 +19,7 @@ const MotherboardFilter = (products) => {
   const [activeCollapsRamTypes, setActiveCollapsRamTypes] = useState(false);
   const [activeCollapsSocket, setActiveCollapsSocket] = useState(false)
 
-  const [value,setValue] = useState("")
+  const [value, setValue] = useState("")
 
   const handleCheckboxChange = (category, value, setSelectedCategories) => {
     if (selectedCategories.includes(value)) {
@@ -28,7 +27,6 @@ const MotherboardFilter = (products) => {
     } else {
       setSelectedCategories([...selectedCategories, value]);
     }
-    products_store.counter += 1
   };
 
 
@@ -43,16 +41,17 @@ const MotherboardFilter = (products) => {
     return isChipsetSelected && isRamTypeSelected && isSocketSelected && inputChange;
   })
 
+
   useEffect(() => {
     fetch('/products/motherboards')
       .then((res) => res.json())
       .then((data) => setMsiMotherboards(data))
       .catch((e) => console.log(e))
 
-  },[])
+  }, [])
 
   const applyFilter = () => {
-    
+    products.setProducts(filtered)
   }
 
 
@@ -61,7 +60,7 @@ const MotherboardFilter = (products) => {
   return (
     <div>
       <div>
-        <input onChange={(event) => setValue(event.target.value)}/>dsfg
+        <input onChange={(event) => setValue(event.target.value)} />dsfg
         <button class={activeCollapsChipsets ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsChipsets(!activeCollapsChipsets)}><h2>Chipset</h2><img src={activeCollapsChipsets ? opened_pointer : closed_pointer} /></button>
         <div class={activeCollapsChipsets ? "content activeContent" : "content"}>
           {Array.from(new Set(msiMotherboards.map((item) => item.characteristic.chipset))).map((chipset) => (
@@ -79,7 +78,7 @@ const MotherboardFilter = (products) => {
             </label>
           ))}
         </div>
-        
+
 
 
         <button class={activeCollapsRamTypes ? "collapsible active" : "collapsible"} onClick={() => setActiveCollapsRamTypes(!activeCollapsRamTypes)}><h2>RAM Type</h2><img src={activeCollapsRamTypes ? opened_pointer : closed_pointer} /></button>

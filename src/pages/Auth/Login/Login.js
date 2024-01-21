@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Login.css'
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,6 +9,17 @@ import products_store from '../../../store/products_store';
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const [users,setUsers] = useState([])
+
+    useEffect(() => {
+        fetch('/auth/login')
+            .then((res) => res.json())
+            .then((data) => setUsers(data))
+            .catch((e) => console.log(e))
+    },[])
+
+
 
     const notify = (data) => {
         if(data === "No such user was found"){
@@ -49,39 +60,50 @@ const Login = () => {
         if(email == "admin"){
             products_store.isAdmin = true
         }
+
     }
 
     const handleSubmit = () => {
-        const apiUrl = 'http://localhost:5000/api/user/login';
+        // const apiUrl = '/auth/login';
 
-        // Замените данные в body на те, которые вы хотите отправить на сервер
-        const postData = {
-            email: email,
-            password: password,
-        };
+        // // Замените данные в body на те, которые вы хотите отправить на сервер
+        // const postData = {
+        //     email: email,
+        //     password: password,
+        // };
 
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                // Дополнительные заголовки, если необходимо
-            },
-            body: JSON.stringify(postData),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    // throw new Error(`Network response was not ok: ${response.statusText}`);
+        // fetch(apiUrl, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         // Дополнительные заголовки, если необходимо
+        //     },
+        //     body: JSON.stringify(postData),
+        // })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             // throw new Error(`Network response was not ok: ${response.statusText}`);
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log('Data received:', data);
+        //         notify(data.message)
+        //     })
+        //     .catch(error => {
+        //         console.error('There was a problem with the fetch operation:', error);
+        //     });
+
+
+        users.forEach((user) => {
+            if(user.includes(email)){
+                if(user.password == password){
+                    return notify()
                 }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data received:', data);
-                notify(data.message)
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-
+                return notify("incorrect password")
+            }
+            return notify("No such user was found")
+        })
 
     }
 

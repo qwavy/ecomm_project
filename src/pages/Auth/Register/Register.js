@@ -9,6 +9,7 @@ const Register = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const [users,setUsers] = useState([])
 
     const notify = (data) => {
         if (data === "This email is already taken") {
@@ -45,10 +46,11 @@ const Register = () => {
             progress: undefined,
             theme: "light",
         });
+        console.log(users)
     }
 
     const handleSubmit = () => {
-        const apiUrl = 'http://localhost:5000/api/user/registration';
+        const apiUrl = '/auth/register/';
 
         // Замените данные в body на те, которые вы хотите отправить на сервер
         const postData = {

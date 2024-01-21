@@ -3,12 +3,20 @@ import { http, HttpResponse } from 'msw'
 import products from '../storage/data.json'
 import reviewsSite from '../storage/reviewsSite.json'
 import news from '../storage/news.json'
+import users from '../storage/users.json'
+
+
+
+
+
 const url = '/api/test/'
 
 let laptops = []
 let desktops = []
 let monitors = []
 let motherboards = []
+
+
 
 let product = []
 
@@ -33,6 +41,27 @@ products.forEach(product => {
 
 
 export const handlers = [
+
+
+  http.post('/auth/register/', async ({ request }) => {
+    const newUser = await request.json()
+    
+    users.push(newUser)
+
+    return HttpResponse.json(newUser, { status: 201 })
+
+  }),
+  // http.post('/auth/login/', async ({ request }) => {
+  //   const newUser = await request.json()
+
+  //   users.push(newUser)
+
+  //   return HttpResponse.json(newUser, { status: 201 })
+
+  // }),
+  http.get('/auth/login',() => {
+    return HttpResponse.json(users)
+  }),
 
 
   http.get('/products/laptops/', () => {
@@ -76,6 +105,8 @@ export const handlers = [
 
   }),
 
+
+  
   http.get('/cartProducts', () => {
     return HttpResponse.json(cartProducts)
   }),
