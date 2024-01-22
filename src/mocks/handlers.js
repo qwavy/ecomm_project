@@ -17,7 +17,6 @@ let monitors = []
 let motherboards = []
 
 
-
 let product = []
 
 let cartProducts = []
@@ -26,19 +25,28 @@ let reviewsProducts = []
 
 
 
-products.forEach(product => {
-  if (product.category == "laptop") {
-    laptops.push(product)
-  } else if (product.category == "desktop") {
-    desktops.push(product)
-  } else if (product.category == "monitor") {
-    monitors.push(product)
-  } else if (product.category == "motherboard") {
-    motherboards.push(product)
-  }
-})
 
 
+const sortByCategory = () => {
+
+  laptops = products.filter((product) => {
+    return product.category == "laptop"
+  })
+
+  desktops = products.filter((product) => {
+    return product.category == "desktop"
+  })
+
+  monitors = products.filter((product) => {
+    return product.category == "monitor"
+  })
+
+  motherboards = products.filter((product) => {
+    return product.category == "motherboard"
+  })
+
+
+}
 
 export const handlers = [
 
@@ -63,17 +71,29 @@ export const handlers = [
     return HttpResponse.json(users)
   }),
 
+  http.get('/products/' , () => {
+    return HttpResponse.json(products)
+  }),
+
 
   http.get('/products/laptops/', () => {
+
+    sortByCategory()
+
     return HttpResponse.json(laptops)
   }),
   http.get('/products/desktops', () => {
     return HttpResponse.json(desktops)
   }),
   http.get('/products/monitors', () => {
+
+
     return HttpResponse.json(monitors)
   }),
   http.get('/products/motherboards', () => {
+
+    sortByCategory()
+
     return HttpResponse.json(motherboards)
   }),
 
@@ -96,6 +116,13 @@ export const handlers = [
 
     return HttpResponse.json(newProduct, { status: 201 })
   }),
+
+  
+  http.get('/cartProducts', () => {
+    return HttpResponse.json(cartProducts)
+  }),
+
+
   http.post('/addReviews/', async ({ request }) => {
     const newReview = await request.json()
 
@@ -105,11 +132,18 @@ export const handlers = [
 
   }),
 
+  http.post('/admin/addProduct', async ({ request }) => {
+    const newProduct = await request.json()
+    
+    products.push(newProduct)
 
-  
-  http.get('/cartProducts', () => {
-    return HttpResponse.json(cartProducts)
+    return HttpResponse.json(newProduct, { status: 201 })
+
   }),
+  // admin панель
+
+
+
 
   http.get('/reviews/', () => {
     return HttpResponse.json(reviewsSite)

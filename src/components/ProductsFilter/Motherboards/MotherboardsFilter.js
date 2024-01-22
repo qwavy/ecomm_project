@@ -9,7 +9,7 @@ import { observer } from 'mobx-react-lite';
 
 const MotherboardFilter = (products) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [msiMotherboards, setMsiMotherboards] = useState(products.products)
+  const [msiMotherboards, setMsiMotherboards] = useState([])
 
   const [selectedChipsets, setSelectedChipsets] = useState([]);
   const [selectedRamTypes, setSelectedRamTypes] = useState([]);
@@ -45,7 +45,10 @@ const MotherboardFilter = (products) => {
   useEffect(() => {
     fetch('/products/motherboards')
       .then((res) => res.json())
-      .then((data) => setMsiMotherboards(data))
+      .then((data) => {
+        setMsiMotherboards(data)
+        console.log(data)
+      })
       .catch((e) => console.log(e))
 
   }, [])

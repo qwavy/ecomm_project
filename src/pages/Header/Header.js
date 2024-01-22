@@ -55,8 +55,8 @@ const Header = () => {
           <Link to="/AboutUs">
             <p>About Us</p>
           </Link>
-          <Link to="/ProductPage">
-            <p>CHECK PRODUCT PAGE</p>
+          <Link to="/Admin">
+            <p>Admin Panel</p>
           </Link>
 
 
