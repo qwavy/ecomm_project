@@ -1,0 +1,24 @@
+.admin__panel__site{
+    display: flex;
+    justify-content: center;
+}
+.admin__panel__site label{
+    display: flex;
+    flex-direction: column;
+}
+.admin__panel__site input{
+    border-radius: 8px;
+    width: 50%;
+    height: 50px;
+}
+.admin__panel__site input::placeholder{
+    padding: 5px;
+}
+.admin__panel__site button{
+    background-color: #0156FF;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 20px;
+}

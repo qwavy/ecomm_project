@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 
+import RenderCategoryInputs from "./RenderCategoryInputs";
+
+import './Admin.css'
+
+
 const Admin = () => {
 
 
-    const [products,setProducts] = useState([]) 
+    const [products, setProducts] = useState([])
 
     const [productName, setProductName] = useState("");
     const [productPrice, setProductPrice] = useState(0);
@@ -21,7 +26,7 @@ const Admin = () => {
             .then((res) => res.json())
             .then((data) => setProducts(data))
             .catch((e) => console.log(e))
-    },[])
+    }, [])
 
     useEffect(() => {
         if (productCategory === "laptop") {
@@ -70,25 +75,6 @@ const Admin = () => {
         };
 
 
-        // const product = {
-        //     id: 99,
-        //     name: 'MSI A320M-A PRO ADMIN',
-        //     category: "motherboard",
-        //     price: 65,
-        //     old_price: 90,
-        //     image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/f9ded1c4f0272c4965b71eb9e03c89d1/8f294b10338291df08061a7370eb823c8686d7e9b7e323d9ef8065a61fbf902c.jpg.webp',
-        //     characteristic: {
-        //         socket: 'AMD-AM4',
-        //         chipset: 'A320',
-        //         max_ram: 2,
-        //         type_ram: 'DDR4',
-        //         form_factor: 'micro-ATX',
-        //         max_ram_hz: 3200,
-        //         audio_chip: 'Realtek ALC892'
-        //     }
-        // }
-
-        console.log(product)
         try {
             const url = "/admin/addProduct/";
             const response = await fetch(url, {
@@ -110,215 +96,62 @@ const Admin = () => {
         }
     };
 
-    const renderCategoryInputs = () => {
-        if (productCategory === "laptop") {
-            return (
-                <div>
-                    <label>
-                        Processor Model:
-                        <input
-                            type="text"
-                            value={productCharacteristic.processer_model}
-                            onChange={(e) =>
-                                handleInputChange("processer_model", e.target.value)
-                            }
-                        />
-                    </label>
 
-                    <label>
-                        RAM:
-                        <input
-                            type="number"
-                            value={productCharacteristic.ram}
-                            onChange={(e) => handleInputChange("ram", e.target.value)}
-                        />
-                    </label>
-
-                    <label>
-                        SSD:
-                        <input
-                            type="number"
-                            value={productCharacteristic.ssd}
-                            onChange={(e) => handleInputChange("ssd", e.target.value)}
-                        />
-                    </label>
-
-                    <label>
-                        Display:
-                        <input
-                            type="number"
-                            value={productCharacteristic.display}
-                            onChange={(e) => handleInputChange("display", e.target.value)}
-                        />
-                    </label>
-                    <label>
-                        display_hz:
-                        <input
-                            type="string"
-                            value={productCharacteristic.display_hz}
-                            onChange={(e) => handleInputChange("display_hz", e.target.value)}
-                        />
-                    </label>
-                    <label>
-                        video_card:
-                        <input
-                            type="string"
-                            value={productCharacteristic.video_card}
-                            onChange={(e) => handleInputChange("video_card", e.target.value)}
-                        />
-                    </label>
-                </div>
-            );
-        } else if (productCategory === "monitor") {
-            return (
-                <div>
-                    <label>
-                        Screen Size:
-                        <input
-                            type="number"
-                            value={productCharacteristic.screenSize}
-                            onChange={(e) =>
-                                handleInputChange("screenSize", e.target.value)
-                            }
-                        />
-                    </label>
-
-                    <label>
-                        Screen Hz:
-                        <input
-                            type="text"
-                            value={productCharacteristic.screenHz}
-                            onChange={(e) =>
-                                handleInputChange("screenHz", e.target.value)
-                            }
-                        />
-                    </label>
-                </div>        //         socket: 'AMD-AM4',
-                //         chipset: 'A320',
-                //         max_ram: 2,
-                //         type_ram: 'DDR4',
-                //         form_factor: 'micro-ATX',
-                //         max_ram_hz: 3200,
-                //         audio_chip: 'Realtek ALC892'
-            );
-        } else if (productCategory == "motherboard") {
-            return (
-                <div>
-                    <label>
-
-                        <input
-                            type="string"
-                            value={productCharacteristic.socket}
-                            onChange={(e) =>
-                                handleInputChange("socket", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="string"
-                            value={productCharacteristic.chipset}
-                            onChange={(e) =>
-                                handleInputChange("chipset", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="number"
-                            value={productCharacteristic.max_ram}
-                            onChange={(e) =>
-                                handleInputChange("max_ram", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="string"
-                            value={productCharacteristic.type_ram}
-                            onChange={(e) =>
-                                handleInputChange("type_ram", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="string"
-                            value={productCharacteristic.form_factor}
-                            onChange={(e) =>
-                                handleInputChange("form_factor", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="number"
-                            value={productCharacteristic.max_ram_hz}
-                            onChange={(e) =>
-                                handleInputChange("max_ram_hz", e.target.value)
-                            }
-                        />
-                    </label>
-                    <label>
-
-                        <input
-                            type="string"
-                            value={productCharacteristic.audio_chip}
-                            onChange={(e) =>
-                                handleInputChange("audio_chip", e.target.value)
-                            }
-                        />
-                    </label>
-                    {/* <label>
-                        
-                        <input
-                            type="string"
-                            value={productCharacteristic.}
-                            onChange={(e) => 
-                                handleInputChange("",e.target.value)
-                            }
-                        />
-                    </label> */}
-                </div>
-            )
-        }
-
-        return null;
-    };
 
     return (
-        <div>
-            <input
-                placeholder="Product Name"
-                onChange={(e) => setProductName(e.target.value)}
-            />
-            <input
-                placeholder="Product Price"
-                type="number"
-                onChange={(e) => setProductPrice(e.target.value)}
-            />
-            <input
-                placeholder="Product Image"
-                type="string"
-                onChange={(e) => setProductImg(e.target.value)}
-            />
-            <select
-                name="select"
-                onChange={(e) => setProductCategory(e.target.value)}
-            >
-                <option value="laptop">Laptop</option>
-                <option value="desktop">Desktop</option>
-                <option value="monitor">Monitor</option>
-                <option value="motherboard">Motherboard</option>
-            </select>
-            {renderCategoryInputs()}
-            <button onClick={() => addProduct()}>Add Product</button>
+        <div className="admin__panel__site">
+
+            <div>
+                <div>
+                    <h1>Main </h1>
+                    <label>
+
+                        <h3>Product Name</h3>
+                        <input
+                            placeholder="Product Name"
+                            onChange={(e) => setProductName(e.target.value)}
+                        />
+                    </label>
+                    <h3>Product Price</h3>
+                    <label>
+
+                        <input
+                            placeholder="Product Price"
+                            type="number"
+                            onChange={(e) => setProductPrice(e.target.value)}
+                        />
+                    </label>
+                    <h3>Product Image</h3>
+                    <label>
+
+                        <input
+                            placeholder="Product Image"
+                            type="string"
+                            onChange={(e) => setProductImg(e.target.value)}
+                        />
+                    </label>
+                    <label>
+
+                    <h3>Select Product Category</h3>
+                        <select
+                            name="select"
+                            onChange={(e) => setProductCategory(e.target.value)}
+                        >
+                            <option value="laptop">Laptop</option>
+                            <option value="desktop">Desktop</option>
+                            <option value="monitor">Monitor</option>
+                            <option value="motherboard">Motherboard</option>
+                        </select>
+                    </label>
+                </div>
+                <h1>
+                    Characteristic
+                </h1>
+                <RenderCategoryInputs productCategory={productCategory} productCharacteristic={productCharacteristic} handleInputChange={handleInputChange} />
+                <button onClick={() => addProduct()}>Add Product</button>
+            </div>
         </div>
+
     );
 };
 
