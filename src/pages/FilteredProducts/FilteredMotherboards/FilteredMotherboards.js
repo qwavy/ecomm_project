@@ -73,71 +73,73 @@ const FilteredProductsMotherboards = () => {
     }
 
 
-    const addFavourites = () => {}
+    const addFavourites = () => { }
 
     return (
         <div className="site">
+            <div>
 
-            <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
-            <div className="filter_header">
+                <h1 className="filter_title">Filtered products ({countFilteredProducts})</h1>
+                <div className="filter_header">
 
-                <div>
-                    {/* <input className="filter_search" onChange={(e) => setSearchFitler(e.target.value)}/> */}
-                </div>
-                <div >
-                    <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
-                </div>
-            </div>
-            <div className="filter_content">
-                <div className="filter_column">
-                    <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
-                    <div className={activeCollaps ? "content activeContent" : "content"}>
-                        <MotherboardsFilter products={msiProducts} setProducts={setMsiProducts} />
+                    <div>
+                        {/* <input className="filter_search" onChange={(e) => setSearchFitler(e.target.value)}/> */}
+                    </div>
+                    <div >
+                        <LaptopsSort laptops={msiProducts} setLaptops={setMsiProducts} />
                     </div>
                 </div>
-                <div className="msi_products">
+                <div className="filter_content">
+                    <div className="filter_column">
+                        <button className={activeCollaps ? "collapsible active" : "collapsible"} onClick={() => setActiveCollaps(!activeCollaps)}><h2>Filter</h2><img src={activeCollaps ? opened_pointer : closed_pointer} /></button>
+                        <div className={activeCollaps ? "content activeContent" : "content"}>
+                            <MotherboardsFilter products={msiProducts} setProducts={setMsiProducts} />
+                        </div>
+                    </div>
+                    <div className="msi_products">
 
-                    {msiProducts.map((product) => <div className='msi_product'>
-                        <Link to={`/ProductPage/${product.id}`} onClick={() => changeId(product.id)}>
-                            <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
-                            <p className='msi_laptop_name'>{product.name}</p>
-                            <p><s>{product.old_price}$</s></p>
-                            <div className="msi_product_container">
+                        {msiProducts.map((product) => <div className='msi_product'>
+                            <Link to={`/ProductPage/${product.id}`} onClick={() => changeId(product.id)}>
+                                <img src={product.image} alt='car' className='msi_image' style={{ width: "170px" }} />
+                                <p className='msi_laptop_name'>{product.name}</p>
+                                <p><s>{product.old_price}$</s></p>
+                                <div className="msi_product_container">
 
-                                <span>{product.price}$</span>
+                                    <span>{product.price}$</span>
 
+                                </div>
+
+                            </Link>
+                            <div className="msi_product_buttons">
+
+                                <img src={favorite_icon} onClick={() => addFavourites(product)} />
+                                <img src={cart_icon} className="msi_cart" onClick={() => {
+                                    addCart(product)
+                                }} />
                             </div>
 
-                        </Link>
-                        <div className="msi_product_buttons">
 
-                            <img src={favorite_icon} onClick={() => addFavourites(product)} />
-                            <img src={cart_icon} className="msi_cart" onClick={() => {
-                                addCart(product)
-                            }} />
-                        </div>
+                        </div>)}
 
-
-                    </div>)}
+                    </div>
 
                 </div>
 
-            </div>
 
-
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-            />
-        </div >
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+            </div >
+        </div>
     )
 }
 export default observer(FilteredProductsMotherboards)

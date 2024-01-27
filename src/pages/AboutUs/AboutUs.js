@@ -12,6 +12,7 @@ import about_us_photo_2 from '../../images/about_us_photo_2.png'
 import about_us_photo_3 from '../../images/about_us_photo_3.png'
 
 import star from '../../images/star.png'
+import pointer from '../../images/closed_pointer.png'
 
 import { useEffect, useState } from 'react'
 import { json } from 'react-router-dom'
@@ -20,7 +21,7 @@ const AboutUs = () => {
 
     const [reviews, setReviews] = useState([])
     const [currentReview, setCurrentReview] = useState([])
-    const [currentReviewIndex,setCurrentReviewIndex] = useState(0)
+    const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
 
     useEffect(() => {
         fetch('/reviews/')
@@ -36,11 +37,11 @@ const AboutUs = () => {
 
 
     const nextReview = () => {
-        setCurrentReviewIndex(currentReviewIndex+1)
+        setCurrentReviewIndex(currentReviewIndex + 1)
         setCurrentReview([reviews[currentReviewIndex]])
     }
     const prevReview = () => {
-        setCurrentReviewIndex(currentReviewIndex-1)
+        setCurrentReviewIndex(currentReviewIndex - 1)
         setCurrentReview([reviews[currentReviewIndex]])
     }
 
@@ -126,19 +127,20 @@ const AboutUs = () => {
                     <img src={about_us_photo_3} />
                 </div>
             </div>
-            <button onClick={() => nextReview()}>Next Review</button>
-            {currentReview.map((review) => <div className='about__us__reviews'>
-                <img src={star}/>{review.rating}
-                <div className='about__us__review'>
-                    <strong>{review.review_text}</strong>
-                </div>
-                <div className='about__us__reviews__author'>
-                    <p>-- {review.author}</p>
-                </div>
-            </div>)}
-            {currentReviewIndex}
-            
-            <button onClick={() => prevReview()}>Prev Review</button>
+            <div className='about__us__reviews__container'>
+                <img src={pointer} className='left__pointer' onClick={() => nextReview()} />
+
+                {currentReview.map((review) => <div className='about__us__reviews'>
+                    <img src={star} />{review.rating}
+                    <div className='about__us__review'>
+                        <strong>{review.review_text}</strong>
+                    </div>
+                    <div className='about__us__reviews__author'>
+                        <p>-- {review.author}</p>
+                    </div>
+                </div>)}
+                <img src={pointer} className='right__pointer' onClick={() => prevReview()} />
+            </div>
 
         </div>
     )

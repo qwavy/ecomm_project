@@ -2,11 +2,15 @@
 
 
 
-.site {
+.main__page {
     /* display: flex; */
     /* justify-content: space-around; */
     width: 1920px;
     margin: auto;
+}
+.site{
+    margin: auto;
+
 }
 
 .header {
@@ -81,6 +85,20 @@
     width: 232px;
     height: 346px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.msi_banner p {
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    color: #FFF;
 }
 
 .msi_banner.laptop {
@@ -95,13 +113,16 @@
     background-image: url(../../images//msi_monitor.png);
 }
 
-.msi_banner p {
+/* .msi_banner p {
     color: #FFF;
-    /* text-align: center; */
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
     font-family: Poppins;
     font-size: 22px;
     font-weight: 700
-}
+} */
 
 .msi_content {
     margin-top: 100px;
@@ -124,6 +145,10 @@
     padding: 18px;
     align-items: center;
     /* border: #000 1px solid; */
+}
+
+.main__page .msi_product {
+    display: block !important;
 }
 
 .msi_image {
@@ -169,23 +194,25 @@
 
 .content__news__container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
 }
 
-.content__news__card{
+.content__news__card {
     /* display: flex; */
 }
-.content__news__card img{
+
+.content__news__card img {
     width: 400px;
 }
-.content__news__card__text{
+
+.content__news__card__text {
     width: 250px;
 }
 
 
 @media (max-width:480px) {
-    .site {
+    .main__page {
         width: 100%;
     }
 

@@ -29,15 +29,15 @@ const MainPage = () => {
   const [msiMotherboard, setMsiMotherboard] = useState(products_store.msi_motherboard)
   // console.log(products) 
 
-  const [contentNews,setContentNews] = useState([
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
-    {title:"If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",image:content_news_1},
+  const [contentNews, setContentNews] = useState([
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
+    { title: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...", image: content_news_1 },
   ])
 
   // const [msiLaptopsFive,setMsiLaptopsFive] = useState([])
@@ -74,25 +74,18 @@ const MainPage = () => {
 
 
   return (
-    <div className='site'>
-      {/* <button onClick={console.log(data)}>TEST</button> */}
+    <div className='main__page'>
       <div className='content_mainpage'>
         <div className='content__banner_1'>
           <img src={banner_1} />
         </div>
         <div className='content__products'>
-          {/* {products.map((product) => <div className='content__product' key={product.id}>
-            <img src={product.image} />
-            <h3 className='content__product__title'>{product.name}</h3>
-            <span className='content__product__price'>{product.price}</span>
-          </div>)} */}
         </div>
         <div className='msi_content'>
           <div className='msi_banner laptop'>
-            <Link to="/products">
-              <p>msi laptops</p>
-              <p><a>all products</a></p>
-            </Link>
+              <Link to="/products">
+                <p>MSI laptops</p>
+              </Link>
 
           </div>
           <div className='msi_products'>
@@ -109,8 +102,8 @@ const MainPage = () => {
         </div>
         <div className='msi_content'>
           <div className='msi_banner dekstop'>
-            <p>msi dekstops</p>
-            <p><a>all products</a></p>
+            <p>MSI dekstops</p>
+
           </div>
           <div className='msi_products'>
             {msiDekstopsFive.map((desktop) => <div className='msi_product'>
@@ -126,8 +119,8 @@ const MainPage = () => {
         </div>
         <div className='msi_content'>
           <div className='msi_banner monitor'>
-            <p>msi laptops</p>
-            <p><a>all products</a></p>
+            <p>MSI laptops</p>
+
           </div>
           <div className='msi_products'>
             {msiMonitorsFive.map((laptop) => <div className='msi_product'>
@@ -145,7 +138,7 @@ const MainPage = () => {
           <h1>Follow us on Instagram for News, Offers & More</h1>
           <div className='content__news__container'>
             {contentNews.map((news) => <div className='content__news__card'>
-              <img src={news.image}/>
+              <img src={news.image} />
               <p className='content__news__card__text'>{news.title}</p>
             </div>)}
           </div>

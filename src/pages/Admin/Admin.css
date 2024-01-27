@@ -8,7 +8,7 @@
 }
 .admin__panel__site input{
     border-radius: 8px;
-    width: 50%;
+    width: 200px;
     height: 50px;
 }
 .admin__panel__site input::placeholder{
@@ -21,4 +21,12 @@
     border-radius: 8px;
     padding: 18px;
     margin-top: 20px;
+}
+
+.admin__panel__site select{
+    border-radius: 12px;
+    background-color: #0156FF;
+    color: #FFF;
+    padding: 8px;
+    border: none;
 }

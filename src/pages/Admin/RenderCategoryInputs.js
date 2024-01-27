@@ -102,7 +102,7 @@ const RenderCategoryInputs = (props) => {
                 <label>
                     <h3>
 
-                        Response Time:
+                        Response Time
                     </h3>
                     <input
                         type="string"
@@ -110,13 +110,14 @@ const RenderCategoryInputs = (props) => {
                         onChange={(e) =>
                             handleInputChange("response_time", e.target.value)
                         }
+                        placeholder="Response Time"
                     />
                 </label>
 
                 <label>
                     <h3>
 
-                        Display:
+                        Display
                     </h3>
                     <input
 
@@ -125,6 +126,7 @@ const RenderCategoryInputs = (props) => {
                         onChange={(e) =>
                             handleInputChange("display", e.target.value)
                         }
+                        placeholder="Display"
                     />
                 </label>
 
@@ -137,6 +139,7 @@ const RenderCategoryInputs = (props) => {
                         type="string"
                         value={productCharacteristic.display_hz}
                         onChange={(e) => handleInputChange("display_hz", e.target.value)}
+                        placeholder="Display Hz"
                     />
                 </label>
                 <label>
@@ -148,6 +151,7 @@ const RenderCategoryInputs = (props) => {
                         type="string"
                         value={productCharacteristic.matrix}
                         onChange={(e) => handleInputChange("matrix", e.target.value)}
+                        placeholder="Matrix"
                     />
                 </label>
                 <label>
@@ -159,6 +163,7 @@ const RenderCategoryInputs = (props) => {
                         type="string"
                         value={productCharacteristic.resolution}
                         onChange={(e) => handleInputChange("resolution", e.target.value)}
+                        placeholder="Resolution"
                     />
                 </label>
                 <label>
@@ -170,6 +175,7 @@ const RenderCategoryInputs = (props) => {
                         type="string"
                         value={productCharacteristic.color_depth}
                         onChange={(e) => handleInputChange("color_depth", e.target.value)}
+                        placeholder="Color Depth"
                     />
                 </label>
                 <label>
@@ -181,6 +187,7 @@ const RenderCategoryInputs = (props) => {
                         type="number"
                         value={productCharacteristic.brightness}
                         onChange={(e) => handleInputChange("brightness", e.target.value)}
+                        placeholder="Brightness"
                     />
                 </label>
 
@@ -192,73 +199,101 @@ const RenderCategoryInputs = (props) => {
         return (
             <div>
                 <label>
-                    Socket
+                    <h3>
+
+                        Socket
+                    </h3>
                     <input
                         type="string"
                         value={productCharacteristic.socket}
                         onChange={(e) =>
                             handleInputChange("socket", e.target.value)
                         }
+                        placeholder="Socket"
                     />
                 </label>
                 <label>
-                    Chipset
+                    <h3>
+
+                        Chipset
+                    </h3>
                     <input
                         type="string"
                         value={productCharacteristic.chipset}
                         onChange={(e) =>
                             handleInputChange("chipset", e.target.value)
                         }
+                        placeholder="Chipset"
                     />
                 </label>
                 <label>
-                    Max Ram
+                    <h3>
+
+                        Max Ram
+                    </h3>
                     <input
                         type="number"
                         value={productCharacteristic.max_ram}
                         onChange={(e) =>
                             handleInputChange("max_ram", e.target.value)
                         }
+                        placeholder="Max Ram"
                     />
                 </label>
                 <label>
-                    Type Ram
+                    <h3>
+
+                        Type Ram
+                    </h3>
                     <input
                         type="string"
                         value={productCharacteristic.type_ram}
                         onChange={(e) =>
                             handleInputChange("type_ram", e.target.value)
                         }
+                        placeholder="Type Ram"
                     />
                 </label>
                 <label>
-                    Form Factor
+                    <h3>
+
+                        Form Factor
+                    </h3>
                     <input
                         type="string"
                         value={productCharacteristic.form_factor}
                         onChange={(e) =>
                             handleInputChange("form_factor", e.target.value)
                         }
+                        placeholder="Form Factor"
                     />
                 </label>
                 <label>
-                    Max Ram Hz
+                    <h3>
+
+                        Max Ram Hz
+                    </h3>
                     <input
                         type="number"
                         value={productCharacteristic.max_ram_hz}
                         onChange={(e) =>
                             handleInputChange("max_ram_hz", e.target.value)
                         }
+                        placeholder="Max Ram Hz"
                     />
                 </label>
                 <label>
-                    Audio Chip
+                    <h3>
+
+                        Audio Chip
+                    </h3>
                     <input
                         type="string"
                         value={productCharacteristic.audio_chip}
                         onChange={(e) =>
                             handleInputChange("audio_chip", e.target.value)
                         }
+                        placeholder="Audio Chip"
                     />
                 </label>
             </div>
